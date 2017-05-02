@@ -42,12 +42,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let title = list[indexPath.row]
+        // swift中switch更强大，匹配的模式更多（区间匹配、元组deng） 不用写break，fallthrough表示continue
         switch indexPath.row {
         case 0:
             let airdrop = UIStoryboard.init(name: "Airdrop", bundle: nil).instantiateInitialViewController()!
+            airdrop.title = title
             self.show(airdrop, sender: nil)
+        case 1:
+            let QRcode = UIStoryboard.init(name: "AVFoundationQRcode", bundle: nil).instantiateInitialViewController()!
+            QRcode.title = title
+            self.show(QRcode, sender: nil)
+        case 2:
+            let alertrC = UIStoryboard.init(name: "AlertC", bundle: nil).instantiateInitialViewController()!
+            alertrC.title = title
+            self.show(alertrC, sender: nil)
+        case 3:
+            let animationQuartzCore = UIStoryboard.init(name: "AnimationQuartzCore", bundle: nil).instantiateInitialViewController()!
+            animationQuartzCore.title = title
+            self.show(animationQuartzCore, sender: nil)
+        case 4:
+            let animationGesture = UIStoryboard.init(name: "AnimationGesture", bundle: nil).instantiateInitialViewController()!
+            animationGesture.title = title
+            self.show(animationGesture, sender: nil)
         default:
-            print("%s" + list[indexPath.row], #function)
+            print("%s" + title, #function)
         }
     }
     
