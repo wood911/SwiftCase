@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		415B10C81EB43BDC00A95D27 /* sourcecode.html in Resources */ = {isa = PBXBuildFile; fileRef = 415B10C71EB43BDC00A95D27 /* sourcecode.html */; };
+		415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */; };
+		415B10CF1EB4468D00A95D27 /* UIBarButtonItemEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */; };
+		415B10D21EB58B5100A95D27 /* AVFoundationQRcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */; };
+		415B10D41EB58B7C00A95D27 /* QRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10D31EB58B7C00A95D27 /* QRcodeViewController.swift */; };
+		415B10D61EB58C3900A95D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415B10D51EB58C3900A95D27 /* AVFoundation.framework */; };
+		415B10D81EB5959300A95D27 /* avfoundationqrcode.html in Resources */ = {isa = PBXBuildFile; fileRef = 415B10D71EB5959300A95D27 /* avfoundationqrcode.html */; };
+		415B10DA1EB5993400A95D27 /* airdrop2.html in Resources */ = {isa = PBXBuildFile; fileRef = 415B10D91EB5993400A95D27 /* airdrop2.html */; };
+		415B10DC1EB59AF000A95D27 /* airdrop.html in Resources */ = {isa = PBXBuildFile; fileRef = 415B10DB1EB59AF000A95D27 /* airdrop.html */; };
+		415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */; };
+		415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10E01EB5A64B00A95D27 /* AlertViewController.swift */; };
+		41EB26821EB5B24500480186 /* alertc.html in Resources */ = {isa = PBXBuildFile; fileRef = 41EB26811EB5B24500480186 /* alertc.html */; };
+		41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */; };
+		41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */; };
+		41EB26891EB5BECF00480186 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EB26881EB5BECF00480186 /* QuartzCore.framework */; };
+		41EB268B1EB5C57500480186 /* animationquartzcore.html in Resources */ = {isa = PBXBuildFile; fileRef = 41EB268A1EB5C57500480186 /* animationquartzcore.html */; };
+		41EB268E1EB5CBCA00480186 /* AnimationGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB268D1EB5CBCA00480186 /* AnimationGestureViewController.swift */; };
+		41EB26901EB5CBD700480186 /* AnimationGesture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EB268F1EB5CBD700480186 /* AnimationGesture.storyboard */; };
+		41EB26921EB5D71000480186 /* animationgesture.html in Resources */ = {isa = PBXBuildFile; fileRef = 41EB26911EB5D71000480186 /* animationgesture.html */; };
+		41EB26951EB5D8D100480186 /* BasicAgenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EB26941EB5D8D100480186 /* BasicAgenda.storyboard */; };
+		41EB26971EB5DB9B00480186 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26961EB5DB9B00480186 /* ContactListViewController.swift */; };
+		41EB26991EB5DBAB00480186 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26981EB5DBAB00480186 /* ContactDetailViewController.swift */; };
+		41EB269B1EB5DBC800480186 /* ContactAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB269A1EB5DBC800480186 /* ContactAddViewController.swift */; };
 		605DD4111EB2CB13001C873C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DD4101EB2CB13001C873C /* AppDelegate.swift */; };
 		605DD4131EB2CB13001C873C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DD4121EB2CB13001C873C /* ViewController.swift */; };
 		605DD4161EB2CB13001C873C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605DD4141EB2CB13001C873C /* Main.storyboard */; };
@@ -22,10 +45,32 @@
 		605DD4AC1EB34147001C873C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605DD4AB1EB34147001C873C /* MediaPlayer.framework */; };
 		605DD4B31EB34540001C873C /* agate.css in Resources */ = {isa = PBXBuildFile; fileRef = 605DD4B11EB34540001C873C /* agate.css */; };
 		605DD4B41EB34540001C873C /* highlight.pack.js in Resources */ = {isa = PBXBuildFile; fileRef = 605DD4B21EB34540001C873C /* highlight.pack.js */; };
-		605DD4B61EB34548001C873C /* airdrop.html in Resources */ = {isa = PBXBuildFile; fileRef = 605DD4B51EB34548001C873C /* airdrop.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		415B10C71EB43BDC00A95D27 /* sourcecode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sourcecode.html; sourceTree = "<group>"; };
+		415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCodeEx.swift; sourceTree = "<group>"; };
+		415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemEx.swift; sourceTree = "<group>"; };
+		415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AVFoundationQRcode.storyboard; sourceTree = "<group>"; };
+		415B10D31EB58B7C00A95D27 /* QRcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRcodeViewController.swift; sourceTree = "<group>"; };
+		415B10D51EB58C3900A95D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		415B10D71EB5959300A95D27 /* avfoundationqrcode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = avfoundationqrcode.html; sourceTree = "<group>"; };
+		415B10D91EB5993400A95D27 /* airdrop2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = airdrop2.html; sourceTree = "<group>"; };
+		415B10DB1EB59AF000A95D27 /* airdrop.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = airdrop.html; sourceTree = "<group>"; };
+		415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertC.storyboard; sourceTree = "<group>"; };
+		415B10E01EB5A64B00A95D27 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		41EB26811EB5B24500480186 /* alertc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = alertc.html; sourceTree = "<group>"; };
+		41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnimationQuartzCore.storyboard; sourceTree = "<group>"; };
+		41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationQuartzCoreViewController.swift; sourceTree = "<group>"; };
+		41EB26881EB5BECF00480186 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		41EB268A1EB5C57500480186 /* animationquartzcore.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = animationquartzcore.html; sourceTree = "<group>"; };
+		41EB268D1EB5CBCA00480186 /* AnimationGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationGestureViewController.swift; sourceTree = "<group>"; };
+		41EB268F1EB5CBD700480186 /* AnimationGesture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnimationGesture.storyboard; sourceTree = "<group>"; };
+		41EB26911EB5D71000480186 /* animationgesture.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = animationgesture.html; sourceTree = "<group>"; };
+		41EB26941EB5D8D100480186 /* BasicAgenda.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BasicAgenda.storyboard; sourceTree = "<group>"; };
+		41EB26961EB5DB9B00480186 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		41EB26981EB5DBAB00480186 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		41EB269A1EB5DBC800480186 /* ContactAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAddViewController.swift; sourceTree = "<group>"; };
 		605DD40D1EB2CB13001C873C /* SwiftCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605DD4101EB2CB13001C873C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605DD4121EB2CB13001C873C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +88,6 @@
 		605DD4AB1EB34147001C873C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		605DD4B11EB34540001C873C /* agate.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = agate.css; sourceTree = "<group>"; };
 		605DD4B21EB34540001C873C /* highlight.pack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.pack.js; sourceTree = "<group>"; };
-		605DD4B51EB34548001C873C /* airdrop.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = airdrop.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EB26891EB5BECF00480186 /* QuartzCore.framework in Frameworks */,
+				415B10D61EB58C3900A95D27 /* AVFoundation.framework in Frameworks */,
 				605DD4AC1EB34147001C873C /* MediaPlayer.framework in Frameworks */,
 				605DD4AA1EB3413E001C873C /* WebKit.framework in Frameworks */,
 			);
@@ -59,6 +105,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		415B10C91EB43CA000A95D27 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */,
+				415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		415B10D01EB58A9600A95D27 /* AVFoundationQRcode */ = {
+			isa = PBXGroup;
+			children = (
+				415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */,
+				415B10D31EB58B7C00A95D27 /* QRcodeViewController.swift */,
+			);
+			path = AVFoundationQRcode;
+			sourceTree = "<group>";
+		};
+		415B10DD1EB5A58A00A95D27 /* AlertC */ = {
+			isa = PBXGroup;
+			children = (
+				415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */,
+				415B10E01EB5A64B00A95D27 /* AlertViewController.swift */,
+			);
+			path = AlertC;
+			sourceTree = "<group>";
+		};
+		41EB26831EB5B8A000480186 /* AnimationQuartzCore */ = {
+			isa = PBXGroup;
+			children = (
+				41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */,
+				41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */,
+			);
+			path = AnimationQuartzCore;
+			sourceTree = "<group>";
+		};
+		41EB268C1EB5CBBA00480186 /* AnimationGesture */ = {
+			isa = PBXGroup;
+			children = (
+				41EB268D1EB5CBCA00480186 /* AnimationGestureViewController.swift */,
+				41EB268F1EB5CBD700480186 /* AnimationGesture.storyboard */,
+			);
+			path = AnimationGesture;
+			sourceTree = "<group>";
+		};
+		41EB26931EB5D8BF00480186 /* BasicAgenda */ = {
+			isa = PBXGroup;
+			children = (
+				41EB26941EB5D8D100480186 /* BasicAgenda.storyboard */,
+				41EB26961EB5DB9B00480186 /* ContactListViewController.swift */,
+				41EB26981EB5DBAB00480186 /* ContactDetailViewController.swift */,
+				41EB269A1EB5DBC800480186 /* ContactAddViewController.swift */,
+			);
+			path = BasicAgenda;
+			sourceTree = "<group>";
+		};
 		605DD4041EB2CB13001C873C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +183,7 @@
 			children = (
 				605DD4251EB2CE65001C873C /* List */,
 				605DD4221EB2CDDA001C873C /* Resource */,
+				415B10C91EB43CA000A95D27 /* Util */,
 				605DD4101EB2CB13001C873C /* AppDelegate.swift */,
 				605DD4121EB2CB13001C873C /* ViewController.swift */,
 				605DD4141EB2CB13001C873C /* Main.storyboard */,
@@ -104,6 +207,11 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				41EB26931EB5D8BF00480186 /* BasicAgenda */,
+				41EB268C1EB5CBBA00480186 /* AnimationGesture */,
+				41EB26831EB5B8A000480186 /* AnimationQuartzCore */,
+				415B10DD1EB5A58A00A95D27 /* AlertC */,
+				415B10D01EB58A9600A95D27 /* AVFoundationQRcode */,
 				605DD4A41EB34010001C873C /* SourceCode */,
 				605DD4261EB2CE7A001C873C /* Airdrop */,
 			);
@@ -123,6 +231,8 @@
 		605DD42F1EB2D90B001C873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41EB26881EB5BECF00480186 /* QuartzCore.framework */,
+				415B10D51EB58C3900A95D27 /* AVFoundation.framework */,
 				605DD4AB1EB34147001C873C /* MediaPlayer.framework */,
 				605DD4A91EB3413E001C873C /* WebKit.framework */,
 			);
@@ -140,7 +250,13 @@
 		605DD4B01EB34517001C873C /* web */ = {
 			isa = PBXGroup;
 			children = (
-				605DD4B51EB34548001C873C /* airdrop.html */,
+				41EB26911EB5D71000480186 /* animationgesture.html */,
+				41EB268A1EB5C57500480186 /* animationquartzcore.html */,
+				41EB26811EB5B24500480186 /* alertc.html */,
+				415B10DB1EB59AF000A95D27 /* airdrop.html */,
+				415B10D91EB5993400A95D27 /* airdrop2.html */,
+				415B10D71EB5959300A95D27 /* avfoundationqrcode.html */,
+				415B10C71EB43BDC00A95D27 /* sourcecode.html */,
 				605DD4B11EB34540001C873C /* agate.css */,
 				605DD4B21EB34540001C873C /* highlight.pack.js */,
 			);
@@ -208,13 +324,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				605DD41B1EB2CB13001C873C /* LaunchScreen.storyboard in Resources */,
+				41EB26821EB5B24500480186 /* alertc.html in Resources */,
 				605DD4B41EB34540001C873C /* highlight.pack.js in Resources */,
+				41EB26951EB5D8D100480186 /* BasicAgenda.storyboard in Resources */,
+				415B10D81EB5959300A95D27 /* avfoundationqrcode.html in Resources */,
+				415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */,
+				41EB26901EB5CBD700480186 /* AnimationGesture.storyboard in Resources */,
+				41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */,
 				605DD4181EB2CB13001C873C /* Assets.xcassets in Resources */,
 				605DD4241EB2CDED001C873C /* ProjectList.plist in Resources */,
 				605DD4161EB2CB13001C873C /* Main.storyboard in Resources */,
-				605DD4B61EB34548001C873C /* airdrop.html in Resources */,
+				415B10C81EB43BDC00A95D27 /* sourcecode.html in Resources */,
 				605DD42C1EB2D71C001C873C /* Airdrop.storyboard in Resources */,
+				415B10DA1EB5993400A95D27 /* airdrop2.html in Resources */,
 				605DD4B31EB34540001C873C /* agate.css in Resources */,
+				415B10D21EB58B5100A95D27 /* AVFoundationQRcode.storyboard in Resources */,
+				415B10DC1EB59AF000A95D27 /* airdrop.html in Resources */,
+				41EB268B1EB5C57500480186 /* animationquartzcore.html in Resources */,
+				41EB26921EB5D71000480186 /* animationgesture.html in Resources */,
 				605DD42E1EB2D8DA001C873C /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,10 +354,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				605DD42A1EB2D6B8001C873C /* AirdropURLViewController.swift in Sources */,
+				41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */,
+				41EB268E1EB5CBCA00480186 /* AnimationGestureViewController.swift in Sources */,
 				605DD4A61EB3404D001C873C /* SourceCodeViewController.swift in Sources */,
+				415B10D41EB58B7C00A95D27 /* QRcodeViewController.swift in Sources */,
+				41EB26971EB5DB9B00480186 /* ContactListViewController.swift in Sources */,
+				415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */,
+				415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */,
+				41EB26991EB5DBAB00480186 /* ContactDetailViewController.swift in Sources */,
 				605DD4131EB2CB13001C873C /* ViewController.swift in Sources */,
 				605DD4281EB2D68E001C873C /* AirdropViewController.swift in Sources */,
+				415B10CF1EB4468D00A95D27 /* UIBarButtonItemEx.swift in Sources */,
 				605DD4111EB2CB13001C873C /* AppDelegate.swift in Sources */,
+				41EB269B1EB5DBC800480186 /* ContactAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

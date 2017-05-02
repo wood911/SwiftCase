@@ -3,5 +3,8 @@
 <plist version="1.0">
 <array>
 	<string>Airdrop</string>
+	<string>AVFoundationQRcode</string>
+    <string>AlertC</string>
+    <string>AnimationQuartzCore</string>
 </array>
 </plist>

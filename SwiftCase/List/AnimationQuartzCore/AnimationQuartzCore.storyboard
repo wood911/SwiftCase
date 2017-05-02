@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation Quartz Core View Controller-->
+        <scene sceneID="ZZU-ce-H3u">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="p2e-gI-nXW" customClass="AnimationQuartzCoreViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AFd-Ri-FbN"/>
+                        <viewControllerLayoutGuide type="bottom" id="dFK-9C-2y0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lbV-24-taZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhR-Ke-5LT">
+                                <rect key="frame" x="158" y="203" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="IRON"/>
+                                <connections>
+                                    <action selector="gravity:" destination="p2e-gI-nXW" eventType="touchUpInside" id="orG-pa-i3k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXv-Us-Xj0">
+                                <rect key="frame" x="156" y="263" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="HACK"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFH-JZ-obU">
+                                <rect key="frame" x="159" y="318" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="MOB"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KUu-3A-nwQ" appends="YES" id="RhR-6e-xUg"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="attachment" destination="dFH-JZ-obU" id="uvZ-Kt-ENE"/>
+                        <outlet property="gravity" destination="vhR-Ke-5LT" id="yct-s3-z2K"/>
+                        <outlet property="push" destination="cXv-Us-Xj0" id="Lmh-sJ-cSm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJ3-Tu-WMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="KUu-3A-nwQ">
+                    <connections>
+                        <action selector="handlerAttachment:" destination="p2e-gI-nXW" id="swq-1o-kdU"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-266" y="27"/>
+        </scene>
+    </scenes>
+</document>
