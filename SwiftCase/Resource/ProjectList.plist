@@ -6,5 +6,7 @@
 	<string>AVFoundationQRcode</string>
     <string>AlertC</string>
     <string>AnimationQuartzCore</string>
+    <string>AnimationGesture</string>
+    <string>BasicAgenda</string>
 </array>
 </plist>

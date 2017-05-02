@@ -12,15 +12,15 @@ import AVFoundation
 class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet var preview: UIView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var sendURL: UILabel!
+    
     var previewLayer: AVCaptureVideoPreviewLayer!
     var captureSession: AVCaptureSession!
     var metadataOutput: AVCaptureMetadataOutput!
     var videoDevice: AVCaptureDevice!
     var videoInput: AVCaptureDeviceInput!
     var runnng = false
-    
-    var sendURL: String!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +36,49 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             self.present(alert, animated: true, completion: nil)
             return
         }
+        
         previewLayer.frame = preview.bounds
-        preview.layer.addSublayer(previewLayer)
+        preview.layer.insertSublayer(previewLayer, at: 0)
+        
         // 应用进入后台时停止扫描，进入前台时继续扫描
         NotificationCenter.default.addObserver(self, selector: #selector(startRunning), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(stopRunning), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.startRunning()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.stopRunning()
+    }
+    
+    @IBAction func scan(_ sender: UIButton) {
+        if !runnng {
+            self.startRunning()
+        }
+        imageView.alpha = 0
+    }
+    
+    @IBAction func generate(_ sender: UIButton) {
+        self.stopRunning()
+        // 创建一个二维码种类路径
+        // 二维码：CIQRCodeGenerator  条形码：CICode128BarcodeGenerator
+        let filter = CIFilter(name: "CIQRCodeGenerator")!
+        // 恢复滤镜为默认设置
+        filter.setDefaults()
+        // 准备元数据
+        let metadata = "https://www.github.com".data(using: .utf8)
+        // 设置 滤镜 inputMessage 属性
+        filter.setValue(metadata, forKey: "inputMessage")
+        // 输出二维码图片
+        let image = filter.outputImage!
+        //设置为imageView的图片 
+        imageView.image = UIImage(ciImage: image)
+        imageView.alpha = 1
     }
     
     func startRunning() {
@@ -94,6 +130,16 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             captureSession.addOutput(metadataOutput)
         }
         
+    }
+    
+    // MARK: - AVCaptureMetadataOutputObjectsDelegate
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+        let elemento = metadataObjects.first as? AVMetadataMachineReadableCodeObject
+        if(elemento != nil){
+            // self.stopRunning()
+            print(elemento!.stringValue)
+            sendURL.text = elemento!.stringValue
+        }
     }
 
 }

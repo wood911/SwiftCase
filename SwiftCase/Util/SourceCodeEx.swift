@@ -16,7 +16,11 @@ extension UIViewController {
         item.hander = { _ in
             self.show(SourceCodeViewController(sourceCodeFileName: fileName), sender: nil)
         }
-        self.navigationItem.rightBarButtonItem = item
+        var rightItems: [UIBarButtonItem]! = [item]
+        if let items = navigationItem.rightBarButtonItems {
+            rightItems = rightItems + items
+        }
+        navigationItem.rightBarButtonItems = rightItems
     }
     
 }

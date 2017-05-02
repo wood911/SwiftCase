@@ -65,6 +65,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let animationGesture = UIStoryboard.init(name: "AnimationGesture", bundle: nil).instantiateInitialViewController()!
             animationGesture.title = title
             self.show(animationGesture, sender: nil)
+        case 5:
+            let contact = UIStoryboard.init(name: "BasicAgenda", bundle: nil).instantiateInitialViewController()!
+            contact.title = title
+            self.show(contact, sender: nil)
         default:
             print("%s" + title, #function)
         }

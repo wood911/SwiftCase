@@ -56,9 +56,7 @@ class AlertViewController: UIViewController {
 
         let alertC = UIAlertController(title: "Options", message: "Please select one", preferredStyle: .actionSheet)
 
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
-            self.dismiss(animated: true, completion: nil)
-        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler:nil)
         alertC.addAction(cancel)
 
         // self的生命周期 > AlertSheet，不会造成循环引用
@@ -86,9 +84,7 @@ class AlertViewController: UIViewController {
 
         let alertC = UIAlertController(title: "Login Login", message: "This is an alert", preferredStyle: .alert)
 
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-            self.dismiss(animated: true, completion: nil)
-        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler:nil)
         alertC.addAction(cancel)
 
         // 点击空白处收起键盘 可以用第三方切面处理
