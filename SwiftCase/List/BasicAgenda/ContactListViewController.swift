@@ -14,12 +14,20 @@ class Contact {
     var surname: String
     var phone: String
     var email: String
-    
-    convenience init() {
-        self.init(avatarURL: "", name: "", surname: "", phone: "", email: "")
+    // 便捷构造器 调用其他初始化方法进行初始化
+//    convenience init() {
+//        self.init(avatarURL: "", name: "", surname: "", phone: "", email: "")
+//    }
+    init() {
+        avatarURL = ""
+        name = ""
+        surname = ""
+        phone = ""
+        email = ""
     }
-    
+    // 不声明构造器时，编译器提供默认构造器init()，当声明构造器后，编译器不再提供
     init(avatarURL: String?, name: String?, surname: String?, phone: String?, email: String?) {
+        // 空合运算符 name ?? defaultValue 当name==false时给默认值
         self.avatarURL = avatarURL ?? ""
         self.name = name ?? ""
         self.surname = surname ?? ""
@@ -29,6 +37,29 @@ class Contact {
 }
 
 class ContactCell: UITableViewCell {
+    @IBOutlet private weak var icon: UIImageView!
+    @IBOutlet private weak var name: UILabel!
+    @IBOutlet private weak var phone: UILabel!
+    
+    private var _contact: Contact?
+    var contact: Contact! {
+        set {
+            _contact = newValue
+            icon = UIImageView.init(image: UIImage.init(named: newValue.avatarURL))
+            name.text = newValue.name
+            phone.text = newValue.phone
+        }
+        get {
+            return _contact
+        }
+        // Objective-C -> add observer
+//        willSet (newContact) {
+//            print("\(newContact.name) \(newContact.phone)")
+//        }
+//        didSet {
+//            
+//        }
+    }
     
 }
 
@@ -56,7 +87,7 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ContactCell
-        
+        cell.contact = contactArr[indexPath.row]
         return cell
     }
     
