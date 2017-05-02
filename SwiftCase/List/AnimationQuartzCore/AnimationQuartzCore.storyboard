@@ -33,11 +33,17 @@
                                 <rect key="frame" x="156" y="263" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="HACK"/>
+                                <connections>
+                                    <action selector="push:" destination="p2e-gI-nXW" eventType="touchUpInside" id="fAv-bb-rhL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFH-JZ-obU">
                                 <rect key="frame" x="159" y="318" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="MOB"/>
+                                <connections>
+                                    <action selector="attachment:" destination="p2e-gI-nXW" eventType="touchUpInside" id="dpq-bs-uaN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -82,9 +82,10 @@ class AnimationQuartzCoreViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // 视图展示时捕捉中心点
-        let snap1 = UISnapBehavior(item: gravity, snapTo: gravity.center)
-        let snap2 = UISnapBehavior(item: push, snapTo: push.center)
-        let snap3 = UISnapBehavior(item: attachment, snapTo: attachment.center)
+        let max = UIScreen.main.bounds
+        let snap1 = UISnapBehavior(item: gravity, snapTo: CGPoint(x: max.size.width/2, y: max.size.height/2 - 50))
+        let snap2 = UISnapBehavior(item: push, snapTo: CGPoint(x: max.size.width/2, y: max.size.height/2))
+        let snap3 = UISnapBehavior(item: attachment, snapTo: CGPoint(x: max.size.width/2, y: max.size.height/2 + 50))
         snap1.damping = 1
         snap2.damping = 2
         snap3.damping = 4
