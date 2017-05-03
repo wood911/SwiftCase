@@ -77,6 +77,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let ibeacon = UIStoryboard(name: "iBeacon", bundle: nil).instantiateInitialViewController()!
             ibeacon.title = title
             self.show(ibeacon, sender: nil)
+        case 8:
+            let ibeacon = UIStoryboard(name: "ChatPeer2Peer", bundle: nil).instantiateInitialViewController()!
+            ibeacon.title = title
+            self.show(ibeacon, sender: nil)
         default:
             print("%s" + title, #function)
         }

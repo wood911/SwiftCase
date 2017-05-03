@@ -10,5 +10,6 @@
     <string>BasicAgenda</string>
     <string>Calendar</string>
     <string>iBeacon</string>
+    <string>ChatPeer2Peer</string>
 </array>
 </plist>
