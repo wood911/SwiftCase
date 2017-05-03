@@ -108,6 +108,9 @@ class ChatPeer2PeerViewController: UIViewController, MCBrowserViewControllerDele
     }
     
     @IBAction func sendDoc(_ sender: UIButton) {
+        guard session.connectedPeers.count > 0 else {
+            return
+        }
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "chatpeer2peer", ofType: ".html")!)
         for peerID in session.connectedPeers {
             session.sendResource(at: url, withName: "chatpeertopeer.html", toPeer: peerID, withCompletionHandler: { (error) in
