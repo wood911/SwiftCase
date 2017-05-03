@@ -48,6 +48,17 @@
 		60A53E991EB839830012DD2D /* contactdetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A53E951EB839830012DD2D /* contactdetail.html */; };
 		60A53E9A1EB839830012DD2D /* contactlist.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A53E961EB839830012DD2D /* contactlist.html */; };
 		60A53E9B1EB839830012DD2D /* templete.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A53E971EB839830012DD2D /* templete.html */; };
+		60A53EA91EB88A880012DD2D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A53EA81EB88A880012DD2D /* EventKit.framework */; };
+		60A53EAB1EB88AA80012DD2D /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A53EAA1EB88AA80012DD2D /* Calendar.storyboard */; };
+		60A53EAD1EB88B720012DD2D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A53EAC1EB88B720012DD2D /* CalendarViewController.swift */; };
+		60A53EB61EB97E1B0012DD2D /* calendar.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A53EB51EB97E1B0012DD2D /* calendar.html */; };
+		60A53EBA1EB982400012DD2D /* iBeacon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A53EB91EB982400012DD2D /* iBeacon.storyboard */; };
+		60A53EBC1EB9825B0012DD2D /* IBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A53EBB1EB9825B0012DD2D /* IBeaconViewController.swift */; };
+		60A53EBE1EB982690012DD2D /* MultipeerConnect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A53EBD1EB982690012DD2D /* MultipeerConnect.storyboard */; };
+		60A53EC01EB982770012DD2D /* MultipeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A53EBF1EB982770012DD2D /* MultipeerViewController.swift */; };
+		60A53EC21EB982DB0012DD2D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A53EC11EB982DB0012DD2D /* CoreLocation.framework */; };
+		60A53EC41EB982EF0012DD2D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A53EC31EB982EF0012DD2D /* CoreBluetooth.framework */; };
+		60A53EC61EB9CD5E0012DD2D /* ibeacon.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A53EC51EB9CD5E0012DD2D /* ibeacon.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +105,17 @@
 		60A53E951EB839830012DD2D /* contactdetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contactdetail.html; sourceTree = "<group>"; };
 		60A53E961EB839830012DD2D /* contactlist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contactlist.html; sourceTree = "<group>"; };
 		60A53E971EB839830012DD2D /* templete.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = templete.html; sourceTree = "<group>"; };
+		60A53EA81EB88A880012DD2D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		60A53EAA1EB88AA80012DD2D /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		60A53EAC1EB88B720012DD2D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		60A53EB51EB97E1B0012DD2D /* calendar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = calendar.html; sourceTree = "<group>"; };
+		60A53EB91EB982400012DD2D /* iBeacon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iBeacon.storyboard; sourceTree = "<group>"; };
+		60A53EBB1EB9825B0012DD2D /* IBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconViewController.swift; sourceTree = "<group>"; };
+		60A53EBD1EB982690012DD2D /* MultipeerConnect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipeerConnect.storyboard; sourceTree = "<group>"; };
+		60A53EBF1EB982770012DD2D /* MultipeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerViewController.swift; sourceTree = "<group>"; };
+		60A53EC11EB982DB0012DD2D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		60A53EC31EB982EF0012DD2D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		60A53EC51EB9CD5E0012DD2D /* ibeacon.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ibeacon.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +123,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A53EC41EB982EF0012DD2D /* CoreBluetooth.framework in Frameworks */,
+				60A53EC21EB982DB0012DD2D /* CoreLocation.framework in Frameworks */,
+				60A53EA91EB88A880012DD2D /* EventKit.framework in Frameworks */,
 				41EB26891EB5BECF00480186 /* QuartzCore.framework in Frameworks */,
 				415B10D61EB58C3900A95D27 /* AVFoundation.framework in Frameworks */,
 				605DD4AC1EB34147001C873C /* MediaPlayer.framework in Frameworks */,
@@ -212,6 +237,9 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				60A53EB71EB9822E0012DD2D /* MultipeerConnect */,
+				60A53EB81EB9822E0012DD2D /* iBeacon */,
+				60A53EA71EB88A7D0012DD2D /* Calendar */,
 				41EB26931EB5D8BF00480186 /* BasicAgenda */,
 				41EB268C1EB5CBBA00480186 /* AnimationGesture */,
 				41EB26831EB5B8A000480186 /* AnimationQuartzCore */,
@@ -236,6 +264,9 @@
 		605DD42F1EB2D90B001C873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60A53EC31EB982EF0012DD2D /* CoreBluetooth.framework */,
+				60A53EC11EB982DB0012DD2D /* CoreLocation.framework */,
+				60A53EA81EB88A880012DD2D /* EventKit.framework */,
 				41EB26881EB5BECF00480186 /* QuartzCore.framework */,
 				415B10D51EB58C3900A95D27 /* AVFoundation.framework */,
 				605DD4AB1EB34147001C873C /* MediaPlayer.framework */,
@@ -255,6 +286,8 @@
 		60A53E811EB836B10012DD2D /* www */ = {
 			isa = PBXGroup;
 			children = (
+				60A53EC51EB9CD5E0012DD2D /* ibeacon.html */,
+				60A53EB51EB97E1B0012DD2D /* calendar.html */,
 				60A53E941EB839830012DD2D /* contactadd.html */,
 				60A53E951EB839830012DD2D /* contactdetail.html */,
 				60A53E961EB839830012DD2D /* contactlist.html */,
@@ -270,6 +303,33 @@
 				60A53E891EB836B10012DD2D /* highlight.pack.js */,
 			);
 			path = www;
+			sourceTree = "<group>";
+		};
+		60A53EA71EB88A7D0012DD2D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				60A53EAA1EB88AA80012DD2D /* Calendar.storyboard */,
+				60A53EAC1EB88B720012DD2D /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		60A53EB71EB9822E0012DD2D /* MultipeerConnect */ = {
+			isa = PBXGroup;
+			children = (
+				60A53EBD1EB982690012DD2D /* MultipeerConnect.storyboard */,
+				60A53EBF1EB982770012DD2D /* MultipeerViewController.swift */,
+			);
+			path = MultipeerConnect;
+			sourceTree = "<group>";
+		};
+		60A53EB81EB9822E0012DD2D /* iBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				60A53EB91EB982400012DD2D /* iBeacon.storyboard */,
+				60A53EBB1EB9825B0012DD2D /* IBeaconViewController.swift */,
+			);
+			path = iBeacon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +393,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				605DD41B1EB2CB13001C873C /* LaunchScreen.storyboard in Resources */,
+				60A53EBE1EB982690012DD2D /* MultipeerConnect.storyboard in Resources */,
 				60A53E8E1EB836B10012DD2D /* alertc.html in Resources */,
 				41EB26951EB5D8D100480186 /* BasicAgenda.storyboard in Resources */,
+				60A53EC61EB9CD5E0012DD2D /* ibeacon.html in Resources */,
 				60A53E8B1EB836B10012DD2D /* agate.css in Resources */,
 				415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */,
 				41EB26901EB5CBD700480186 /* AnimationGesture.storyboard in Resources */,
@@ -344,13 +406,16 @@
 				60A53E8F1EB836B10012DD2D /* animationgesture.html in Resources */,
 				41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */,
 				605DD4181EB2CB13001C873C /* Assets.xcassets in Resources */,
+				60A53EAB1EB88AA80012DD2D /* Calendar.storyboard in Resources */,
 				605DD4241EB2CDED001C873C /* ProjectList.plist in Resources */,
+				60A53EBA1EB982400012DD2D /* iBeacon.storyboard in Resources */,
 				60A53E991EB839830012DD2D /* contactdetail.html in Resources */,
 				60A53E921EB836B10012DD2D /* highlight.pack.js in Resources */,
 				605DD4161EB2CB13001C873C /* Main.storyboard in Resources */,
 				605DD42C1EB2D71C001C873C /* Airdrop.storyboard in Resources */,
 				415B10D21EB58B5100A95D27 /* AVFoundationQRcode.storyboard in Resources */,
 				60A53E911EB836B10012DD2D /* avfoundationqrcode.html in Resources */,
+				60A53EB61EB97E1B0012DD2D /* calendar.html in Resources */,
 				60A53E8C1EB836B10012DD2D /* airdrop.html in Resources */,
 				60A53E981EB839830012DD2D /* contactadd.html in Resources */,
 				60A53E9A1EB839830012DD2D /* contactlist.html in Resources */,
@@ -365,11 +430,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A53EAD1EB88B720012DD2D /* CalendarViewController.swift in Sources */,
+				60A53EC01EB982770012DD2D /* MultipeerViewController.swift in Sources */,
 				605DD42A1EB2D6B8001C873C /* AirdropURLViewController.swift in Sources */,
 				41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */,
 				41EB268E1EB5CBCA00480186 /* AnimationGestureViewController.swift in Sources */,
 				605DD4A61EB3404D001C873C /* SourceCodeViewController.swift in Sources */,
 				415B10D41EB58B7C00A95D27 /* QRcodeViewController.swift in Sources */,
+				60A53EBC1EB9825B0012DD2D /* IBeaconViewController.swift in Sources */,
 				41EB26971EB5DB9B00480186 /* ContactListViewController.swift in Sources */,
 				415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */,
 				415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */,

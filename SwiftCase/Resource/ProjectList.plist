@@ -8,5 +8,7 @@
     <string>AnimationQuartzCore</string>
     <string>AnimationGesture</string>
     <string>BasicAgenda</string>
+    <string>Calendar</string>
+    <string>iBeacon</string>
 </array>
 </plist>

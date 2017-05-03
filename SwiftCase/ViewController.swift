@@ -46,29 +46,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // swift中switch更强大，匹配的模式更多（区间匹配、元组deng） 不用写break，fallthrough表示continue
         switch indexPath.row {
         case 0:
-            let airdrop = UIStoryboard.init(name: "Airdrop", bundle: nil).instantiateInitialViewController()!
+            let airdrop = UIStoryboard(name: "Airdrop", bundle: nil).instantiateInitialViewController()!
             airdrop.title = title
             self.show(airdrop, sender: nil)
         case 1:
-            let QRcode = UIStoryboard.init(name: "AVFoundationQRcode", bundle: nil).instantiateInitialViewController()!
+            let QRcode = UIStoryboard(name: "AVFoundationQRcode", bundle: nil).instantiateInitialViewController()!
             QRcode.title = title
             self.show(QRcode, sender: nil)
         case 2:
-            let alertrC = UIStoryboard.init(name: "AlertC", bundle: nil).instantiateInitialViewController()!
+            let alertrC = UIStoryboard(name: "AlertC", bundle: nil).instantiateInitialViewController()!
             alertrC.title = title
             self.show(alertrC, sender: nil)
         case 3:
-            let animationQuartzCore = UIStoryboard.init(name: "AnimationQuartzCore", bundle: nil).instantiateInitialViewController()!
+            let animationQuartzCore = UIStoryboard(name: "AnimationQuartzCore", bundle: nil).instantiateInitialViewController()!
             animationQuartzCore.title = title
             self.show(animationQuartzCore, sender: nil)
         case 4:
-            let animationGesture = UIStoryboard.init(name: "AnimationGesture", bundle: nil).instantiateInitialViewController()!
+            let animationGesture = UIStoryboard(name: "AnimationGesture", bundle: nil).instantiateInitialViewController()!
             animationGesture.title = title
             self.show(animationGesture, sender: nil)
         case 5:
-            let contact = UIStoryboard.init(name: "BasicAgenda", bundle: nil).instantiateInitialViewController()!
+            let contact = UIStoryboard(name: "BasicAgenda", bundle: nil).instantiateInitialViewController()!
             contact.title = title
             self.show(contact, sender: nil)
+        case 6:
+            let calendar = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()!
+            calendar.title = title
+            self.show(calendar, sender: nil)
+        case 7:
+            let ibeacon = UIStoryboard(name: "iBeacon", bundle: nil).instantiateInitialViewController()!
+            ibeacon.title = title
+            self.show(ibeacon, sender: nil)
         default:
             print("%s" + title, #function)
         }
