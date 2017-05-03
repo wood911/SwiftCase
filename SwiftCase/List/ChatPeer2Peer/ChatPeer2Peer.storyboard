@@ -51,8 +51,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send Doc"/>
                                 <connections>
-                                    <action selector="browser:" destination="4SJ-A3-vf8" eventType="touchUpInside" id="Vdo-da-fWD"/>
-                                    <action selector="sendDoc:" destination="4SJ-A3-vf8" eventType="touchUpInside" id="GpC-F3-5VV"/>
+                                    <action selector="sendDoc:" destination="4SJ-A3-vf8" eventType="touchUpInside" id="afc-qC-HHA"/>
                                 </connections>
                             </button>
                         </subviews>
