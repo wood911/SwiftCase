@@ -21,28 +21,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="string" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fW-ii-hv7">
-                                <rect key="frame" x="28" y="613" width="318" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="string" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fW-ii-hv7">
+                                <rect key="frame" x="20" y="616" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.90421652793884277" green="0.31300067901611328" blue="0.37351873517036438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LhM-2z-PEW">
-                                <rect key="frame" x="112" y="161" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LhM-2z-PEW">
+                                <rect key="frame" x="112" y="158.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Zgc-wX-Eio"/>
+                                    <constraint firstAttribute="width" constant="150" id="fLP-LK-dSc"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbm-Nd-YJp">
-                                <rect key="frame" x="64" y="92" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbm-Nd-YJp">
+                                <rect key="frame" x="90" y="40" width="35" height="30"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
                                     <action selector="scan:" destination="QQA-lK-V1B" eventType="touchUpInside" id="NaT-XP-3o4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5x-k6-m2M">
-                                <rect key="frame" x="260" y="92" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5x-k6-m2M">
+                                <rect key="frame" x="235.5" y="40" width="64" height="30"/>
                                 <state key="normal" title="Generate"/>
                                 <connections>
                                     <action selector="generate:" destination="QQA-lK-V1B" eventType="touchUpInside" id="h9W-8K-ycd"/>
@@ -50,6 +50,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pbm-Nd-YJp" firstAttribute="centerX" secondItem="Zkt-D3-4wc" secondAttribute="centerX" constant="-80" id="Qvq-mX-lqL"/>
+                            <constraint firstItem="VVh-66-taD" firstAttribute="top" secondItem="0fW-ii-hv7" secondAttribute="bottom" constant="30" id="VaT-a4-uhv"/>
+                            <constraint firstItem="h5x-k6-m2M" firstAttribute="centerX" secondItem="Zkt-D3-4wc" secondAttribute="centerX" constant="80" id="eAn-hF-tFu"/>
+                            <constraint firstItem="LhM-2z-PEW" firstAttribute="centerX" secondItem="Zkt-D3-4wc" secondAttribute="centerX" id="hJk-9u-Olr"/>
+                            <constraint firstAttribute="trailing" secondItem="0fW-ii-hv7" secondAttribute="trailing" constant="20" id="ol8-UO-hAM"/>
+                            <constraint firstItem="0fW-ii-hv7" firstAttribute="leading" secondItem="Zkt-D3-4wc" secondAttribute="leading" constant="20" id="tg5-gu-9QQ"/>
+                            <constraint firstItem="pbm-Nd-YJp" firstAttribute="top" secondItem="h5x-k6-m2M" secondAttribute="top" id="uxN-ok-W0T"/>
+                            <constraint firstItem="LhM-2z-PEW" firstAttribute="centerY" secondItem="Zkt-D3-4wc" secondAttribute="centerY" constant="-100" id="x90-Af-UUU"/>
+                            <constraint firstItem="pbm-Nd-YJp" firstAttribute="top" secondItem="5yt-H8-NmJ" secondAttribute="bottom" constant="20" id="yzM-hF-Bhc"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="LhM-2z-PEW" id="uCO-rk-8AP"/>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nB3-JT-gRS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nB3-JT-gRS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,43 +22,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-9A-gMm">
-                                <rect key="frame" x="149" y="427" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-9A-gMm">
+                                <rect key="frame" x="149" y="368.5" width="77" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="camera:" destination="nB3-JT-gRS" eventType="touchUpInside" id="Ll8-MF-HaN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kz-Ku-A5H">
-                                <rect key="frame" x="165" y="473" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Album"/>
-                                <connections>
-                                    <action selector="album:" destination="nB3-JT-gRS" eventType="touchUpInside" id="HYK-wJ-931"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-Nw-brf">
-                                <rect key="frame" x="169" y="520" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-Nw-brf">
+                                <rect key="frame" x="169.5" y="468.5" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="send:" destination="nB3-JT-gRS" eventType="touchUpInside" id="VU5-QH-veZ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.png" translatesAutoresizingMaskIntoConstraints="NO" id="gPL-kM-y09">
-                                <rect key="frame" x="38" y="86" width="298" height="322"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="gPL-kM-y09">
+                                <rect key="frame" x="30" y="40" width="315" height="315"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2d-gd-6mb">
-                                <rect key="frame" x="25" y="86" width="319" height="322"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2d-gd-6mb">
+                                <rect key="frame" x="30" y="40" width="315" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="v2d-gd-6mb" secondAttribute="height" id="bwX-cm-fKP"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="BQF-4e-Stn" kind="show" id="XOf-Nb-2Um"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kz-Ku-A5H">
+                                <rect key="frame" x="165.5" y="418.5" width="44" height="30"/>
+                                <state key="normal" title="Album"/>
+                                <connections>
+                                    <action selector="album:" destination="nB3-JT-gRS" eventType="touchUpInside" id="HYK-wJ-931"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Kz-Ku-A5H" firstAttribute="centerX" secondItem="Tbb-9A-gMm" secondAttribute="centerX" id="3hi-Nc-R0c"/>
+                            <constraint firstItem="v2d-gd-6mb" firstAttribute="leading" secondItem="gPL-kM-y09" secondAttribute="leading" id="7Ea-6T-82Q"/>
+                            <constraint firstItem="gPL-kM-y09" firstAttribute="leading" secondItem="Nun-Lz-vMU" secondAttribute="leading" constant="30" id="8Tr-CY-t2x"/>
+                            <constraint firstItem="gPL-kM-y09" firstAttribute="top" secondItem="eec-zs-NUb" secondAttribute="bottom" constant="20" id="AMd-kD-FXu"/>
+                            <constraint firstItem="v2d-gd-6mb" firstAttribute="bottom" secondItem="gPL-kM-y09" secondAttribute="bottom" id="C4l-oM-DXy"/>
+                            <constraint firstItem="Tbb-9A-gMm" firstAttribute="centerX" secondItem="Nun-Lz-vMU" secondAttribute="centerX" id="E8j-zM-Re0"/>
+                            <constraint firstItem="v2d-gd-6mb" firstAttribute="trailing" secondItem="gPL-kM-y09" secondAttribute="trailing" id="KqP-hl-qYf"/>
+                            <constraint firstItem="4Kz-Ku-A5H" firstAttribute="top" secondItem="Tbb-9A-gMm" secondAttribute="bottom" constant="20" id="WN4-ad-fe7"/>
+                            <constraint firstItem="v2d-gd-6mb" firstAttribute="top" secondItem="gPL-kM-y09" secondAttribute="top" id="cNO-wZ-5cR"/>
+                            <constraint firstItem="TNa-Nw-brf" firstAttribute="centerX" secondItem="Tbb-9A-gMm" secondAttribute="centerX" id="cXv-MM-Pyv"/>
+                            <constraint firstAttribute="trailing" secondItem="gPL-kM-y09" secondAttribute="trailing" constant="30" id="tSD-kP-xeU"/>
+                            <constraint firstItem="TNa-Nw-brf" firstAttribute="top" secondItem="4Kz-Ku-A5H" secondAttribute="bottom" constant="20" id="ugm-89-ASq"/>
+                            <constraint firstItem="Tbb-9A-gMm" firstAttribute="centerY" secondItem="Nun-Lz-vMU" secondAttribute="centerY" constant="50" id="xGy-hj-Vgl"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="gPL-kM-y09" id="mXJ-Tu-tbu"/>
@@ -79,32 +93,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.swiftdeveloperblog.com" borderStyle="roundedRect" placeholder="url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWP-JV-3KQ">
-                                <rect key="frame" x="58" y="88" width="259" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.swiftdeveloperblog.com" borderStyle="roundedRect" placeholder="url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWP-JV-3KQ">
+                                <rect key="frame" x="62" y="40" width="251" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MM-Xq-erx">
-                                <rect key="frame" x="126" y="153" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MM-Xq-erx">
+                                <rect key="frame" x="89.5" y="90" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="send:" destination="BQF-4e-Stn" eventType="touchUpInside" id="UDR-8d-jDb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wot-n4-8TD">
-                                <rect key="frame" x="225" y="153" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wot-n4-8TD">
+                                <rect key="frame" x="250.5" y="90" width="34" height="30"/>
                                 <state key="normal" title="Load"/>
                                 <connections>
                                     <action selector="load:" destination="BQF-4e-Stn" eventType="touchUpInside" id="aOh-sY-PEd"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2je-m4-VQU">
-                                <rect key="frame" x="23" y="215" width="329" height="364"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2je-m4-VQU">
+                                <rect key="frame" x="0.0" y="140" width="375" height="527"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="BQF-4e-Stn" id="kqm-g7-PGr"/>
@@ -112,6 +122,18 @@
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qWP-JV-3KQ" firstAttribute="top" secondItem="y2i-AO-asi" secondAttribute="bottom" constant="20" id="3pm-Uf-KfJ"/>
+                            <constraint firstItem="2je-m4-VQU" firstAttribute="leading" secondItem="fCQ-UM-Oss" secondAttribute="leading" id="6Jr-30-yxu"/>
+                            <constraint firstAttribute="trailing" secondItem="2je-m4-VQU" secondAttribute="trailing" id="8h3-K3-iHV"/>
+                            <constraint firstItem="6MM-Xq-erx" firstAttribute="top" secondItem="qWP-JV-3KQ" secondAttribute="bottom" constant="20" id="BIk-Je-33m"/>
+                            <constraint firstItem="6MM-Xq-erx" firstAttribute="centerX" secondItem="fCQ-UM-Oss" secondAttribute="centerX" constant="-80" id="Lb9-HE-4tg"/>
+                            <constraint firstItem="qWP-JV-3KQ" firstAttribute="centerX" secondItem="fCQ-UM-Oss" secondAttribute="centerX" id="PJC-NV-whP"/>
+                            <constraint firstItem="Wot-n4-8TD" firstAttribute="centerX" secondItem="fCQ-UM-Oss" secondAttribute="centerX" constant="80" id="XoC-g2-Qvj"/>
+                            <constraint firstItem="Wot-n4-8TD" firstAttribute="top" secondItem="qWP-JV-3KQ" secondAttribute="bottom" constant="20" id="ZuH-vG-RSR"/>
+                            <constraint firstItem="2je-m4-VQU" firstAttribute="top" secondItem="Wot-n4-8TD" secondAttribute="bottom" constant="20" id="fNI-A9-3hK"/>
+                            <constraint firstItem="hAU-Ul-RWK" firstAttribute="top" secondItem="2je-m4-VQU" secondAttribute="bottom" id="lLK-GG-P4O"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="myUrl" destination="qWP-JV-3KQ" id="n4Z-Qe-XHl"/>
@@ -124,6 +146,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image.png" width="500" height="550"/>
+        <image name="image" width="167" height="184"/>
     </resources>
 </document>

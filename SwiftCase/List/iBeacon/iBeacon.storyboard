@@ -21,16 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-vz-OKt">
-                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-vz-OKt">
+                                <rect key="frame" x="0.0" y="98" width="375" height="569"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="OjV-Ay-Qhk">
-                                <rect key="frame" x="142" y="90" width="91" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="OjV-Ay-Qhk">
+                                <rect key="frame" x="142" y="50" width="91" height="29"/>
                                 <segments>
                                     <segment title="Scan"/>
                                     <segment title="Stop"/>
@@ -41,6 +39,14 @@
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OjV-Ay-Qhk" firstAttribute="centerX" secondItem="DGL-4U-vFR" secondAttribute="centerX" id="2PB-ln-vSm"/>
+                            <constraint firstItem="RNN-vz-OKt" firstAttribute="top" secondItem="OjV-Ay-Qhk" secondAttribute="bottom" constant="20" id="IBX-RT-TXR"/>
+                            <constraint firstItem="RNN-vz-OKt" firstAttribute="leading" secondItem="DGL-4U-vFR" secondAttribute="leading" id="TVh-SG-Rm3"/>
+                            <constraint firstItem="gwZ-Up-TEp" firstAttribute="top" secondItem="RNN-vz-OKt" secondAttribute="bottom" id="bP2-nX-d01"/>
+                            <constraint firstItem="OjV-Ay-Qhk" firstAttribute="top" secondItem="FNK-nO-INb" secondAttribute="bottom" constant="30" id="kqh-wD-xye"/>
+                            <constraint firstAttribute="trailing" secondItem="RNN-vz-OKt" secondAttribute="trailing" id="v58-Bq-7Fg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="segment" destination="OjV-Ay-Qhk" id="eie-9e-uz9"/>

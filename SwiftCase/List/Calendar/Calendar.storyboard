@@ -21,52 +21,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-uW-lln">
-                                <rect key="frame" x="72" y="90" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-uW-lln">
+                                <rect key="frame" x="50" y="50" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjY-sZ-V7D">
-                                <rect key="frame" x="138" y="128" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save Calendar"/>
-                                <connections>
-                                    <action selector="saveCalendar:" destination="zro-sh-Gj0" eventType="touchUpInside" id="1jf-No-TqC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifh-Vf-cuX">
-                                <rect key="frame" x="149" y="249" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifh-Vf-cuX">
+                                <rect key="frame" x="149" y="250" width="76" height="30"/>
                                 <state key="normal" title="Save Event"/>
                                 <connections>
                                     <action selector="saveEvent:" destination="zro-sh-Gj0" eventType="touchUpInside" id="A6I-3s-aUI"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="生日" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOG-6l-R1a">
-                                <rect key="frame" x="80" y="166" width="220" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="生日" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOG-6l-R1a">
+                                <rect key="frame" x="50" y="150" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TitleEvent" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0c4-3L-C4R">
-                                <rect key="frame" x="80" y="211" width="220" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TitleEvent" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0c4-3L-C4R">
+                                <rect key="frame" x="50" y="200" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GkE-Dy-Pt2">
-                                <rect key="frame" x="0.0" y="287" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GkE-Dy-Pt2">
+                                <rect key="frame" x="0.0" y="288" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="515410685.59905702">
                                     <!--2017-05-02 09:38:05 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjY-sZ-V7D">
+                                <rect key="frame" x="138" y="100" width="99" height="30"/>
+                                <state key="normal" title="Save Calendar"/>
+                                <connections>
+                                    <action selector="saveCalendar:" destination="zro-sh-Gj0" eventType="touchUpInside" id="1jf-No-TqC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0c4-3L-C4R" firstAttribute="trailing" secondItem="xr5-uW-lln" secondAttribute="trailing" id="0X5-63-Pae"/>
+                            <constraint firstItem="xr5-uW-lln" firstAttribute="leading" secondItem="TcT-Uf-f7u" secondAttribute="leading" constant="50" id="2hE-VH-qqC"/>
+                            <constraint firstItem="ifh-Vf-cuX" firstAttribute="top" secondItem="0c4-3L-C4R" secondAttribute="bottom" constant="20" id="53n-pg-tT8"/>
+                            <constraint firstItem="JjY-sZ-V7D" firstAttribute="top" secondItem="xr5-uW-lln" secondAttribute="bottom" constant="20" id="53r-zb-0dI"/>
+                            <constraint firstAttribute="trailing" secondItem="GkE-Dy-Pt2" secondAttribute="trailing" id="C0o-CG-Od1"/>
+                            <constraint firstItem="EOG-6l-R1a" firstAttribute="top" secondItem="JjY-sZ-V7D" secondAttribute="bottom" constant="20" id="C79-fE-6kY"/>
+                            <constraint firstAttribute="trailing" secondItem="xr5-uW-lln" secondAttribute="trailing" constant="50" id="HtM-D3-OIS"/>
+                            <constraint firstItem="0c4-3L-C4R" firstAttribute="leading" secondItem="xr5-uW-lln" secondAttribute="leading" id="Ju5-xi-BsW"/>
+                            <constraint firstItem="GkE-Dy-Pt2" firstAttribute="top" secondItem="ifh-Vf-cuX" secondAttribute="bottom" constant="8" id="KSe-lh-diF"/>
+                            <constraint firstItem="EOG-6l-R1a" firstAttribute="trailing" secondItem="xr5-uW-lln" secondAttribute="trailing" id="KZT-Rm-1P6"/>
+                            <constraint firstItem="ifh-Vf-cuX" firstAttribute="centerX" secondItem="JjY-sZ-V7D" secondAttribute="centerX" id="Qgh-v1-0w8"/>
+                            <constraint firstItem="JjY-sZ-V7D" firstAttribute="centerX" secondItem="TcT-Uf-f7u" secondAttribute="centerX" id="V35-9z-cJA"/>
+                            <constraint firstItem="xr5-uW-lln" firstAttribute="top" secondItem="UKP-3k-hki" secondAttribute="bottom" constant="30" id="cFT-xp-Y0j"/>
+                            <constraint firstItem="GkE-Dy-Pt2" firstAttribute="leading" secondItem="TcT-Uf-f7u" secondAttribute="leading" id="dhr-TC-09y"/>
+                            <constraint firstItem="EOG-6l-R1a" firstAttribute="leading" secondItem="xr5-uW-lln" secondAttribute="leading" id="oHw-0D-kVF"/>
+                            <constraint firstItem="0c4-3L-C4R" firstAttribute="top" secondItem="EOG-6l-R1a" secondAttribute="bottom" constant="20" id="seZ-Wy-ydL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="GkE-Dy-Pt2" id="cg7-RG-tfp"/>

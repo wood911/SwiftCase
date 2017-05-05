@@ -19,6 +19,7 @@ class ChatPeer2PeerViewController: UIViewController, MCBrowserViewControllerDele
     var session: MCSession!
     // 向用户发出邀请 处理响应，连接助手
     var advertAssistant: MCAdvertiserAssistant!
+    // 搜索周围的设备可以发出会话邀请建立连接
     var browserC: MCBrowserViewController!
     
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class ChatPeer2PeerViewController: UIViewController, MCBrowserViewControllerDele
         
         peerID = MCPeerID(displayName: UIDevice.current.name)
         session = MCSession(peer: peerID)
+        session.delegate = self
         advertAssistant = MCAdvertiserAssistant(serviceType: "Chat", discoveryInfo: nil, session: session)
         browserC = MCBrowserViewController(serviceType: "Chat", session: session)
         browserC.delegate = self

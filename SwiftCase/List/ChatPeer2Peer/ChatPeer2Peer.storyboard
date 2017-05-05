@@ -21,17 +21,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgx-tb-tZ1">
-                                <rect key="frame" x="84" y="82" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgx-tb-tZ1">
+                                <rect key="frame" x="79.5" y="50" width="56" height="30"/>
                                 <state key="normal" title="Browser"/>
                                 <connections>
                                     <action selector="browser:" destination="4SJ-A3-vf8" eventType="touchUpInside" id="ucB-Fk-OG8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DwN-fV-TK6">
-                                <rect key="frame" x="73" y="120" width="229" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bKH-cQ-aYZ">
+                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DwN-fV-TK6">
+                                <rect key="frame" x="50" y="100" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -39,16 +43,8 @@
                                     <outlet property="delegate" destination="4SJ-A3-vf8" id="GNQ-Rt-UkO"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bKH-cQ-aYZ">
-                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30Z-pE-jtK">
-                                <rect key="frame" x="228" y="82" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30Z-pE-jtK">
+                                <rect key="frame" x="234" y="50" width="67" height="30"/>
                                 <state key="normal" title="Send Doc"/>
                                 <connections>
                                     <action selector="sendDoc:" destination="4SJ-A3-vf8" eventType="touchUpInside" id="afc-qC-HHA"/>
@@ -56,6 +52,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DwN-fV-TK6" firstAttribute="leading" secondItem="5BH-SH-Nci" secondAttribute="leading" constant="50" id="0Yi-nZ-epb"/>
+                            <constraint firstItem="bKH-cQ-aYZ" firstAttribute="leading" secondItem="5BH-SH-Nci" secondAttribute="leading" id="3EI-5R-uPA"/>
+                            <constraint firstItem="30Z-pE-jtK" firstAttribute="centerX" secondItem="5BH-SH-Nci" secondAttribute="centerX" constant="80" id="4n9-YN-ojd"/>
+                            <constraint firstItem="bKH-cQ-aYZ" firstAttribute="top" secondItem="DwN-fV-TK6" secondAttribute="bottom" constant="20" id="Ak5-Vs-2rc"/>
+                            <constraint firstItem="Jgx-tb-tZ1" firstAttribute="centerX" secondItem="5BH-SH-Nci" secondAttribute="centerX" constant="-80" id="Qjd-DM-LGq"/>
+                            <constraint firstAttribute="trailing" secondItem="DwN-fV-TK6" secondAttribute="trailing" constant="50" id="WCq-hB-apK"/>
+                            <constraint firstItem="DwN-fV-TK6" firstAttribute="top" secondItem="30Z-pE-jtK" secondAttribute="bottom" constant="20" id="Xtd-Ao-Lw1"/>
+                            <constraint firstItem="30Z-pE-jtK" firstAttribute="top" secondItem="Jgx-tb-tZ1" secondAttribute="top" id="ZXp-gb-HI2"/>
+                            <constraint firstAttribute="trailing" secondItem="bKH-cQ-aYZ" secondAttribute="trailing" id="aBZ-as-1rh"/>
+                            <constraint firstItem="bZI-r8-pOH" firstAttribute="top" secondItem="bKH-cQ-aYZ" secondAttribute="bottom" id="dyj-Nq-qHY"/>
+                            <constraint firstItem="Jgx-tb-tZ1" firstAttribute="top" secondItem="lbq-Ua-DS4" secondAttribute="bottom" constant="30" id="hBL-V3-BzM"/>
+                            <constraint firstItem="DwN-fV-TK6" firstAttribute="centerX" secondItem="5BH-SH-Nci" secondAttribute="centerX" id="hjz-bu-mvU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="input" destination="DwN-fV-TK6" id="Ov9-f1-S7P"/>
@@ -64,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bZ-bT-p4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.799999999999997" y="142.57871064467767"/>
+            <point key="canvasLocation" x="-621" y="27"/>
         </scene>
     </scenes>
 </document>
