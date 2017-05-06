@@ -14,6 +14,7 @@
 		415B10D61EB58C3900A95D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415B10D51EB58C3900A95D27 /* AVFoundation.framework */; };
 		415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */; };
 		415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10E01EB5A64B00A95D27 /* AlertViewController.swift */; };
+		41E59B9E1EBD63F30047BD27 /* WGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E59B9D1EBD63F30047BD27 /* WGridFlowLayout.swift */; };
 		41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */; };
 		41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */; };
 		41EB26891EB5BECF00480186 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EB26881EB5BECF00480186 /* QuartzCore.framework */; };
@@ -23,6 +24,8 @@
 		41EB26971EB5DB9B00480186 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26961EB5DB9B00480186 /* ContactListViewController.swift */; };
 		41EB26991EB5DBAB00480186 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26981EB5DBAB00480186 /* ContactDetailViewController.swift */; };
 		41EB269B1EB5DBC800480186 /* ContactAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB269A1EB5DBC800480186 /* ContactAddViewController.swift */; };
+		41EB269E1EBD5F8C00480186 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EB269D1EBD5F8C00480186 /* CollectionView.storyboard */; };
+		41EB26A01EBD5FA000480186 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB269F1EBD5FA000480186 /* CollectionViewController.swift */; };
 		605DD4111EB2CB13001C873C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DD4101EB2CB13001C873C /* AppDelegate.swift */; };
 		605DD4131EB2CB13001C873C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DD4121EB2CB13001C873C /* ViewController.swift */; };
 		605DD4161EB2CB13001C873C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605DD4141EB2CB13001C873C /* Main.storyboard */; };
@@ -71,6 +74,7 @@
 		415B10D51EB58C3900A95D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertC.storyboard; sourceTree = "<group>"; };
 		415B10E01EB5A64B00A95D27 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		41E59B9D1EBD63F30047BD27 /* WGridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGridFlowLayout.swift; sourceTree = "<group>"; };
 		41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnimationQuartzCore.storyboard; sourceTree = "<group>"; };
 		41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationQuartzCoreViewController.swift; sourceTree = "<group>"; };
 		41EB26881EB5BECF00480186 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -80,6 +84,8 @@
 		41EB26961EB5DB9B00480186 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		41EB26981EB5DBAB00480186 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		41EB269A1EB5DBC800480186 /* ContactAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAddViewController.swift; sourceTree = "<group>"; };
+		41EB269D1EBD5F8C00480186 /* CollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionView.storyboard; sourceTree = "<group>"; };
+		41EB269F1EBD5FA000480186 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		605DD40D1EB2CB13001C873C /* SwiftCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605DD4101EB2CB13001C873C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605DD4121EB2CB13001C873C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +203,16 @@
 			path = BasicAgenda;
 			sourceTree = "<group>";
 		};
+		41EB269C1EBD5F7A00480186 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				41EB269D1EBD5F8C00480186 /* CollectionView.storyboard */,
+				41EB269F1EBD5FA000480186 /* CollectionViewController.swift */,
+				41E59B9D1EBD63F30047BD27 /* WGridFlowLayout.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		605DD4041EB2CB13001C873C = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +258,7 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				41EB269C1EBD5F7A00480186 /* CollectionView */,
 				60A53ECE1EB9DCC90012DD2D /* ChatPeer2Peer */,
 				60A53EB81EB9822E0012DD2D /* iBeacon */,
 				60A53EA71EB88A7D0012DD2D /* Calendar */,
@@ -426,6 +443,7 @@
 				60A53EB61EB97E1B0012DD2D /* calendar.html in Resources */,
 				60A53E8C1EB836B10012DD2D /* airdrop.html in Resources */,
 				60A53E981EB839830012DD2D /* contactadd.html in Resources */,
+				41EB269E1EBD5F8C00480186 /* CollectionView.storyboard in Resources */,
 				60A53E9A1EB839830012DD2D /* contactlist.html in Resources */,
 				60A53E901EB836B10012DD2D /* animationquartzcore.html in Resources */,
 			);
@@ -438,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EB26A01EBD5FA000480186 /* CollectionViewController.swift in Sources */,
 				60A53EAD1EB88B720012DD2D /* CalendarViewController.swift in Sources */,
 				605DD42A1EB2D6B8001C873C /* AirdropURLViewController.swift in Sources */,
 				41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */,
@@ -449,6 +468,7 @@
 				415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */,
 				415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */,
 				41EB26991EB5DBAB00480186 /* ContactDetailViewController.swift in Sources */,
+				41E59B9E1EBD63F30047BD27 /* WGridFlowLayout.swift in Sources */,
 				605DD4131EB2CB13001C873C /* ViewController.swift in Sources */,
 				605DD4281EB2D68E001C873C /* AirdropViewController.swift in Sources */,
 				415B10CF1EB4468D00A95D27 /* UIBarButtonItemEx.swift in Sources */,
