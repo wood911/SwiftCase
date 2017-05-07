@@ -81,6 +81,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let ibeacon = UIStoryboard(name: "ChatPeer2Peer", bundle: nil).instantiateInitialViewController()!
             ibeacon.title = title
             self.show(ibeacon, sender: nil)
+        case 9:
+            let collectionC = UIStoryboard(name: "CollectionView", bundle: nil).instantiateInitialViewController()!
+            collectionC.title = title
+            self.show(collectionC, sender: nil)
         default:
             print("%s" + title, #function)
         }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V1w-CL-USP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Core Animation View Controller-->
+        <scene sceneID="hjJ-cT-Mtq">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="V1w-CL-USP" customClass="CoreAnimationViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s4h-pe-eME"/>
+                        <viewControllerLayoutGuide type="bottom" id="6lM-b9-vsg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fG8-vq-PBy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="3r2-4E-7Gm">
+                                <rect key="frame" x="52" y="64" width="134" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-MX-Zov">
+                                <rect key="frame" x="234" y="607" width="67" height="30"/>
+                                <state key="normal" title="example2"/>
+                                <connections>
+                                    <action selector="example2:" destination="V1w-CL-USP" eventType="touchUpInside" id="0UD-hZ-1Nv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nof-5I-JfM">
+                                <rect key="frame" x="75" y="607" width="65" height="30"/>
+                                <state key="normal" title="example1"/>
+                                <connections>
+                                    <action selector="example1:" destination="V1w-CL-USP" eventType="touchUpInside" id="jA3-7p-Ea9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nof-5I-JfM" firstAttribute="centerY" secondItem="a3d-MX-Zov" secondAttribute="centerY" id="45V-Xy-lie"/>
+                            <constraint firstItem="a3d-MX-Zov" firstAttribute="centerX" secondItem="fG8-vq-PBy" secondAttribute="centerX" constant="80" id="bEw-ff-Gzx"/>
+                            <constraint firstItem="6lM-b9-vsg" firstAttribute="top" secondItem="a3d-MX-Zov" secondAttribute="bottom" constant="30" id="l6e-e6-2by"/>
+                            <constraint firstItem="nof-5I-JfM" firstAttribute="centerX" secondItem="fG8-vq-PBy" secondAttribute="centerX" constant="-80" id="vaw-sc-GbI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="3r2-4E-7Gm" id="gqo-mY-N3f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCa-pJ-j5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.19999999999999" y="200.14992503748127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image1" width="268" height="268"/>
+    </resources>
+</document>
