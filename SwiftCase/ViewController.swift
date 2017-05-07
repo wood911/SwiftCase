@@ -85,6 +85,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let collectionC = UIStoryboard(name: "CollectionView", bundle: nil).instantiateInitialViewController()!
             collectionC.title = title
             self.show(collectionC, sender: nil)
+        case 10:
+            let coreAnimation = UIStoryboard(name: "CoreAnimation", bundle: nil).instantiateInitialViewController()!
+            coreAnimation.title = title
+            self.show(coreAnimation, sender: nil)
+        case 11:
+            let coreData = UIStoryboard(name: "CoreData", bundle: nil).instantiateInitialViewController()!
+            coreData.title = title
+            self.show(coreData, sender: nil)
+        case 12:
+            let coreImage = UIStoryboard(name: "CoreImage", bundle: nil).instantiateInitialViewController()!
+            coreImage.title = title
+            self.show(coreImage, sender: nil)
         default:
             print("%s" + title, #function)
         }

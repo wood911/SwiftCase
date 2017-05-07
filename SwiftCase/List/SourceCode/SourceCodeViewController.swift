@@ -50,17 +50,9 @@ class SourceCodeViewController: UIViewController {
         let rightC = NSLayoutConstraint(item: webView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: 0)
         view.addConstraints([topC, bottomC, leftC, rightC])
         
-        guard (name != nil) else { return }
-        let url = URL(fileURLWithPath: Bundle.main.path(forResource: name!, ofType: "html")!)
-        if #available(iOS 9.0, *) {
+        if let sourceName = name, let path = Bundle.main.path(forResource: sourceName, ofType: "html") {
+            let url = URL(fileURLWithPath: path)
             webView.loadFileURL(url, allowingReadAccessTo: url)
-        } else {
-            let tmpUrl = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("www")
-            try! FileManager.default.createDirectory(at: tmpUrl, withIntermediateDirectories: true, attributes: nil)
-            let dstUrl = tmpUrl.appendingPathComponent(name!)
-            try? FileManager.default.removeItem(at: dstUrl)
-            try! FileManager.default.copyItem(at: url, to: dstUrl)
-            webView.load(URLRequest(url: dstUrl))
         }
         
     }

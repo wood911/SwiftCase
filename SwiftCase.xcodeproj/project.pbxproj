@@ -18,6 +18,16 @@
 		41E59BA01EBDB72C0047BD27 /* collectionview.html in Resources */ = {isa = PBXBuildFile; fileRef = 41E59B9F1EBDB72C0047BD27 /* collectionview.html */; };
 		41E59BA31EBDBCB50047BD27 /* CoreAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E59BA21EBDBCB50047BD27 /* CoreAnimation.storyboard */; };
 		41E59BA51EBDBD680047BD27 /* CoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E59BA41EBDBD680047BD27 /* CoreAnimationViewController.swift */; };
+		41E59BA81EBED4020047BD27 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E59BA71EBED4020047BD27 /* CoreDataViewController.swift */; };
+		41E59BAA1EBED40D0047BD27 /* CoreData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E59BA91EBED40D0047BD27 /* CoreData.storyboard */; };
+		41E59C0D1EBEDAB00047BD27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E59C0C1EBEDAB00047BD27 /* CoreData.framework */; };
+		41E59C0F1EBEDAF10047BD27 /* CoreData.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 41E59C0E1EBEDAF10047BD27 /* CoreData.xcdatamodel */; };
+		41E59C111EBEEC960047BD27 /* coreanimation.html in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C101EBEEC960047BD27 /* coreanimation.html */; };
+		41E59C151EBF06E40047BD27 /* coredata.html in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C141EBF06E40047BD27 /* coredata.html */; };
+		41E59C181EBF072C0047BD27 /* CoreImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C171EBF072C0047BD27 /* CoreImage.storyboard */; };
+		41E59C1A1EBF07510047BD27 /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E59C191EBF07510047BD27 /* CoreImageViewController.swift */; };
+		41E59C1D1EBF3D730047BD27 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C1C1EBF3D730047BD27 /* heart.png */; };
+		41E59C211EBF3F5C0047BD27 /* walle.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C201EBF3F5C0047BD27 /* walle.png */; };
 		41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */; };
 		41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */; };
 		41EB26891EB5BECF00480186 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EB26881EB5BECF00480186 /* QuartzCore.framework */; };
@@ -81,6 +91,16 @@
 		41E59B9F1EBDB72C0047BD27 /* collectionview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = collectionview.html; sourceTree = "<group>"; };
 		41E59BA21EBDBCB50047BD27 /* CoreAnimation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreAnimation.storyboard; sourceTree = "<group>"; };
 		41E59BA41EBDBD680047BD27 /* CoreAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimationViewController.swift; sourceTree = "<group>"; };
+		41E59BA71EBED4020047BD27 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		41E59BA91EBED40D0047BD27 /* CoreData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreData.storyboard; sourceTree = "<group>"; };
+		41E59C0C1EBEDAB00047BD27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		41E59C0E1EBEDAF10047BD27 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		41E59C101EBEEC960047BD27 /* coreanimation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = coreanimation.html; sourceTree = "<group>"; };
+		41E59C141EBF06E40047BD27 /* coredata.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = coredata.html; sourceTree = "<group>"; };
+		41E59C171EBF072C0047BD27 /* CoreImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreImage.storyboard; sourceTree = "<group>"; };
+		41E59C191EBF07510047BD27 /* CoreImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageViewController.swift; sourceTree = "<group>"; };
+		41E59C1C1EBF3D730047BD27 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		41E59C201EBF3F5C0047BD27 /* walle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walle.png; sourceTree = "<group>"; };
 		41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnimationQuartzCore.storyboard; sourceTree = "<group>"; };
 		41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationQuartzCoreViewController.swift; sourceTree = "<group>"; };
 		41EB26881EB5BECF00480186 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -139,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41E59C0D1EBEDAB00047BD27 /* CoreData.framework in Frameworks */,
 				60A53ECD1EB9CE7B0012DD2D /* MultipeerConnectivity.framework in Frameworks */,
 				60A53EC41EB982EF0012DD2D /* CoreBluetooth.framework in Frameworks */,
 				60A53EC21EB982DB0012DD2D /* CoreLocation.framework in Frameworks */,
@@ -187,6 +208,33 @@
 				41E59BA41EBDBD680047BD27 /* CoreAnimationViewController.swift */,
 			);
 			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		41E59BA61EBED3C60047BD27 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				41E59BA71EBED4020047BD27 /* CoreDataViewController.swift */,
+				41E59BA91EBED40D0047BD27 /* CoreData.storyboard */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		41E59C161EBF071C0047BD27 /* CoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				41E59C171EBF072C0047BD27 /* CoreImage.storyboard */,
+				41E59C191EBF07510047BD27 /* CoreImageViewController.swift */,
+			);
+			path = CoreImage;
+			sourceTree = "<group>";
+		};
+		41E59C1B1EBF3D560047BD27 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				41E59C201EBF3F5C0047BD27 /* walle.png */,
+				41E59C1C1EBF3D730047BD27 /* heart.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 		41EB26831EB5B8A000480186 /* AnimationQuartzCore */ = {
@@ -257,6 +305,7 @@
 				605DD4171EB2CB13001C873C /* Assets.xcassets */,
 				605DD4191EB2CB13001C873C /* LaunchScreen.storyboard */,
 				605DD41C1EB2CB13001C873C /* Info.plist */,
+				41E59C0E1EBEDAF10047BD27 /* CoreData.xcdatamodel */,
 			);
 			path = SwiftCase;
 			sourceTree = "<group>";
@@ -264,6 +313,7 @@
 		605DD4221EB2CDDA001C873C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				41E59C1B1EBF3D560047BD27 /* image */,
 				60A53E811EB836B10012DD2D /* www */,
 				605DD4231EB2CDED001C873C /* ProjectList.plist */,
 			);
@@ -273,6 +323,8 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				41E59C161EBF071C0047BD27 /* CoreImage */,
+				41E59BA61EBED3C60047BD27 /* CoreData */,
 				41E59BA11EBDBC9F0047BD27 /* CoreAnimation */,
 				41EB269C1EBD5F7A00480186 /* CollectionView */,
 				60A53ECE1EB9DCC90012DD2D /* ChatPeer2Peer */,
@@ -302,6 +354,7 @@
 		605DD42F1EB2D90B001C873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41E59C0C1EBEDAB00047BD27 /* CoreData.framework */,
 				60A53ECC1EB9CE7B0012DD2D /* MultipeerConnectivity.framework */,
 				60A53EC31EB982EF0012DD2D /* CoreBluetooth.framework */,
 				60A53EC11EB982DB0012DD2D /* CoreLocation.framework */,
@@ -325,6 +378,8 @@
 		60A53E811EB836B10012DD2D /* www */ = {
 			isa = PBXGroup;
 			children = (
+				41E59C141EBF06E40047BD27 /* coredata.html */,
+				41E59C101EBEEC960047BD27 /* coreanimation.html */,
 				41E59B9F1EBDB72C0047BD27 /* collectionview.html */,
 				60A53ED31EB9DE490012DD2D /* chatpeer2peer.html */,
 				60A53EC51EB9CD5E0012DD2D /* ibeacon.html */,
@@ -436,20 +491,24 @@
 				605DD41B1EB2CB13001C873C /* LaunchScreen.storyboard in Resources */,
 				60A53E8E1EB836B10012DD2D /* alertc.html in Resources */,
 				41EB26951EB5D8D100480186 /* BasicAgenda.storyboard in Resources */,
+				41E59C151EBF06E40047BD27 /* coredata.html in Resources */,
 				60A53EC61EB9CD5E0012DD2D /* ibeacon.html in Resources */,
 				60A53E8B1EB836B10012DD2D /* agate.css in Resources */,
 				415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */,
 				41EB26901EB5CBD700480186 /* AnimationGesture.storyboard in Resources */,
+				41E59C1D1EBF3D730047BD27 /* heart.png in Resources */,
 				60A53E931EB836B10012DD2D /* sourcecode.html in Resources */,
 				60A53E8D1EB836B10012DD2D /* airdrop2.html in Resources */,
 				60A53E9B1EB839830012DD2D /* templete.html in Resources */,
 				60A53ED11EB9DCC90012DD2D /* ChatPeer2Peer.storyboard in Resources */,
+				41E59C211EBF3F5C0047BD27 /* walle.png in Resources */,
 				60A53E8F1EB836B10012DD2D /* animationgesture.html in Resources */,
 				41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */,
 				605DD4181EB2CB13001C873C /* Assets.xcassets in Resources */,
 				60A53EAB1EB88AA80012DD2D /* Calendar.storyboard in Resources */,
 				605DD4241EB2CDED001C873C /* ProjectList.plist in Resources */,
 				60A53EBA1EB982400012DD2D /* iBeacon.storyboard in Resources */,
+				41E59BAA1EBED40D0047BD27 /* CoreData.storyboard in Resources */,
 				60A53ED41EB9DE490012DD2D /* chatpeer2peer.html in Resources */,
 				60A53E991EB839830012DD2D /* contactdetail.html in Resources */,
 				41E59BA01EBDB72C0047BD27 /* collectionview.html in Resources */,
@@ -462,8 +521,10 @@
 				60A53EB61EB97E1B0012DD2D /* calendar.html in Resources */,
 				60A53E8C1EB836B10012DD2D /* airdrop.html in Resources */,
 				60A53E981EB839830012DD2D /* contactadd.html in Resources */,
+				41E59C181EBF072C0047BD27 /* CoreImage.storyboard in Resources */,
 				41EB269E1EBD5F8C00480186 /* CollectionView.storyboard in Resources */,
 				60A53E9A1EB839830012DD2D /* contactlist.html in Resources */,
+				41E59C111EBEEC960047BD27 /* coreanimation.html in Resources */,
 				60A53E901EB836B10012DD2D /* animationquartzcore.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +539,14 @@
 				41EB26A01EBD5FA000480186 /* CollectionViewController.swift in Sources */,
 				60A53EAD1EB88B720012DD2D /* CalendarViewController.swift in Sources */,
 				605DD42A1EB2D6B8001C873C /* AirdropURLViewController.swift in Sources */,
+				41E59BA81EBED4020047BD27 /* CoreDataViewController.swift in Sources */,
+				41E59C1A1EBF07510047BD27 /* CoreImageViewController.swift in Sources */,
 				41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */,
 				41EB268E1EB5CBCA00480186 /* AnimationGestureViewController.swift in Sources */,
 				605DD4A61EB3404D001C873C /* SourceCodeViewController.swift in Sources */,
 				415B10D41EB58B7C00A95D27 /* QRcodeViewController.swift in Sources */,
 				60A53EBC1EB9825B0012DD2D /* IBeaconViewController.swift in Sources */,
+				41E59C0F1EBEDAF10047BD27 /* CoreData.xcdatamodel in Sources */,
 				41E59BA51EBDBD680047BD27 /* CoreAnimationViewController.swift in Sources */,
 				41EB26971EB5DB9B00480186 /* ContactListViewController.swift in Sources */,
 				415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */,
@@ -619,7 +683,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UD5YK4KV23;
 				INFOPLIST_FILE = SwiftCase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shepherd.SwiftCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,7 +697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UD5YK4KV23;
 				INFOPLIST_FILE = SwiftCase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shepherd.SwiftCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";

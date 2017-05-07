@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="el2-6e-v1K">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Core Image View Controller-->
+        <scene sceneID="2aw-hg-tgP">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="el2-6e-v1K" customClass="CoreImageViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WPv-7o-j7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="BuG-KA-5Uv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VPW-f8-QVy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="walle.png" translatesAutoresizingMaskIntoConstraints="NO" id="j93-Eh-rrU">
+                                <rect key="frame" x="50" y="61" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX6-8H-CW5">
+                                <rect key="frame" x="77" y="547" width="39" height="30"/>
+                                <state key="normal" title="Sepia">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action:" destination="el2-6e-v1K" eventType="touchUpInside" id="4Sc-7Z-Npe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be4-jl-cVC">
+                                <rect key="frame" x="158.5" y="547" width="58" height="30"/>
+                                <state key="normal" title="Vignette">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8G-hU-tYg">
+                                <rect key="frame" x="269.5" y="547" width="40" height="30"/>
+                                <state key="normal" title="Invert">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbz-rY-9ZW">
+                                <rect key="frame" x="76" y="587" width="41" height="30"/>
+                                <state key="normal" title="Photo">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmf-1g-x65">
+                                <rect key="frame" x="147" y="587" width="81" height="30"/>
+                                <state key="normal" title="Perspective">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc6-Ws-4ha">
+                                <rect key="frame" x="258" y="587" width="63" height="30"/>
+                                <state key="normal" title="Gaussian">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6DO-jD-U79">
+                                <rect key="frame" x="48" y="497" width="279" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="el2-6e-v1K" eventType="valueChanged" id="8pv-hD-S7r"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lmf-1g-x65" firstAttribute="leading" secondItem="zbz-rY-9ZW" secondAttribute="trailing" constant="30" id="7mW-xO-9Xi"/>
+                            <constraint firstItem="be4-jl-cVC" firstAttribute="centerX" secondItem="lmf-1g-x65" secondAttribute="centerX" id="8I7-Vw-8Cs"/>
+                            <constraint firstItem="lmf-1g-x65" firstAttribute="top" secondItem="be4-jl-cVC" secondAttribute="bottom" constant="10" id="C7a-eR-Opu"/>
+                            <constraint firstItem="zbz-rY-9ZW" firstAttribute="centerY" secondItem="lmf-1g-x65" secondAttribute="centerY" id="C8M-a9-GmL"/>
+                            <constraint firstItem="Wc6-Ws-4ha" firstAttribute="leading" secondItem="lmf-1g-x65" secondAttribute="trailing" constant="30" id="EEg-bt-hdM"/>
+                            <constraint firstItem="Wc6-Ws-4ha" firstAttribute="centerY" secondItem="lmf-1g-x65" secondAttribute="centerY" id="Ik5-dY-3PD"/>
+                            <constraint firstItem="u8G-hU-tYg" firstAttribute="centerY" secondItem="be4-jl-cVC" secondAttribute="centerY" id="UTb-Dl-5Iq"/>
+                            <constraint firstItem="GX6-8H-CW5" firstAttribute="centerY" secondItem="be4-jl-cVC" secondAttribute="centerY" id="YHY-gi-zxn"/>
+                            <constraint firstItem="u8G-hU-tYg" firstAttribute="top" secondItem="6DO-jD-U79" secondAttribute="bottom" constant="20" id="ZWX-jX-uuh"/>
+                            <constraint firstItem="BuG-KA-5Uv" firstAttribute="top" secondItem="lmf-1g-x65" secondAttribute="bottom" constant="50" id="dSb-9Z-UVl"/>
+                            <constraint firstItem="GX6-8H-CW5" firstAttribute="centerX" secondItem="zbz-rY-9ZW" secondAttribute="centerX" id="eJ6-dt-9pr"/>
+                            <constraint firstItem="u8G-hU-tYg" firstAttribute="centerX" secondItem="Wc6-Ws-4ha" secondAttribute="centerX" id="eoG-aR-bZ3"/>
+                            <constraint firstItem="6DO-jD-U79" firstAttribute="leading" secondItem="VPW-f8-QVy" secondAttribute="leading" constant="50" id="mfI-tR-ucv"/>
+                            <constraint firstItem="lmf-1g-x65" firstAttribute="centerX" secondItem="VPW-f8-QVy" secondAttribute="centerX" id="qDo-1U-luv"/>
+                            <constraint firstAttribute="trailing" secondItem="6DO-jD-U79" secondAttribute="trailing" constant="50" id="tN4-bm-jFU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="j93-Eh-rrU" id="kJo-d7-Wjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuo-La-CVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233" y="243"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="walle.png" width="1920" height="1080"/>
+    </resources>
+</document>

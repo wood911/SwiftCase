@@ -1,0 +1,109 @@
+//
+//  CoreDataViewController.swift
+//  SwiftCase
+//
+//  Created by 伍腾飞 on 2017/5/7.
+//  Copyright © 2017年 Shepherd. All rights reserved.
+//
+
+import UIKit
+import CoreData
+
+class CoreDataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
+    var results: [Any]?
+    
+    lazy var context = {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    }()
+    
+    lazy var request = { () -> NSFetchRequest<NSFetchRequestResult> in
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
+        request.returnsObjectsAsFaults = false
+        request.sortDescriptors = [NSSortDescriptor(key: "age", ascending: false)]
+        return request
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.addSourceCodeItem("coredata")
+        /**
+         CoreData:(个人觉得设计思路类似Hibernate)
+         
+         1、本质：封装SQL语句/Sqlite3.0中的接口，暴露面向对象的方法/类
+         2、优势：内存数据存到本地文件文件/内存（读取数据快），不需要知道任何SQL语句
+         3、代价：那些类和他们之间关系（手动创建/Xcode自动创建）
+         4、结果控制器：NSFetchedResultsController（从数据库读取数据）和tableView交互
+         优势：缓存请求数据（加速读取）、指定一次读取多少条、指定section对象，变化监听
+         查询/更新/删除：创建NSFetchRequest对象，先取出需要操作的对象做更新操作
+         用户操作的是内存中的模型对象，需要context.save调用协调上操作持久化对象来同步更新Sqlite
+         
+         NSManagedObjectContext:管理模型对象，save通过协调器操作持久化对象来更新Sqlite
+         NSManagedObject:在内存里管理模型对象
+         NSPersistentStoreCoordinator:模型对象和持久化对象之间的桥梁，操作模型对象再持久化到Sqlite
+         NSPersistentStore:管理持久化对象和Sqlite实际交互
+         
+         操作步骤：
+         1、获取上下文
+         2、关联实体
+         3、设置查询条件及排序
+         4、获取数据
+         
+         */
+        
+        for i in 1...30 {
+            let person = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context)
+            person.setValue("name\(i)", forKey: "name")
+            person.setValue(i + 10, forKey: "age")
+            person.setValue(165.0 + Float(i), forKey: "height")
+            person.setValue(50.0 + Float(i), forKey: "weight")
+            
+            do {
+                try context.save()
+            } catch {
+                print("SAVE ERROR")
+            }
+        }
+        
+        results = try! context.fetch(request)
+        
+    }
+    
+    // MARK: - UITableViewDelegate, UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (results?.count)!
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let person = results?[indexPath.row] as! NSManagedObject
+        cell.textLabel?.text = person.value(forKey: "name") as? String
+        cell.detailTextLabel?.text = "age:\(person.value(forKey: "age") ?? "0") height:\(person.value(forKey: "height") ?? "0") cm weight:\(person.value(forKey: "weight") ?? "0") kg"
+        return cell
+    }
+    
+    @IBAction func insertAction(_ sender: UIButton) {
+        
+        let name = sender.superview!.viewWithTag(1) as! UITextField
+        let age = sender.superview!.viewWithTag(2) as! UITextField
+        let height = sender.superview!.viewWithTag(3) as! UITextField
+        let weight = sender.superview!.viewWithTag(4) as! UITextField
+        
+        
+        let person = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context)
+        person.setValue(name.text ?? "", forKey: "name")
+        person.setValue(Int(age.text ?? "0"), forKey: "age")
+        person.setValue(Float(height.text ?? "0"), forKey: "height")
+        person.setValue(Float(weight.text ?? "0"), forKey: "weight")
+        
+        do {
+            try context.save()
+            results = try! context.fetch(request)
+            tableView.reloadData()
+        } catch {
+            print("SAVE ERROR")
+        }
+    }
+
+}

@@ -13,5 +13,7 @@
     <string>ChatPeer2Peer</string>
     <string>CollectionView</string>
     <string>CoreAnimation</string>
+    <string>CoreData</string>
+    <string>CoreImage</string>
 </array>
 </plist>
