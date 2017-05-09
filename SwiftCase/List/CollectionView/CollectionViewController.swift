@@ -44,7 +44,15 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addSourceCodeItem("collectionview")
-        session = URLSession(configuration: URLSessionConfiguration())
+        session = URLSession(configuration: URLSessionConfiguration.default)
+        let flowLayout = WGridFlowLayout()
+        flowLayout.delegate = self
+        collectionView.collectionViewLayout = flowLayout
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        self.map.removeAll()
     }
     
     // MARK: UICollectionViewDelegate, UICollectionViewDataSource
@@ -57,7 +65,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         let URLString = imageURL[indexPath.item]
         unowned let weekItem = item
         download(URLString: URLString) { (data) in
-            (weekItem.viewWithTag(0) as! UIImageView).image = UIImage(data: data)
+            (weekItem.contentView.viewWithTag(1) as! UIImageView).image = UIImage(data: data)
         }
         return item
     }
@@ -68,12 +76,32 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width * 0.5 - 1, height: collectionView.frame.size.width * 0.5 - 1)
+        if indexPath.row == 0 {
+            return CGSize(width: collectionView.frame.width * 0.5 - 1, height: collectionView.frame.width * 0.25 - 1)
+        }
+        return CGSize(width: collectionView.frame.width * 0.5 - 1, height: collectionView.frame.width * 0.5 - 1)
     }
     
     func download(URLString: String, dataBlock: @escaping DataBlock) {
-        if let url = URL(string: URLString) {
-            session.dataTask(with: url, completionHandler: { (data, response, error) in
+        guard URL(string: URLString) != nil else { return }
+        
+        let imageURLString = URLString
+        let range = imageURLString.startIndex..<imageURLString.endIndex
+        let filename = imageURLString.replacingOccurrences(of: "[/:]", with: "", options: .regularExpression, range: range)
+        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
+        let imageCachePath = cachePath + "/image"
+        
+        // 1、从一级缓存memory中读取图片数据
+        let exist = self.map.contains(where: { (key, value) -> Bool in
+            if key == filename {
+                return true
+            }
+            return false
+        })
+        if exist {
+            dataBlock(self.map[filename]!)
+        } else {
+            session.dataTask(with: URL(string: URLString)!, completionHandler: { (data, response, error) in
                 if error != nil {
                     print("ERROR:\(error.debugDescription)")
                     return;
@@ -81,39 +109,17 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
                 let httpResponse = response as! HTTPURLResponse
                 if httpResponse.statusCode == 200 {
                     if let imageData = data {
-                        dataBlock(imageData)
-                        
-                        let imageURLString = (httpResponse.url?.absoluteString)!
-                        let filename = imageURLString.replacingOccurrences(of: "[/:]", with: "", options: .caseInsensitive, range: imageURLString.range(of: imageURLString))
-                        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
-                        let imageCachePath = cachePath + "/image"
-                        
-                        // 1、从一级缓存memory中读取图片数据
-                        let exist = self.map.contains(where: { (key, value) -> Bool in
-                            if key == filename {
-                                return true
-                            }
-                            return false
-                        })
-                        if exist {
-                            dataBlock(self.map[filename]!)
-                        } else {
-                            // 2、从二级缓存disk中读取数据
-                            if FileManager.default.fileExists(atPath: imageCachePath + filename) {
-                                dataBlock(FileManager.default.contents(atPath: imageCachePath + filename)!)
-                            } else {
-                                // 一级缓存 memory
-                                self.map[filename] = data;
-                                // 二级缓存 disk
-                                // 创建目录
-                                try! FileManager.default.createDirectory(atPath: imageCachePath, withIntermediateDirectories: true, attributes: nil)
-                                // 写入图片数据
-                                FileManager.default.createFile(atPath: imageCachePath + filename, contents: data, attributes: nil)
-                            }
-                        }
+                        // 一级缓存 memory
+                        self.map[filename] = imageData;
+                        // 二级缓存 disk
+                        // 创建目录
+                        try! FileManager.default.createDirectory(atPath: imageCachePath, withIntermediateDirectories: true, attributes: nil)
+                        // 写入图片数据
+                        FileManager.default.createFile(atPath: imageCachePath + filename, contents: imageData, attributes: nil)
                     }
                 }
-            })
+            }).resume()
+            
         }
         
     }

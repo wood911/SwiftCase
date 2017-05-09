@@ -90,6 +90,7 @@ class CoreDataViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     @IBAction func insertAction(_ sender: UIButton) {
+        view.endEditing(true)
 
         let name = sender.superview!.viewWithTag(1) as! UITextField
         let age = sender.superview!.viewWithTag(2) as! UITextField

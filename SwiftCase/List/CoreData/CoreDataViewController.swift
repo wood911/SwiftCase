@@ -84,12 +84,12 @@ class CoreDataViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func insertAction(_ sender: UIButton) {
+        view.endEditing(true)
         
         let name = sender.superview!.viewWithTag(1) as! UITextField
         let age = sender.superview!.viewWithTag(2) as! UITextField
         let height = sender.superview!.viewWithTag(3) as! UITextField
         let weight = sender.superview!.viewWithTag(4) as! UITextField
-        
         
         let person = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context)
         person.setValue(name.text ?? "", forKey: "name")
