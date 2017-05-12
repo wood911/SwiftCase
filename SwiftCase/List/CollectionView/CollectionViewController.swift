@@ -101,6 +101,13 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         if exist {
             dataBlock(self.map[filename]!)
         } else {
+            if FileManager.default.fileExists(atPath: imageCachePath + filename) {
+                if let data = FileManager.default.contents(atPath: imageCachePath + filename) {
+                    dataBlock(data)
+                }
+                return
+            }
+            
             session.dataTask(with: URL(string: URLString)!, completionHandler: { (data, response, error) in
                 if error != nil {
                     print("ERROR:\(error.debugDescription)")

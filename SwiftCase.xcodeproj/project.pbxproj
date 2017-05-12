@@ -51,6 +51,13 @@
 		605DD4A61EB3404D001C873C /* SourceCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DD4A51EB3404D001C873C /* SourceCodeViewController.swift */; };
 		605DD4AA1EB3413E001C873C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605DD4A91EB3413E001C873C /* WebKit.framework */; };
 		605DD4AC1EB34147001C873C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605DD4AB1EB34147001C873C /* MediaPlayer.framework */; };
+		60A38BE51EC3036900D63D7B /* DetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A38BE41EC3036900D63D7B /* DetectorViewController.swift */; };
+		60A38BE71EC30D0D00D63D7B /* emotions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60A38BE61EC30D0D00D63D7B /* emotions.jpg */; };
+		60A38BEA1EC3119C00D63D7B /* coreimage.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A38BE81EC3119C00D63D7B /* coreimage.html */; };
+		60A38BEB1EC3119C00D63D7B /* detector.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A38BE91EC3119C00D63D7B /* detector.html */; };
+		60A38BF01EC418EE00D63D7B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A38BEF1EC418EE00D63D7B /* LocationViewController.swift */; };
+		60A38BF21EC418F700D63D7B /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A38BF11EC418F700D63D7B /* Location.storyboard */; };
+		60A38BF41EC4390B00D63D7B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A38BF31EC4390B00D63D7B /* LocationManager.swift */; };
 		60A53E8B1EB836B10012DD2D /* agate.css in Resources */ = {isa = PBXBuildFile; fileRef = 60A53E821EB836B10012DD2D /* agate.css */; };
 		60A53E8C1EB836B10012DD2D /* airdrop.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A53E831EB836B10012DD2D /* airdrop.html */; };
 		60A53E8D1EB836B10012DD2D /* airdrop2.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A53E841EB836B10012DD2D /* airdrop2.html */; };
@@ -126,6 +133,13 @@
 		605DD4A51EB3404D001C873C /* SourceCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCodeViewController.swift; sourceTree = "<group>"; };
 		605DD4A91EB3413E001C873C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		605DD4AB1EB34147001C873C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		60A38BE41EC3036900D63D7B /* DetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectorViewController.swift; sourceTree = "<group>"; };
+		60A38BE61EC30D0D00D63D7B /* emotions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emotions.jpg; sourceTree = "<group>"; };
+		60A38BE81EC3119C00D63D7B /* coreimage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = coreimage.html; sourceTree = "<group>"; };
+		60A38BE91EC3119C00D63D7B /* detector.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detector.html; sourceTree = "<group>"; };
+		60A38BEF1EC418EE00D63D7B /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		60A38BF11EC418F700D63D7B /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		60A38BF31EC4390B00D63D7B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		60A53E821EB836B10012DD2D /* agate.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = agate.css; sourceTree = "<group>"; };
 		60A53E831EB836B10012DD2D /* airdrop.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = airdrop.html; sourceTree = "<group>"; };
 		60A53E841EB836B10012DD2D /* airdrop2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = airdrop2.html; sourceTree = "<group>"; };
@@ -159,10 +173,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A53EC21EB982DB0012DD2D /* CoreLocation.framework in Frameworks */,
 				41E59C0D1EBEDAB00047BD27 /* CoreData.framework in Frameworks */,
 				60A53ECD1EB9CE7B0012DD2D /* MultipeerConnectivity.framework in Frameworks */,
 				60A53EC41EB982EF0012DD2D /* CoreBluetooth.framework in Frameworks */,
-				60A53EC21EB982DB0012DD2D /* CoreLocation.framework in Frameworks */,
 				60A53EA91EB88A880012DD2D /* EventKit.framework in Frameworks */,
 				41EB26891EB5BECF00480186 /* QuartzCore.framework in Frameworks */,
 				415B10D61EB58C3900A95D27 /* AVFoundation.framework in Frameworks */,
@@ -224,6 +238,7 @@
 			children = (
 				41E59C171EBF072C0047BD27 /* CoreImage.storyboard */,
 				41E59C191EBF07510047BD27 /* CoreImageViewController.swift */,
+				60A38BE41EC3036900D63D7B /* DetectorViewController.swift */,
 			);
 			path = CoreImage;
 			sourceTree = "<group>";
@@ -231,6 +246,7 @@
 		41E59C1B1EBF3D560047BD27 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				60A38BE61EC30D0D00D63D7B /* emotions.jpg */,
 				41E59C201EBF3F5C0047BD27 /* walle.png */,
 				41E59C1C1EBF3D730047BD27 /* heart.png */,
 			);
@@ -323,6 +339,7 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				60A38BEE1EC418CA00D63D7B /* CoreLocation */,
 				41E59C161EBF071C0047BD27 /* CoreImage */,
 				41E59BA61EBED3C60047BD27 /* CoreData */,
 				41E59BA11EBDBC9F0047BD27 /* CoreAnimation */,
@@ -375,9 +392,21 @@
 			path = SourceCode;
 			sourceTree = "<group>";
 		};
+		60A38BEE1EC418CA00D63D7B /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				60A38BEF1EC418EE00D63D7B /* LocationViewController.swift */,
+				60A38BF11EC418F700D63D7B /* Location.storyboard */,
+				60A38BF31EC4390B00D63D7B /* LocationManager.swift */,
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
 		60A53E811EB836B10012DD2D /* www */ = {
 			isa = PBXGroup;
 			children = (
+				60A38BE81EC3119C00D63D7B /* coreimage.html */,
+				60A38BE91EC3119C00D63D7B /* detector.html */,
 				41E59C141EBF06E40047BD27 /* coredata.html */,
 				41E59C101EBEEC960047BD27 /* coreanimation.html */,
 				41E59B9F1EBDB72C0047BD27 /* collectionview.html */,
@@ -501,9 +530,11 @@
 				60A53E8D1EB836B10012DD2D /* airdrop2.html in Resources */,
 				60A53E9B1EB839830012DD2D /* templete.html in Resources */,
 				60A53ED11EB9DCC90012DD2D /* ChatPeer2Peer.storyboard in Resources */,
+				60A38BEA1EC3119C00D63D7B /* coreimage.html in Resources */,
 				41E59C211EBF3F5C0047BD27 /* walle.png in Resources */,
 				60A53E8F1EB836B10012DD2D /* animationgesture.html in Resources */,
 				41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */,
+				60A38BEB1EC3119C00D63D7B /* detector.html in Resources */,
 				605DD4181EB2CB13001C873C /* Assets.xcassets in Resources */,
 				60A53EAB1EB88AA80012DD2D /* Calendar.storyboard in Resources */,
 				605DD4241EB2CDED001C873C /* ProjectList.plist in Resources */,
@@ -524,6 +555,8 @@
 				41E59C181EBF072C0047BD27 /* CoreImage.storyboard in Resources */,
 				41EB269E1EBD5F8C00480186 /* CollectionView.storyboard in Resources */,
 				60A53E9A1EB839830012DD2D /* contactlist.html in Resources */,
+				60A38BE71EC30D0D00D63D7B /* emotions.jpg in Resources */,
+				60A38BF21EC418F700D63D7B /* Location.storyboard in Resources */,
 				41E59C111EBEEC960047BD27 /* coreanimation.html in Resources */,
 				60A53E901EB836B10012DD2D /* animationquartzcore.html in Resources */,
 			);
@@ -544,8 +577,11 @@
 				41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */,
 				41EB268E1EB5CBCA00480186 /* AnimationGestureViewController.swift in Sources */,
 				605DD4A61EB3404D001C873C /* SourceCodeViewController.swift in Sources */,
+				60A38BE51EC3036900D63D7B /* DetectorViewController.swift in Sources */,
 				415B10D41EB58B7C00A95D27 /* QRcodeViewController.swift in Sources */,
+				60A38BF01EC418EE00D63D7B /* LocationViewController.swift in Sources */,
 				60A53EBC1EB9825B0012DD2D /* IBeaconViewController.swift in Sources */,
+				60A38BF41EC4390B00D63D7B /* LocationManager.swift in Sources */,
 				41E59C0F1EBEDAF10047BD27 /* CoreData.xcdatamodel in Sources */,
 				41E59BA51EBDBD680047BD27 /* CoreAnimationViewController.swift in Sources */,
 				41EB26971EB5DB9B00480186 /* ContactListViewController.swift in Sources */,
@@ -681,12 +717,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UD5YK4KV23;
 				INFOPLIST_FILE = SwiftCase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shepherd.SwiftCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -695,12 +733,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UD5YK4KV23;
 				INFOPLIST_FILE = SwiftCase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shepherd.SwiftCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

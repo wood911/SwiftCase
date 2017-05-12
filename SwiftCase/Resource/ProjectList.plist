@@ -15,5 +15,6 @@
     <string>CoreAnimation</string>
     <string>CoreData</string>
     <string>CoreImage</string>
+    <string>CoreLocation</string>
 </array>
 </plist>

@@ -15,11 +15,12 @@
 import UIKit
 import AVFoundation
 
-class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UITextFieldDelegate {
 
     @IBOutlet var preview: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var sendURL: UILabel!
+    @IBOutlet weak var inputMessage: UITextField!
     
     var previewLayer: AVCaptureVideoPreviewLayer!
     var captureSession: AVCaptureSession!
@@ -58,31 +59,6 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.stopRunning()
-    }
-    
-    @IBAction func scan(_ sender: UIButton) {
-        if !runnng {
-            self.startRunning()
-        }
-        imageView.alpha = 0
-    }
-    
-    @IBAction func generate(_ sender: UIButton) {
-        self.stopRunning()
-        // 创建一个二维码种类路径
-        // 二维码：CIQRCodeGenerator  条形码：CICode128BarcodeGenerator
-        let filter = CIFilter(name: "CIQRCodeGenerator")!
-        // 恢复滤镜为默认设置
-        filter.setDefaults()
-        // 准备元数据
-        let metadata = "https://www.github.com".data(using: .utf8)
-        // 设置 滤镜 inputMessage 属性
-        filter.setValue(metadata, forKey: "inputMessage")
-        // 输出二维码图片
-        let image = filter.outputImage!
-        //设置为imageView的图片 
-        imageView.image = UIImage(ciImage: image)
-        imageView.alpha = 1
     }
     
     func startRunning() {
@@ -144,6 +120,120 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             print(elemento!.stringValue)
             sendURL.text = elemento!.stringValue
         }
+    }
+    
+    // MARK: - 生成二维码
+    @IBAction func generate(_ sender: UIButton) {
+        self.stopRunning()
+        // 创建一个二维码种类路径
+        // 二维码：CIQRCodeGenerator  条形码：CICode128BarcodeGenerator
+        let filter = CIFilter(name: "CIQRCodeGenerator")!
+        // 恢复滤镜为默认设置
+        filter.setDefaults()
+        // 准备元数据
+        var metaText = "https://www.github.com";
+        if let text = inputMessage.text {
+            if !text.isEmpty {
+                metaText = text
+            }
+        }
+        let metadata = metaText.data(using: .utf8)
+        // 设置 滤镜 inputMessage 属性
+        filter.setValue(metadata, forKey: "inputMessage")
+        filter.setValue("H", forKey: "inputCorrectionLevel")
+        // 输出二维码图片
+        let ciImage = filter.outputImage!
+        
+        // 这样的二维码不清晰，需要重绘一下
+        imageView.image = UIImage(ciImage: redrawImage(ciImage, width: imageView.frame.width))
+        imageView.alpha = 1
+        
+        // 添加logo
+        let width = imageView.frame.width * 0.5 - 30
+        let logo = UIImageView(frame: CGRect(x: width, y: width, width: 60, height: 60))
+        logo.image = UIImage(named: "image")
+        imageView.addSubview(logo)
+    }
+    
+    // MARK: - 扫描二维码
+    @IBAction func scan(_ sender: UIButton) {
+        if !runnng {
+            self.startRunning()
+        }
+        imageView.alpha = 0
+    }
+    
+    // MARK: - 侦测照片中的二维码
+    @IBAction func detect(_ sender: UIButton) {
+        if imageView.alpha > 0 {
+            if let image = imageView.image, let result = detecteImage(image) {
+                sendURL.text = result
+            }
+        }
+    }
+    
+    
+    // MARK: - 重绘 + 滤镜 增加清晰度
+    func redrawImage(_ cgImage: CIImage, width: CGFloat) -> CIImage {
+        // 根据容器得到适合的尺寸
+        let rect = cgImage.extent.integral
+        let scale = min(width / rect.width, width / rect.height)
+        
+        // 获取BitmapContext，设置输出质量high
+        let bmpRef = CGContext(data: nil, width: Int(rect.width * scale), height: Int(rect.height * scale), bitsPerComponent: 8, bytesPerRow: 0, space: CGColorSpaceCreateDeviceGray(), bitmapInfo: CGImageAlphaInfo.none.rawValue)!
+        bmpRef.interpolationQuality = .high
+        bmpRef.scaleBy(x: scale, y: scale)
+        
+        // 默认用GPU渲染，以牺牲浮点数运算精度换取速度
+        let context = CIContext(options: nil)
+        let imageRef = context.createCGImage(cgImage, from: rect)!
+        
+        bmpRef.draw(imageRef, in: rect, byTiling: true)
+        
+        // 原生灰度图片
+        var outputImage = CIImage(cgImage: bmpRef.makeImage()!)
+        
+        // 伪色滤镜
+        var filter = CIFilter(name: "CIFalseColor")!
+        filter.setDefaults()
+        filter.setValue(outputImage, forKey: kCIInputImageKey)
+        filter.setValue(CIColor(red: 99.0 / 255.0, green: 44.0 / 255.0, blue: 83.0 / 255.0), forKey: "inputColor0")
+        filter.setValue(CIColor(red: 1.0, green: 1.0, blue: 1.0), forKey: "inputColor1")
+        outputImage = filter.outputImage!
+        
+        // 兰索斯缩放变化滤镜
+        filter = CIFilter(name: "CILanczosScaleTransform")!
+        filter.setDefaults()
+        filter.setValue(outputImage, forKey: kCIInputImageKey)
+        filter.setValue(1.0, forKey: kCIInputScaleKey)
+        filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
+        outputImage = filter.outputImage!
+        
+        // 细节锐化滤镜
+        filter = CIFilter(name: "CISharpenLuminance")!
+        filter.setDefaults()
+        filter.setValue(outputImage, forKey: kCIInputImageKey)
+        filter.setValue(10.0, forKey: kCIInputSharpnessKey)
+        outputImage = filter.outputImage!
+        
+        return outputImage
+    }
+    
+    // MARK: - 侦测相册中的图片
+    func detecteImage(_ image: UIImage) -> String? {
+        let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
+        let features = detector.features(in: image.ciImage!)
+        if features.count > 0 {
+            let result = (features[0] as! CIQRCodeFeature).messageString
+            return result
+        }
+        return nil
+    }
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

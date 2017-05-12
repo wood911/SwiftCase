@@ -28,10 +28,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LhM-2z-PEW">
-                                <rect key="frame" x="112" y="158.5" width="150" height="150"/>
+                                <rect key="frame" x="87" y="130" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Zgc-wX-Eio"/>
-                                    <constraint firstAttribute="width" constant="150" id="fLP-LK-dSc"/>
+                                    <constraint firstAttribute="height" constant="200" id="Zgc-wX-Eio"/>
+                                    <constraint firstAttribute="width" constant="200" id="fLP-LK-dSc"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbm-Nd-YJp">
@@ -48,22 +48,47 @@
                                     <action selector="generate:" destination="QQA-lK-V1B" eventType="touchUpInside" id="h9W-8K-ycd"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input message to generate QRCode" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QKu-CT-bzA">
+                                <rect key="frame" x="50" y="80" width="275" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wfm-nt-1te"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QQA-lK-V1B" id="nCJ-G9-vNn"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR0-Xv-v5M">
+                                <rect key="frame" x="157" y="40" width="60" height="30"/>
+                                <state key="normal" title="Detector"/>
+                                <connections>
+                                    <action selector="detect:" destination="QQA-lK-V1B" eventType="touchUpInside" id="aOB-7b-fQk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CR0-Xv-v5M" firstAttribute="centerX" secondItem="Zkt-D3-4wc" secondAttribute="centerX" id="9if-dA-Uiv"/>
+                            <constraint firstItem="CR0-Xv-v5M" firstAttribute="centerY" secondItem="pbm-Nd-YJp" secondAttribute="centerY" id="BuI-4x-TP7"/>
+                            <constraint firstItem="QKu-CT-bzA" firstAttribute="top" secondItem="pbm-Nd-YJp" secondAttribute="bottom" constant="10" id="NO6-ke-9Cu"/>
                             <constraint firstItem="pbm-Nd-YJp" firstAttribute="centerX" secondItem="Zkt-D3-4wc" secondAttribute="centerX" constant="-80" id="Qvq-mX-lqL"/>
                             <constraint firstItem="VVh-66-taD" firstAttribute="top" secondItem="0fW-ii-hv7" secondAttribute="bottom" constant="30" id="VaT-a4-uhv"/>
+                            <constraint firstAttribute="trailing" secondItem="QKu-CT-bzA" secondAttribute="trailing" constant="50" id="e1W-Hy-Qxk"/>
+                            <constraint firstItem="LhM-2z-PEW" firstAttribute="top" secondItem="QKu-CT-bzA" secondAttribute="bottom" constant="10" id="e6v-QH-r6H"/>
                             <constraint firstItem="h5x-k6-m2M" firstAttribute="centerX" secondItem="Zkt-D3-4wc" secondAttribute="centerX" constant="80" id="eAn-hF-tFu"/>
                             <constraint firstItem="LhM-2z-PEW" firstAttribute="centerX" secondItem="Zkt-D3-4wc" secondAttribute="centerX" id="hJk-9u-Olr"/>
                             <constraint firstAttribute="trailing" secondItem="0fW-ii-hv7" secondAttribute="trailing" constant="20" id="ol8-UO-hAM"/>
                             <constraint firstItem="0fW-ii-hv7" firstAttribute="leading" secondItem="Zkt-D3-4wc" secondAttribute="leading" constant="20" id="tg5-gu-9QQ"/>
                             <constraint firstItem="pbm-Nd-YJp" firstAttribute="top" secondItem="h5x-k6-m2M" secondAttribute="top" id="uxN-ok-W0T"/>
-                            <constraint firstItem="LhM-2z-PEW" firstAttribute="centerY" secondItem="Zkt-D3-4wc" secondAttribute="centerY" constant="-100" id="x90-Af-UUU"/>
+                            <constraint firstItem="QKu-CT-bzA" firstAttribute="leading" secondItem="Zkt-D3-4wc" secondAttribute="leading" constant="50" id="xdU-GW-Von"/>
                             <constraint firstItem="pbm-Nd-YJp" firstAttribute="top" secondItem="5yt-H8-NmJ" secondAttribute="bottom" constant="20" id="yzM-hF-Bhc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="LhM-2z-PEW" id="uCO-rk-8AP"/>
+                        <outlet property="inputMessage" destination="QKu-CT-bzA" id="vJH-7Q-rvo"/>
                         <outlet property="preview" destination="Zkt-D3-4wc" id="Aj2-qf-ezf"/>
                         <outlet property="sendURL" destination="0fW-ii-hv7" id="iS0-9Y-ug3"/>
                     </connections>

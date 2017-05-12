@@ -97,6 +97,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let coreImage = UIStoryboard(name: "CoreImage", bundle: nil).instantiateInitialViewController()!
             coreImage.title = title
             self.show(coreImage, sender: nil)
+        case 13:
+            let coreLocation = UIStoryboard(name: "Location", bundle: nil).instantiateInitialViewController()!
+            coreLocation.title = title
+            self.show(coreLocation, sender: nil)
         default:
             print("%s" + title, #function)
         }
