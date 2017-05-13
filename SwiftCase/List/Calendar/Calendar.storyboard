@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zro-sh-Gj0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zro-sh-Gj0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifh-Vf-cuX">
-                                <rect key="frame" x="149" y="250" width="76" height="30"/>
+                                <rect key="frame" x="99" y="250" width="76" height="30"/>
                                 <state key="normal" title="Save Event"/>
                                 <connections>
                                     <action selector="saveEvent:" destination="zro-sh-Gj0" eventType="touchUpInside" id="A6I-3s-aUI"/>
@@ -53,27 +53,46 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjY-sZ-V7D">
-                                <rect key="frame" x="138" y="100" width="99" height="30"/>
+                                <rect key="frame" x="88" y="100" width="99" height="30"/>
                                 <state key="normal" title="Save Calendar"/>
                                 <connections>
                                     <action selector="saveCalendar:" destination="zro-sh-Gj0" eventType="touchUpInside" id="1jf-No-TqC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iI2-iL-hUA">
+                                <rect key="frame" x="217" y="100" width="62" height="30"/>
+                                <state key="normal" title="Calendar"/>
+                                <connections>
+                                    <action selector="openCalendar:" destination="zro-sh-Gj0" eventType="touchUpInside" id="O9O-Ni-vZY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIf-qN-C8I">
+                                <rect key="frame" x="205" y="250" width="87" height="30"/>
+                                <state key="normal" title="Delete Event"/>
+                                <connections>
+                                    <action selector="deleteEvent:" destination="zro-sh-Gj0" eventType="touchUpInside" id="c56-QQ-5M2"/>
+                                    <action selector="saveEvent:" destination="zro-sh-Gj0" eventType="touchUpInside" id="ngb-FQ-0TJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0c4-3L-C4R" firstAttribute="trailing" secondItem="xr5-uW-lln" secondAttribute="trailing" id="0X5-63-Pae"/>
+                            <constraint firstItem="NIf-qN-C8I" firstAttribute="leading" secondItem="ifh-Vf-cuX" secondAttribute="trailing" constant="30" id="2Ye-32-M54"/>
                             <constraint firstItem="xr5-uW-lln" firstAttribute="leading" secondItem="TcT-Uf-f7u" secondAttribute="leading" constant="50" id="2hE-VH-qqC"/>
                             <constraint firstItem="ifh-Vf-cuX" firstAttribute="top" secondItem="0c4-3L-C4R" secondAttribute="bottom" constant="20" id="53n-pg-tT8"/>
                             <constraint firstItem="JjY-sZ-V7D" firstAttribute="top" secondItem="xr5-uW-lln" secondAttribute="bottom" constant="20" id="53r-zb-0dI"/>
                             <constraint firstAttribute="trailing" secondItem="GkE-Dy-Pt2" secondAttribute="trailing" id="C0o-CG-Od1"/>
                             <constraint firstItem="EOG-6l-R1a" firstAttribute="top" secondItem="JjY-sZ-V7D" secondAttribute="bottom" constant="20" id="C79-fE-6kY"/>
+                            <constraint firstItem="iI2-iL-hUA" firstAttribute="leading" secondItem="JjY-sZ-V7D" secondAttribute="trailing" constant="30" id="H9G-jq-Ki7"/>
+                            <constraint firstItem="iI2-iL-hUA" firstAttribute="centerY" secondItem="JjY-sZ-V7D" secondAttribute="centerY" id="HKF-wG-3rt"/>
                             <constraint firstAttribute="trailing" secondItem="xr5-uW-lln" secondAttribute="trailing" constant="50" id="HtM-D3-OIS"/>
                             <constraint firstItem="0c4-3L-C4R" firstAttribute="leading" secondItem="xr5-uW-lln" secondAttribute="leading" id="Ju5-xi-BsW"/>
                             <constraint firstItem="GkE-Dy-Pt2" firstAttribute="top" secondItem="ifh-Vf-cuX" secondAttribute="bottom" constant="8" id="KSe-lh-diF"/>
                             <constraint firstItem="EOG-6l-R1a" firstAttribute="trailing" secondItem="xr5-uW-lln" secondAttribute="trailing" id="KZT-Rm-1P6"/>
                             <constraint firstItem="ifh-Vf-cuX" firstAttribute="centerX" secondItem="JjY-sZ-V7D" secondAttribute="centerX" id="Qgh-v1-0w8"/>
-                            <constraint firstItem="JjY-sZ-V7D" firstAttribute="centerX" secondItem="TcT-Uf-f7u" secondAttribute="centerX" id="V35-9z-cJA"/>
+                            <constraint firstItem="NIf-qN-C8I" firstAttribute="centerY" secondItem="ifh-Vf-cuX" secondAttribute="centerY" id="SuO-sa-0jb"/>
+                            <constraint firstItem="JjY-sZ-V7D" firstAttribute="centerX" secondItem="TcT-Uf-f7u" secondAttribute="centerX" constant="-50" id="V35-9z-cJA"/>
                             <constraint firstItem="xr5-uW-lln" firstAttribute="top" secondItem="UKP-3k-hki" secondAttribute="bottom" constant="30" id="cFT-xp-Y0j"/>
                             <constraint firstItem="GkE-Dy-Pt2" firstAttribute="leading" secondItem="TcT-Uf-f7u" secondAttribute="leading" id="dhr-TC-09y"/>
                             <constraint firstItem="EOG-6l-R1a" firstAttribute="leading" secondItem="xr5-uW-lln" secondAttribute="leading" id="oHw-0D-kVF"/>

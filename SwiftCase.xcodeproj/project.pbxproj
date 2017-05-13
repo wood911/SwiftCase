@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4125933A1EC6A5D100DFEC81 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412593391EC6A5D100DFEC81 /* EventKitUI.framework */; };
 		415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */; };
 		415B10CF1EB4468D00A95D27 /* UIBarButtonItemEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */; };
 		415B10D21EB58B5100A95D27 /* AVFoundationQRcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */; };
@@ -80,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		412593391EC6A5D100DFEC81 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCodeEx.swift; sourceTree = "<group>"; };
 		415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemEx.swift; sourceTree = "<group>"; };
 		415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AVFoundationQRcode.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4125933A1EC6A5D100DFEC81 /* EventKitUI.framework in Frameworks */,
 				41E59C0D1EBEDAB00047BD27 /* CoreData.framework in Frameworks */,
 				60A53ECD1EB9CE7B0012DD2D /* MultipeerConnectivity.framework in Frameworks */,
 				60A53EC41EB982EF0012DD2D /* CoreBluetooth.framework in Frameworks */,
@@ -354,6 +357,7 @@
 		605DD42F1EB2D90B001C873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				412593391EC6A5D100DFEC81 /* EventKitUI.framework */,
 				41E59C0C1EBEDAB00047BD27 /* CoreData.framework */,
 				60A53ECC1EB9CE7B0012DD2D /* MultipeerConnectivity.framework */,
 				60A53EC31EB982EF0012DD2D /* CoreBluetooth.framework */,
