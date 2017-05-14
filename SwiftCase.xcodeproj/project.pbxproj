@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4125933A1EC6A5D100DFEC81 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412593391EC6A5D100DFEC81 /* EventKitUI.framework */; };
+		4125933D1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */; };
+		4125933F1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */; };
 		415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */; };
 		415B10CF1EB4468D00A95D27 /* UIBarButtonItemEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */; };
 		415B10D21EB58B5100A95D27 /* AVFoundationQRcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */; };
@@ -82,6 +84,8 @@
 
 /* Begin PBXFileReference section */
 		412593391EC6A5D100DFEC81 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GestureForPhoto.storyboard; sourceTree = "<group>"; };
+		4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureForPhotoViewController.swift; sourceTree = "<group>"; };
 		415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCodeEx.swift; sourceTree = "<group>"; };
 		415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemEx.swift; sourceTree = "<group>"; };
 		415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AVFoundationQRcode.storyboard; sourceTree = "<group>"; };
@@ -177,6 +181,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4125933B1EC6AD8E00DFEC81 /* GestureForPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */,
+				4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */,
+			);
+			path = GestureForPhoto;
+			sourceTree = "<group>";
+		};
 		415B10C91EB43CA000A95D27 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +339,7 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				4125933B1EC6AD8E00DFEC81 /* GestureForPhoto */,
 				41E59C161EBF071C0047BD27 /* CoreImage */,
 				41E59BA61EBED3C60047BD27 /* CoreData */,
 				41E59BA11EBDBC9F0047BD27 /* CoreAnimation */,
@@ -529,6 +543,7 @@
 				41EB269E1EBD5F8C00480186 /* CollectionView.storyboard in Resources */,
 				60A53E9A1EB839830012DD2D /* contactlist.html in Resources */,
 				41E59C111EBEEC960047BD27 /* coreanimation.html in Resources */,
+				4125933D1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard in Resources */,
 				60A53E901EB836B10012DD2D /* animationquartzcore.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +560,7 @@
 				605DD42A1EB2D6B8001C873C /* AirdropURLViewController.swift in Sources */,
 				41E59BA81EBED4020047BD27 /* CoreDataViewController.swift in Sources */,
 				41E59C1A1EBF07510047BD27 /* CoreImageViewController.swift in Sources */,
+				4125933F1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift in Sources */,
 				41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */,
 				41EB268E1EB5CBCA00480186 /* AnimationGestureViewController.swift in Sources */,
 				605DD4A61EB3404D001C873C /* SourceCodeViewController.swift in Sources */,
