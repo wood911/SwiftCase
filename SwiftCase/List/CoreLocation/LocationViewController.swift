@@ -9,16 +9,43 @@
 import UIKit
 import MapKit
 
+extension UIView {
+    
+    public func showMessage(_ message: String) {
+        let label = UILabel()
+        label.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.7)
+        label.layer.cornerRadius = 5.0
+        label.clipsToBounds = true
+        label.text = message
+        label.textAlignment = .center
+        label.numberOfLines = 5
+        label.textColor = UIColor.white
+        label.font = UIFont.systemFont(ofSize: 14)
+        self.addSubview(label)
+//        CGSize size = "".fit
+        let deadlineTime = DispatchTime.now() + DispatchTimeInterval.milliseconds(1500)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            if label.superview == self {
+                label.removeFromSuperview()
+            }
+        }
+    }
+}
+
 class LocationViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    lazy var geocoder = {
+        return CLGeocoder()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.userTrackingMode = .followWithHeading // 带导航的定位
         mapView.isRotateEnabled = false
-        mapView.mapType = .hybridFlyover
+        mapView.mapType = .standard
         
         // 获取用户位置
         LocationManager.shared.currentLocation { (location, cityName, error) in
@@ -26,8 +53,6 @@ class LocationViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
                 print("\(location.coordinate) \(location.altitude) \(cityName)")
             }
         }
-        
-        
         
     }
     
@@ -60,6 +85,14 @@ class LocationViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
         
     }
     
+    // 画线渲染，线宽、颜色
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let render = MKPolylineRenderer(overlay: overlay)
+        render.lineWidth = 3.0
+        render.strokeColor = UIColor.blue
+        return render
+    }
+    
     // MARK: - UISearchBarDelegate
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
@@ -71,55 +104,105 @@ class LocationViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
     }
     
     func getLocation(by address: String) {
-        LocationManager.shared.placemarks(searchBy: address) { (placemarks) in
-            var latitudeDelta: CLLocationDegrees! = 0.0
-            var longitudeDelta: CLLocationDegrees! = 0.0
-            // 取得第一个地标，地标中存储了详细的地址信息
-            // 注意：一个地名可能搜索出多个地址
-            for placemark in placemarks {
-                let location = placemark.location // 位置
-                let region = placemark.region // 区域
-                let name = placemark.name // 地名
-                let country = placemark.country // 国家
-                let locality = placemark.locality // 城市
-                let thoroughfare = placemark.thoroughfare // 街道
-//                let subThoroughfare = placemark.subThoroughfare // 街道相关信息，例如门牌等
-//                let subLocality = placemark.subLocality // 城市相关信息，例如标志性建筑
-//                let administrativeArea = placemark.administrativeArea // 州
-//                let subAdministrativeArea = placemark.subAdministrativeArea // 其他行政区域信息
-//                let postalCode = placemark.postalCode // 邮编
-//                let inlandWater = placemark.inlandWater // 水源、湖泊
-//                let ocean = placemark.ocean // 海洋
-//                let areasOfInterest = placemark.areasOfInterest // 关联的或利益相关的地标
-//                let addressInfo = placemark.addressDictionary // 详细地址信息字典,包含以下部分信息
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            if let placemarks = placemarks {
+                self.mapView.removeAnnotations(self.mapView.annotations)
+                var latitudeDelta: CLLocationDegrees! = 0.0
+                var longitudeDelta: CLLocationDegrees! = 0.0
                 
-                print("\(String(describing: location)) \(String(describing: region)) \(String(describing: name))")
-                
-                // 1、创建标注对象
-                let annotation = MKPointAnnotation()
-                
-                // 2、设置属性
-                annotation.coordinate = (placemark.location?.coordinate)!
-                annotation.title = name
-                annotation.subtitle = (country ?? "") + (locality ?? "") + (thoroughfare ?? "")
-                
-                // 3、添加到地图上
-                self.mapView.addAnnotation(annotation)
-                
-                if let location = location, let userLocation = self.mapView.userLocation.location {
-                    let distance = location.distance(from: userLocation)
-                    // 设置子标题，距离我的位置
-                    let sub = distance > 1000 ? String(format: "%.2f km", distance / 1000.0) : "\(distance) m"
-                    annotation.subtitle = annotation.subtitle! + sub
-                    // 求出距离我的位置的经纬度增量
-                    latitudeDelta = max(abs(location.coordinate.latitude - userLocation.coordinate.latitude), latitudeDelta)
-                    longitudeDelta = max(abs(location.coordinate.longitude - userLocation.coordinate.longitude), longitudeDelta)
+                // 取得第一个地标，地标中存储了详细的地址信息
+                // 注意：一个地名可能搜索出多个地址
+                for placemark in placemarks {
+                    let location = placemark.location // 位置
+                    let region = placemark.region // 区域
+                    let name = placemark.name // 地名
+                    let country = placemark.country // 国家
+                    let locality = placemark.locality // 城市
+                    let thoroughfare = placemark.thoroughfare // 街道
+                    // let subThoroughfare = placemark.subThoroughfare // 街道相关信息，例如门牌等
+                    // let subLocality = placemark.subLocality // 城市相关信息，例如标志性建筑
+                    // let administrativeArea = placemark.administrativeArea // 州
+                    // let subAdministrativeArea = placemark.subAdministrativeArea // 其他行政区域信息
+                    // let postalCode = placemark.postalCode // 邮编
+                    // let inlandWater = placemark.inlandWater // 水源、湖泊
+                    // let ocean = placemark.ocean // 海洋
+                    // let areasOfInterest = placemark.areasOfInterest // 关联的或利益相关的地标
+                    // let addressInfo = placemark.addressDictionary // 详细地址信息字典,包含以下部分信息
+                    
+                    print("\(String(describing: location)) \(String(describing: region)) \(String(describing: name))")
+                    
+                    // 1、创建标注对象
+                    let annotation = MKPointAnnotation()
+                    
+                    // 2、设置属性
+                    annotation.coordinate = (placemark.location?.coordinate)!
+                    annotation.title = name
+                    annotation.subtitle = (country ?? "") + (locality ?? "") + (thoroughfare ?? "")
+                    
+                    // 3、添加到地图上
+                    self.mapView.addAnnotation(annotation)
+                    
+                    if let location = location, let userLocation = self.mapView.userLocation.location {
+                        let distance = location.distance(from: userLocation)
+                        // 设置子标题，距离我的位置
+                        let sub = distance > 1000 ? String(format: "%.2f km", distance / 1000.0) : "\(distance) m"
+                        annotation.subtitle = annotation.subtitle! + sub
+                        // 求出距离我的位置的经纬度增量
+                        latitudeDelta = max(abs(location.coordinate.latitude - userLocation.coordinate.latitude), latitudeDelta)
+                        longitudeDelta = max(abs(location.coordinate.longitude - userLocation.coordinate.longitude), longitudeDelta)
+                    }
                 }
-                
+                // 4、将最大距离作为中心区域
+                self.mapView.setRegion(MKCoordinateRegion(center: self.mapView.userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 2.1 * latitudeDelta, longitudeDelta: 2.1 * longitudeDelta)), animated: true)
+            } else {
+                print(error.debugDescription)
             }
-            // 4、将最大距离作为中心区域
-            self.mapView.setRegion(MKCoordinateRegion(center: self.mapView.userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 2.1 * latitudeDelta, longitudeDelta: 2.1 * longitudeDelta)), animated: true)
         }
+    }
+    
+    
+    // MARK: - UIEvents
+    @IBAction func walk(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+            view.showMessage("开始跑步🏃")
+        } else {
+            sender.isSelected = true
+            view.showMessage("跑步结束")
+        }
+        
+    }
+    
+    @IBAction func userLocation(_ sender: UIButton) {
+        mapView.showsUserLocation = true
+    }
+    
+    
+    /// 根据起点和重点绘制路线
+    ///
+    /// - Parameters:
+    ///   - startMark: 起点
+    ///   - endMark: 重点
+    func route(start startMark: CLPlacemark, end endMark: CLPlacemark) {
+        // 创建请求，设置起点和重点
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem(placemark: MKPlacemark(placemark: startMark))
+        request.destination = MKMapItem(placemark: MKPlacemark(placemark: endMark))
+        
+        // 根据请求信息，计算出路线
+        let direction = MKDirections(request: request)
+        direction.calculate { (response, error) in
+            if let response = response {
+                for route in response.routes {
+                    print("Distance: %.2f km Time: %.1f h", route.distance / 1000.0, route.expectedTravelTime / 3600)
+                    // 转折点连线添加到地图中
+                    for step in route.steps {
+                        self.mapView.add(step.polyline)
+                    }
+                }
+            }
+        }
+        
     }
 
 }

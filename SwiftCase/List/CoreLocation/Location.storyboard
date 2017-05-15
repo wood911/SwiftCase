@@ -38,15 +38,42 @@
                                     <outlet property="delegate" destination="aAl-g0-tv8" id="vQB-oR-eom"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYr-XO-4gd">
+                                <rect key="frame" x="310" y="94" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="CTw-40-fhj"/>
+                                    <constraint firstAttribute="height" constant="35" id="Y7f-L0-EXm"/>
+                                </constraints>
+                                <state key="normal" image="walk"/>
+                                <state key="selected" image="stopwalk"/>
+                                <connections>
+                                    <action selector="walk:" destination="aAl-g0-tv8" eventType="touchUpInside" id="RX4-eB-SOy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYX-tK-8B6">
+                                <rect key="frame" x="310" y="129" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="8uG-p4-eQx"/>
+                                    <constraint firstAttribute="width" constant="35" id="tOe-M0-GgU"/>
+                                </constraints>
+                                <state key="normal" image="user_address"/>
+                                <connections>
+                                    <action selector="userLocation:" destination="aAl-g0-tv8" eventType="touchUpInside" id="JZH-2i-bAo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9vm-sR-xKe" firstAttribute="top" secondItem="U7W-U9-9xx" secondAttribute="bottom" id="1Ky-mv-0Gd"/>
+                            <constraint firstItem="bYX-tK-8B6" firstAttribute="top" secondItem="JYr-XO-4gd" secondAttribute="bottom" id="Ae8-na-Cu4"/>
                             <constraint firstAttribute="trailing" secondItem="HGy-Uh-NJq" secondAttribute="trailing" id="BMx-hr-lov"/>
                             <constraint firstItem="HGy-Uh-NJq" firstAttribute="leading" secondItem="hOl-X8-Wi1" secondAttribute="leading" id="EfY-Zr-4zY"/>
                             <constraint firstAttribute="trailing" secondItem="U7W-U9-9xx" secondAttribute="trailing" id="H2F-oi-xmk"/>
+                            <constraint firstItem="bYX-tK-8B6" firstAttribute="trailing" secondItem="JYr-XO-4gd" secondAttribute="trailing" id="e1r-aZ-oyb"/>
                             <constraint firstItem="HGy-Uh-NJq" firstAttribute="top" secondItem="E4w-hP-SDF" secondAttribute="bottom" id="fuO-aQ-RtW"/>
+                            <constraint firstAttribute="trailing" secondItem="JYr-XO-4gd" secondAttribute="trailing" constant="30" id="gz5-Zh-pvL"/>
                             <constraint firstItem="U7W-U9-9xx" firstAttribute="leading" secondItem="hOl-X8-Wi1" secondAttribute="leading" id="h2N-E6-2Po"/>
+                            <constraint firstItem="JYr-XO-4gd" firstAttribute="top" secondItem="HGy-Uh-NJq" secondAttribute="bottom" constant="30" id="oa3-EI-XWn"/>
                             <constraint firstItem="U7W-U9-9xx" firstAttribute="top" secondItem="HGy-Uh-NJq" secondAttribute="bottom" id="u6h-J2-8IK"/>
                         </constraints>
                     </view>
@@ -59,4 +86,9 @@
             <point key="canvasLocation" x="29.600000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stopwalk" width="12" height="26"/>
+        <image name="user_address" width="20" height="20"/>
+        <image name="walk" width="30" height="32"/>
+    </resources>
 </document>
