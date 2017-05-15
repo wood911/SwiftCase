@@ -94,7 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             coreData.title = title
             self.show(coreData, sender: nil)
         case 12:
-            let coreImage = UIStoryboard(name: "CoreImage", bundle: nil).instantiateInitialViewController()!
+            let coreImage = UIStoryboard(name: "GestureForPhoto", bundle: nil).instantiateInitialViewController()!
             coreImage.title = title
             self.show(coreImage, sender: nil)
         case 13:

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fxr-Xk-VKa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gesture For Photo View Controller-->
+        <scene sceneID="kGt-OW-ju0">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fxr-Xk-VKa" customClass="GestureForPhotoViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tbO-ZG-XGJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBo-jQ-qKk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iVs-Ne-TcW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYC-Sx-M5b">
+                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aYH-R6-KEM">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="300"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="XqY-uj-F8W">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="150"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="penguin_walk01" translatesAutoresizingMaskIntoConstraints="NO" id="tqc-el-cZ5">
+                                                <rect key="frame" x="0.0" y="150" width="187.5" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tqc-el-cZ5" firstAttribute="height" secondItem="XqY-uj-F8W" secondAttribute="height" id="V4d-PG-K8h"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5TC-X2-4f6">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="300"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="H8v-bH-cLd">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="150"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walle.png" translatesAutoresizingMaskIntoConstraints="NO" id="NaZ-Nv-CUC">
+                                                <rect key="frame" x="0.0" y="150" width="187.5" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NaZ-Nv-CUC" firstAttribute="height" secondItem="H8v-bH-cLd" secondAttribute="height" id="5nv-2S-VJf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Qf6-d1-uKB"/>
+                                    <constraint firstItem="5TC-X2-4f6" firstAttribute="width" secondItem="aYH-R6-KEM" secondAttribute="width" id="qbU-kD-Mxs"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NYC-Sx-M5b" firstAttribute="leading" secondItem="iVs-Ne-TcW" secondAttribute="leading" id="6Cd-Bi-cfV"/>
+                            <constraint firstAttribute="trailing" secondItem="NYC-Sx-M5b" secondAttribute="trailing" id="QEJ-hZ-dFt"/>
+                            <constraint firstItem="NYC-Sx-M5b" firstAttribute="top" secondItem="tbO-ZG-XGJ" secondAttribute="bottom" id="wjH-OL-fHS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="imageView" destination="XqY-uj-F8W" collectionClass="NSMutableArray" id="lp3-YU-rTX"/>
+                        <outletCollection property="imageView" destination="H8v-bH-cLd" collectionClass="NSMutableArray" id="cap-Km-fxD"/>
+                        <outletCollection property="imageView" destination="tqc-el-cZ5" collectionClass="NSMutableArray" id="k36-OH-6z4"/>
+                        <outletCollection property="imageView" destination="NaZ-Nv-CUC" collectionClass="NSMutableArray" id="8DG-oL-uAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hsy-LK-dzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231.19999999999999" y="174.96251874062969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="167" height="184"/>
+        <image name="image1" width="268" height="268"/>
+        <image name="penguin_walk01" width="72" height="64"/>
+        <image name="walle.png" width="1920" height="1080"/>
+    </resources>
+</document>
