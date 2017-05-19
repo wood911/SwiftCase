@@ -9,29 +9,6 @@
 import UIKit
 import MapKit
 
-extension UIView {
-    
-    public func showMessage(_ message: String) {
-        let label = UILabel()
-        label.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.7)
-        label.layer.cornerRadius = 5.0
-        label.clipsToBounds = true
-        label.text = message
-        label.textAlignment = .center
-        label.numberOfLines = 5
-        label.textColor = UIColor.white
-        label.font = UIFont.systemFont(ofSize: 14)
-        self.addSubview(label)
-//        CGSize size = "".fit
-        let deadlineTime = DispatchTime.now() + DispatchTimeInterval.milliseconds(1500)
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-            if label.superview == self {
-                label.removeFromSuperview()
-            }
-        }
-    }
-}
-
 class LocationViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!

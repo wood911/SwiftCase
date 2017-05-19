@@ -94,13 +94,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             coreData.title = title
             self.show(coreData, sender: nil)
         case 12:
-            let coreImage = UIStoryboard(name: "GestureForPhoto", bundle: nil).instantiateInitialViewController()!
+            let coreImage = UIStoryboard(name: "CoreImage", bundle: nil).instantiateInitialViewController()!
             coreImage.title = title
             self.show(coreImage, sender: nil)
         case 13:
             let coreLocation = UIStoryboard(name: "Location", bundle: nil).instantiateInitialViewController()!
             coreLocation.title = title
             self.show(coreLocation, sender: nil)
+        case 14:
+            let photoGesture = UIStoryboard(name: "GestureForPhoto", bundle: nil).instantiateInitialViewController()!
+            photoGesture.title = title
+            self.show(photoGesture, sender: nil)
+        case 15:
+            let customKeyboard = UIStoryboard(name: "CustomKeyboard", bundle: nil).instantiateInitialViewController()!
+            customKeyboard.title = title
+            self.show(customKeyboard, sender: nil)
+        case 16:
+            let guidePage = AppGuideViewController()
+            self.present(guidePage, animated: true, completion: nil)
         default:
             print("%s" + title, #function)
         }

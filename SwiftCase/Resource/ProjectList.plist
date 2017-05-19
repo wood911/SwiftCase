@@ -4,17 +4,20 @@
 <array>
 	<string>Airdrop</string>
 	<string>AVFoundationQRcode</string>
-    <string>AlertC</string>
-    <string>AnimationQuartzCore</string>
-    <string>AnimationGesture</string>
-    <string>BasicAgenda</string>
-    <string>Calendar</string>
-    <string>iBeacon</string>
-    <string>ChatPeer2Peer</string>
-    <string>CollectionView</string>
-    <string>CoreAnimation</string>
-    <string>CoreData</string>
-    <string>CoreImage</string>
-    <string>CoreLocation</string>
+	<string>AlertC</string>
+	<string>AnimationQuartzCore</string>
+	<string>AnimationGesture</string>
+	<string>BasicAgenda</string>
+	<string>Calendar</string>
+	<string>iBeacon</string>
+	<string>ChatPeer2Peer</string>
+	<string>CollectionView</string>
+	<string>CoreAnimation</string>
+	<string>CoreData</string>
+	<string>CoreImage</string>
+	<string>CoreLocation</string>
+	<string>GestureForPhoto</string>
+	<string>CustomKeyboard</string>
+	<string>AppGuidePage</string>
 </array>
 </plist>

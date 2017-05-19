@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Cc-eo-TQz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Keyboard View Controller-->
+        <scene sceneID="Ee0-Di-0g4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0Cc-eo-TQz" customClass="CustomKeyboardViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CYG-wq-XdS"/>
+                        <viewControllerLayoutGuide type="bottom" id="7IG-sa-IDN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wvi-JQ-i1L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在设置-通用-键盘中允许第三方键盘SafeKeyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKc-ak-3aO">
+                                <rect key="frame" x="22" y="50" width="331.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.19970616698265076" green="0.19610679149627686" blue="0.20015090703964233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJg-NZ-jz8">
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="poo-7c-N24"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QJg-NZ-jz8" secondAttribute="trailing" constant="20" id="BuX-pb-6vQ"/>
+                            <constraint firstItem="7IG-sa-IDN" firstAttribute="top" secondItem="QJg-NZ-jz8" secondAttribute="bottom" constant="20" id="KOH-Xg-VZ1"/>
+                            <constraint firstItem="QJg-NZ-jz8" firstAttribute="leading" secondItem="Wvi-JQ-i1L" secondAttribute="leading" constant="20" id="N0S-34-bqm"/>
+                            <constraint firstItem="NKc-ak-3aO" firstAttribute="top" secondItem="CYG-wq-XdS" secondAttribute="bottom" constant="30" id="YUJ-Rt-HxM"/>
+                            <constraint firstItem="QJg-NZ-jz8" firstAttribute="centerX" secondItem="Wvi-JQ-i1L" secondAttribute="centerX" id="bdZ-yt-lQ1"/>
+                            <constraint firstItem="NKc-ak-3aO" firstAttribute="centerX" secondItem="Wvi-JQ-i1L" secondAttribute="centerX" id="fX5-E9-GNl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fieldBottom" destination="KOH-Xg-VZ1" id="pdd-Wy-bMJ"/>
+                        <outlet property="textField" destination="QJg-NZ-jz8" id="Fle-Yh-8Rr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6d9-Ct-YJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="206"/>
+        </scene>
+    </scenes>
+</document>
