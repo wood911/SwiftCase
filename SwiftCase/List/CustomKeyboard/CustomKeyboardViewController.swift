@@ -26,7 +26,7 @@ class CustomKeyboardViewController: UIViewController {
     // 键盘升起
     func keyboardWillShow(_ notification: Notification) {
         // 获取键盘动画
-        let option = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UIViewAnimationOptions
+        let option = UIViewAnimationOptions.init(rawValue: notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt)
         // 动画时长
         let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
         // 键盘高度
@@ -41,7 +41,7 @@ class CustomKeyboardViewController: UIViewController {
     // 键盘收起
     func keyboardWillHide(_ notification: Notification) {
         self.fieldBottom.constant = 20
-        let option = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UIViewAnimationOptions
+        let option = UIViewAnimationOptions.init(rawValue: notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt)
         let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
         UIView.animate(withDuration: duration, delay: 0, options: option, animations: { 
             self.view.layoutIfNeeded()

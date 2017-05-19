@@ -67,7 +67,7 @@ class KeyboardViewController: UIInputViewController {
         
         // Perform custom UI setup here
         view.backgroundColor = UIColor.darkGray
-        self.nextKeyboardButton = UIButton(type: .system)
+        self.nextKeyboardButton = UIButton(type: .custom)
         self.nextKeyboardButton.setImage(UIImage(named: "switch_language_white"), for: [])
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false

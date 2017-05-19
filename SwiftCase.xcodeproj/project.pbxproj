@@ -59,6 +59,7 @@
 		608BFFA21ECBF98300196E99 /* CustomKeyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608BFFA11ECBF98300196E99 /* CustomKeyboard.storyboard */; };
 		608BFFAA1ECBF9CE00196E99 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFFA91ECBF9CE00196E99 /* KeyboardViewController.swift */; };
 		608BFFAE1ECBF9CE00196E99 /* CustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 608BFFA71ECBF9CE00196E99 /* CustomKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		608D459B1ECEFAB70078AFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608D459A1ECEFAB70078AFCD /* Assets.xcassets */; };
 		60A38BE51EC3036900D63D7B /* DetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A38BE41EC3036900D63D7B /* DetectorViewController.swift */; };
 		60A38BE71EC30D0D00D63D7B /* emotions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60A38BE61EC30D0D00D63D7B /* emotions.jpg */; };
 		60A38BEA1EC3119C00D63D7B /* coreimage.html in Resources */ = {isa = PBXBuildFile; fileRef = 60A38BE81EC3119C00D63D7B /* coreimage.html */; };
@@ -218,6 +219,7 @@
 		608BFFD81ECC006500196E99 /* 05_generic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 05_generic.playground; sourceTree = "<group>"; };
 		608BFFD91ECC006500196E99 /* 05_struct.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 05_struct.playground; sourceTree = "<group>"; };
 		608BFFDA1ECC006500196E99 /* 05_subscript.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 05_subscript.playground; sourceTree = "<group>"; };
+		608D459A1ECEFAB70078AFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60A38BE41EC3036900D63D7B /* DetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectorViewController.swift; sourceTree = "<group>"; };
 		60A38BE61EC30D0D00D63D7B /* emotions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emotions.jpg; sourceTree = "<group>"; };
 		60A38BE81EC3119C00D63D7B /* coreimage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = coreimage.html; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 			children = (
 				608BFFA91ECBF9CE00196E99 /* KeyboardViewController.swift */,
 				608BFFAB1ECBF9CE00196E99 /* Info.plist */,
+				608D459A1ECEFAB70078AFCD /* Assets.xcassets */,
 			);
 			path = CustomKeyboard;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				608D459B1ECEFAB70078AFCD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
