@@ -112,6 +112,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 16:
             let guidePage = AppGuideViewController()
             self.present(guidePage, animated: true, completion: nil)
+        case 17:
+            let bezierC = BezierViewController()
+            bezierC.title = title
+            self.show(bezierC, sender: nil)
+        case 18:
+            let layoutVFL = VFLViewController()
+            layoutVFL.title = title
+            self.show(layoutVFL, sender: nil)
+        case 19:
+            let cardGame = UIStoryboard(name: "CardGame", bundle: nil).instantiateInitialViewController()!
+            cardGame.title = title
+            self.show(cardGame, sender: nil)
         default:
             print("%s" + title, #function)
         }

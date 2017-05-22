@@ -17,6 +17,28 @@
 		415B10D61EB58C3900A95D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415B10D51EB58C3900A95D27 /* AVFoundation.framework */; };
 		415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */; };
 		415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10E01EB5A64B00A95D27 /* AlertViewController.swift */; };
+		41C8E0CC1ECFD21800E1ACE7 /* BezierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0CB1ECFD21800E1ACE7 /* BezierViewController.swift */; };
+		41C8E0CE1ECFD2A700E1ACE7 /* DrawImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0CD1ECFD2A700E1ACE7 /* DrawImage.swift */; };
+		41C8E0D01ECFD78800E1ACE7 /* DrawString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0CF1ECFD78800E1ACE7 /* DrawString.swift */; };
+		41C8E0D21ECFDC7300E1ACE7 /* DrawShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0D11ECFDC7300E1ACE7 /* DrawShape.swift */; };
+		41C8E0D41ECFE6BD00E1ACE7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0D31ECFE6BD00E1ACE7 /* ProgressView.swift */; };
+		41C8E0DC1ED0012E00E1ACE7 /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0DB1ED0012E00E1ACE7 /* VFLViewController.swift */; };
+		41C8E0DF1ED0132E00E1ACE7 /* CardGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C8E0DE1ED0132E00E1ACE7 /* CardGame.storyboard */; };
+		41C8E0E11ED0134100E1ACE7 /* CardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0E01ED0134100E1ACE7 /* CardGameViewController.swift */; };
+		41C8E0E31ED013AC00E1ACE7 /* cardback.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C8E0E21ED013AC00E1ACE7 /* cardback.png */; };
+		41C8E0E51ED013BA00E1ACE7 /* cardfront.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C8E0E41ED013BA00E1ACE7 /* cardfront.png */; };
+		41C8E0E71ED1275300E1ACE7 /* CardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0E61ED1275300E1ACE7 /* CardGame.swift */; };
+		41C8E0E91ED129A700E1ACE7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0E81ED129A700E1ACE7 /* Card.swift */; };
+		41C8E0EB1ED129BC00E1ACE7 /* Poker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0EA1ED129BC00E1ACE7 /* Poker.swift */; };
+		41C8E0EF1ED174AA00E1ACE7 /* Poetry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C8E0EE1ED174AA00E1ACE7 /* Poetry.storyboard */; };
+		41C8E0F11ED1751D00E1ACE7 /* PoetryMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0F01ED1751D00E1ACE7 /* PoetryMainViewController.swift */; };
+		41C8E0F31ED1752B00E1ACE7 /* PoetryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0F21ED1752B00E1ACE7 /* PoetryListViewController.swift */; };
+		41C8E0F51ED1753800E1ACE7 /* PoetryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0F41ED1753800E1ACE7 /* PoetryDetailViewController.swift */; };
+		41C8E0F71ED175E800E1ACE7 /* Poetry.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C8E0F61ED175E800E1ACE7 /* Poetry.bundle */; };
+		41C8E0F91ED17A5600E1ACE7 /* Poetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0F81ED17A5600E1ACE7 /* Poetry.swift */; };
+		41C8E0FB1ED17A6000E1ACE7 /* PoetryKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0FA1ED17A6000E1ACE7 /* PoetryKind.swift */; };
+		41C8E0FD1ED17BF800E1ACE7 /* PoetryDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0FC1ED17BF800E1ACE7 /* PoetryDBManager.swift */; };
+		41C8E1001ED1864000E1ACE7 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8E0FF1ED1864000E1ACE7 /* libsqlite3.0.tbd */; };
 		41E59B9E1EBD63F30047BD27 /* WGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E59B9D1EBD63F30047BD27 /* WGridFlowLayout.swift */; };
 		41E59BA01EBDB72C0047BD27 /* collectionview.html in Resources */ = {isa = PBXBuildFile; fileRef = 41E59B9F1EBDB72C0047BD27 /* collectionview.html */; };
 		41E59BA31EBDBCB50047BD27 /* CoreAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E59BA21EBDBCB50047BD27 /* CoreAnimation.storyboard */; };
@@ -136,6 +158,29 @@
 		415B10D51EB58C3900A95D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertC.storyboard; sourceTree = "<group>"; };
 		415B10E01EB5A64B00A95D27 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		41C8E0CB1ECFD21800E1ACE7 /* BezierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierViewController.swift; sourceTree = "<group>"; };
+		41C8E0CD1ECFD2A700E1ACE7 /* DrawImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawImage.swift; sourceTree = "<group>"; };
+		41C8E0CF1ECFD78800E1ACE7 /* DrawString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawString.swift; sourceTree = "<group>"; };
+		41C8E0D11ECFDC7300E1ACE7 /* DrawShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawShape.swift; sourceTree = "<group>"; };
+		41C8E0D31ECFE6BD00E1ACE7 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		41C8E0DB1ED0012E00E1ACE7 /* VFLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
+		41C8E0DE1ED0132E00E1ACE7 /* CardGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CardGame.storyboard; sourceTree = "<group>"; };
+		41C8E0E01ED0134100E1ACE7 /* CardGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardGameViewController.swift; sourceTree = "<group>"; };
+		41C8E0E21ED013AC00E1ACE7 /* cardback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardback.png; sourceTree = "<group>"; };
+		41C8E0E41ED013BA00E1ACE7 /* cardfront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardfront.png; sourceTree = "<group>"; };
+		41C8E0E61ED1275300E1ACE7 /* CardGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardGame.swift; sourceTree = "<group>"; };
+		41C8E0E81ED129A700E1ACE7 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		41C8E0EA1ED129BC00E1ACE7 /* Poker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poker.swift; sourceTree = "<group>"; };
+		41C8E0EE1ED174AA00E1ACE7 /* Poetry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Poetry.storyboard; sourceTree = "<group>"; };
+		41C8E0F01ED1751D00E1ACE7 /* PoetryMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoetryMainViewController.swift; sourceTree = "<group>"; };
+		41C8E0F21ED1752B00E1ACE7 /* PoetryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoetryListViewController.swift; sourceTree = "<group>"; };
+		41C8E0F41ED1753800E1ACE7 /* PoetryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoetryDetailViewController.swift; sourceTree = "<group>"; };
+		41C8E0F61ED175E800E1ACE7 /* Poetry.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Poetry.bundle; sourceTree = "<group>"; };
+		41C8E0F81ED17A5600E1ACE7 /* Poetry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poetry.swift; sourceTree = "<group>"; };
+		41C8E0FA1ED17A6000E1ACE7 /* PoetryKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoetryKind.swift; sourceTree = "<group>"; };
+		41C8E0FC1ED17BF800E1ACE7 /* PoetryDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoetryDBManager.swift; sourceTree = "<group>"; };
+		41C8E0FE1ED1860F00E1ACE7 /* SwiftCase-Bridging-Heade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCase-Bridging-Heade.h"; sourceTree = "<group>"; };
+		41C8E0FF1ED1864000E1ACE7 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		41E59B9D1EBD63F30047BD27 /* WGridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGridFlowLayout.swift; sourceTree = "<group>"; };
 		41E59B9F1EBDB72C0047BD27 /* collectionview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = collectionview.html; sourceTree = "<group>"; };
 		41E59BA21EBDBCB50047BD27 /* CoreAnimation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreAnimation.storyboard; sourceTree = "<group>"; };
@@ -266,6 +311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C8E1001ED1864000E1ACE7 /* libsqlite3.0.tbd in Frameworks */,
 				60A53EC21EB982DB0012DD2D /* CoreLocation.framework in Frameworks */,
 				4125933A1EC6A5D100DFEC81 /* EventKitUI.framework in Frameworks */,
 				41E59C0D1EBEDAB00047BD27 /* CoreData.framework in Frameworks */,
@@ -327,6 +373,52 @@
 			path = AlertC;
 			sourceTree = "<group>";
 		};
+		41C8E0CA1ECFD17900E1ACE7 /* BezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				41C8E0CB1ECFD21800E1ACE7 /* BezierViewController.swift */,
+				41C8E0CD1ECFD2A700E1ACE7 /* DrawImage.swift */,
+				41C8E0CF1ECFD78800E1ACE7 /* DrawString.swift */,
+				41C8E0D11ECFDC7300E1ACE7 /* DrawShape.swift */,
+				41C8E0D31ECFE6BD00E1ACE7 /* ProgressView.swift */,
+			);
+			path = BezierPath;
+			sourceTree = "<group>";
+		};
+		41C8E0DA1ED0010F00E1ACE7 /* VisualFormatLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				41C8E0DB1ED0012E00E1ACE7 /* VFLViewController.swift */,
+			);
+			path = VisualFormatLanguage;
+			sourceTree = "<group>";
+		};
+		41C8E0DD1ED0131F00E1ACE7 /* CardGame */ = {
+			isa = PBXGroup;
+			children = (
+				41C8E0DE1ED0132E00E1ACE7 /* CardGame.storyboard */,
+				41C8E0E01ED0134100E1ACE7 /* CardGameViewController.swift */,
+				41C8E0E61ED1275300E1ACE7 /* CardGame.swift */,
+				41C8E0E81ED129A700E1ACE7 /* Card.swift */,
+				41C8E0EA1ED129BC00E1ACE7 /* Poker.swift */,
+			);
+			path = CardGame;
+			sourceTree = "<group>";
+		};
+		41C8E0ED1ED1749700E1ACE7 /* PoetrySqlite */ = {
+			isa = PBXGroup;
+			children = (
+				41C8E0EE1ED174AA00E1ACE7 /* Poetry.storyboard */,
+				41C8E0F01ED1751D00E1ACE7 /* PoetryMainViewController.swift */,
+				41C8E0F21ED1752B00E1ACE7 /* PoetryListViewController.swift */,
+				41C8E0F41ED1753800E1ACE7 /* PoetryDetailViewController.swift */,
+				41C8E0F81ED17A5600E1ACE7 /* Poetry.swift */,
+				41C8E0FA1ED17A6000E1ACE7 /* PoetryKind.swift */,
+				41C8E0FC1ED17BF800E1ACE7 /* PoetryDBManager.swift */,
+			);
+			path = PoetrySqlite;
+			sourceTree = "<group>";
+		};
 		41E59BA11EBDBC9F0047BD27 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +450,8 @@
 		41E59C1B1EBF3D560047BD27 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				41C8E0E41ED013BA00E1ACE7 /* cardfront.png */,
+				41C8E0E21ED013AC00E1ACE7 /* cardback.png */,
 				60F869861ECE9E6300F97128 /* welcome3.png */,
 				60F869841ECE9E5A00F97128 /* welcome2.png */,
 				60F869821ECE9E5400F97128 /* welcome1.png */,
@@ -440,6 +534,7 @@
 				605DD4191EB2CB13001C873C /* LaunchScreen.storyboard */,
 				605DD41C1EB2CB13001C873C /* Info.plist */,
 				41E59C0E1EBEDAF10047BD27 /* CoreData.xcdatamodel */,
+				41C8E0FE1ED1860F00E1ACE7 /* SwiftCase-Bridging-Heade.h */,
 			);
 			path = SwiftCase;
 			sourceTree = "<group>";
@@ -447,6 +542,7 @@
 		605DD4221EB2CDDA001C873C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				41C8E0F61ED175E800E1ACE7 /* Poetry.bundle */,
 				41E59C1B1EBF3D560047BD27 /* image */,
 				60A53E811EB836B10012DD2D /* www */,
 				605DD4231EB2CDED001C873C /* ProjectList.plist */,
@@ -457,6 +553,10 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				41C8E0ED1ED1749700E1ACE7 /* PoetrySqlite */,
+				41C8E0DD1ED0131F00E1ACE7 /* CardGame */,
+				41C8E0DA1ED0010F00E1ACE7 /* VisualFormatLanguage */,
+				41C8E0CA1ECFD17900E1ACE7 /* BezierPath */,
 				60F8697D1ECE9D9400F97128 /* AppGuidePage */,
 				608BFFA01ECBF96A00196E99 /* CustomKeyboard */,
 				4125933B1EC6AD8E00DFEC81 /* GestureForPhoto */,
@@ -494,6 +594,7 @@
 		605DD42F1EB2D90B001C873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41C8E0FF1ED1864000E1ACE7 /* libsqlite3.0.tbd */,
 				412593391EC6A5D100DFEC81 /* EventKitUI.framework */,
 				41E59C0C1EBEDAB00047BD27 /* CoreData.framework */,
 				60A53ECC1EB9CE7B0012DD2D /* MultipeerConnectivity.framework */,
@@ -746,9 +847,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				605DD41B1EB2CB13001C873C /* LaunchScreen.storyboard in Resources */,
+				41C8E0E51ED013BA00E1ACE7 /* cardfront.png in Resources */,
 				60A53E8E1EB836B10012DD2D /* alertc.html in Resources */,
 				41EB26951EB5D8D100480186 /* BasicAgenda.storyboard in Resources */,
 				41E59C151EBF06E40047BD27 /* coredata.html in Resources */,
+				41C8E0F71ED175E800E1ACE7 /* Poetry.bundle in Resources */,
 				60A53EC61EB9CD5E0012DD2D /* ibeacon.html in Resources */,
 				60A53E8B1EB836B10012DD2D /* agate.css in Resources */,
 				415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */,
@@ -760,6 +863,7 @@
 				60A53ED11EB9DCC90012DD2D /* ChatPeer2Peer.storyboard in Resources */,
 				60A38BEA1EC3119C00D63D7B /* coreimage.html in Resources */,
 				41E59C211EBF3F5C0047BD27 /* walle.png in Resources */,
+				41C8E0DF1ED0132E00E1ACE7 /* CardGame.storyboard in Resources */,
 				60A53E8F1EB836B10012DD2D /* animationgesture.html in Resources */,
 				41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */,
 				60A38BEB1EC3119C00D63D7B /* detector.html in Resources */,
@@ -780,6 +884,7 @@
 				60A53EB61EB97E1B0012DD2D /* calendar.html in Resources */,
 				60A53E8C1EB836B10012DD2D /* airdrop.html in Resources */,
 				60A53E981EB839830012DD2D /* contactadd.html in Resources */,
+				41C8E0E31ED013AC00E1ACE7 /* cardback.png in Resources */,
 				41E59C181EBF072C0047BD27 /* CoreImage.storyboard in Resources */,
 				60F869851ECE9E5A00F97128 /* welcome2.png in Resources */,
 				41EB269E1EBD5F8C00480186 /* CollectionView.storyboard in Resources */,
@@ -789,6 +894,7 @@
 				60A38BF21EC418F700D63D7B /* Location.storyboard in Resources */,
 				608BFFA21ECBF98300196E99 /* CustomKeyboard.storyboard in Resources */,
 				41E59C111EBEEC960047BD27 /* coreanimation.html in Resources */,
+				41C8E0EF1ED174AA00E1ACE7 /* Poetry.storyboard in Resources */,
 				4125933D1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard in Resources */,
 				60A53E901EB836B10012DD2D /* animationquartzcore.html in Resources */,
 				60F869811ECE9E3300F97128 /* welcome0.png in Resources */,
@@ -812,28 +918,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				41EB26A01EBD5FA000480186 /* CollectionViewController.swift in Sources */,
+				41C8E0F31ED1752B00E1ACE7 /* PoetryListViewController.swift in Sources */,
 				60A53EAD1EB88B720012DD2D /* CalendarViewController.swift in Sources */,
+				41C8E0F11ED1751D00E1ACE7 /* PoetryMainViewController.swift in Sources */,
+				41C8E0D01ECFD78800E1ACE7 /* DrawString.swift in Sources */,
 				605DD42A1EB2D6B8001C873C /* AirdropURLViewController.swift in Sources */,
 				41E59BA81EBED4020047BD27 /* CoreDataViewController.swift in Sources */,
 				41E59C1A1EBF07510047BD27 /* CoreImageViewController.swift in Sources */,
+				41C8E0E11ED0134100E1ACE7 /* CardGameViewController.swift in Sources */,
+				41C8E0E91ED129A700E1ACE7 /* Card.swift in Sources */,
 				4125933F1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift in Sources */,
 				41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */,
 				41EB268E1EB5CBCA00480186 /* AnimationGestureViewController.swift in Sources */,
 				605DD4A61EB3404D001C873C /* SourceCodeViewController.swift in Sources */,
 				60A38BE51EC3036900D63D7B /* DetectorViewController.swift in Sources */,
+				41C8E0FD1ED17BF800E1ACE7 /* PoetryDBManager.swift in Sources */,
 				415B10D41EB58B7C00A95D27 /* QRcodeViewController.swift in Sources */,
 				60A38BF01EC418EE00D63D7B /* LocationViewController.swift in Sources */,
 				60F8697F1ECE9DCF00F97128 /* AppGuideViewController.swift in Sources */,
 				60A53EBC1EB9825B0012DD2D /* IBeaconViewController.swift in Sources */,
 				60A38BF41EC4390B00D63D7B /* LocationManager.swift in Sources */,
 				608BFF9F1ECBEF5900196E99 /* UIViewEx.swift in Sources */,
+				41C8E0D41ECFE6BD00E1ACE7 /* ProgressView.swift in Sources */,
+				41C8E0D21ECFDC7300E1ACE7 /* DrawShape.swift in Sources */,
 				41E59C0F1EBEDAF10047BD27 /* CoreData.xcdatamodel in Sources */,
 				41E59BA51EBDBD680047BD27 /* CoreAnimationViewController.swift in Sources */,
 				41EB26971EB5DB9B00480186 /* ContactListViewController.swift in Sources */,
 				415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */,
 				415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */,
+				41C8E0F91ED17A5600E1ACE7 /* Poetry.swift in Sources */,
+				41C8E0F51ED1753800E1ACE7 /* PoetryDetailViewController.swift in Sources */,
+				41C8E0CC1ECFD21800E1ACE7 /* BezierViewController.swift in Sources */,
 				41EB26991EB5DBAB00480186 /* ContactDetailViewController.swift in Sources */,
+				41C8E0FB1ED17A6000E1ACE7 /* PoetryKind.swift in Sources */,
 				608BFF9D1ECBEF4C00196E99 /* UIGestureRecognizerEx.swift in Sources */,
+				41C8E0EB1ED129BC00E1ACE7 /* Poker.swift in Sources */,
 				41E59B9E1EBD63F30047BD27 /* WGridFlowLayout.swift in Sources */,
 				605DD4131EB2CB13001C873C /* ViewController.swift in Sources */,
 				60F8697C1ECD80A300F97128 /* CustomKeyboardViewController.swift in Sources */,
@@ -841,7 +960,10 @@
 				415B10CF1EB4468D00A95D27 /* UIBarButtonItemEx.swift in Sources */,
 				60A53ED21EB9DCC90012DD2D /* ChatPeer2PeerViewController.swift in Sources */,
 				605DD4111EB2CB13001C873C /* AppDelegate.swift in Sources */,
+				41C8E0E71ED1275300E1ACE7 /* CardGame.swift in Sources */,
 				41EB269B1EB5DBC800480186 /* ContactAddViewController.swift in Sources */,
+				41C8E0DC1ED0012E00E1ACE7 /* VFLViewController.swift in Sources */,
+				41C8E0CE1ECFD2A700E1ACE7 /* DrawImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,6 +1111,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shepherd.SwiftCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/SwiftCase-Bridging-Heade.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1006,6 +1129,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shepherd.SwiftCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/SwiftCase-Bridging-Heade.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

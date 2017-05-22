@@ -34,6 +34,10 @@ class AppGuideViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     func backAction() {
         self.dismiss(animated: true, completion: nil)
     }

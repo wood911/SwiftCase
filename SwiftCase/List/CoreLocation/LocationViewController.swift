@@ -122,7 +122,7 @@ class LocationViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
                     if let location = location, let userLocation = self.mapView.userLocation.location {
                         let distance = location.distance(from: userLocation)
                         // 设置子标题，距离我的位置
-                        let sub = distance > 1000 ? String(format: "%.2f km", distance / 1000.0) : "\(distance) m"
+                        let sub = distance > 1000 ? String(format: "%.2f km", distance / 1000.0) : String(format: "%.0f m", distance)
                         annotation.subtitle = annotation.subtitle! + sub
                         // 求出距离我的位置的经纬度增量
                         latitudeDelta = max(abs(location.coordinate.latitude - userLocation.coordinate.latitude), latitudeDelta)
@@ -151,7 +151,7 @@ class LocationViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
     }
     
     @IBAction func userLocation(_ sender: UIButton) {
-        mapView.showsUserLocation = true
+        mapView.setCenter(mapView.userLocation.coordinate, animated: true)
     }
     
     

@@ -153,10 +153,10 @@ class CoreAnimationViewController: UIViewController {
     }
 
     func example6() {
-        let view = UIView(frame: CGRect(x: 200, y: 10, width: 120, height: 120))
+        let view = UIView(frame: CGRect(x: 250, y: 100, width: 120, height: 120))
         self.view.addSubview(view)
 
-        let duration = 1.0
+        let duration = 1.2
 
         // 大小变化
         let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
@@ -176,7 +176,7 @@ class CoreAnimationViewController: UIViewController {
         groupAnimation.repeatCount = MAXFLOAT
         groupAnimation.isRemovedOnCompletion = false
 
-        var beginTimes = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
+        var beginTimes = [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05]
         // 创建8个小圆并添加组动画
         for i in 0..<8 {
             let c = circle(
@@ -189,7 +189,6 @@ class CoreAnimationViewController: UIViewController {
             c.add(groupAnimation, forKey: "loading")
             view.layer.addSublayer(c)
         }
-
     }
 
     func circle(angle: CGFloat, size: CGFloat, origin: CGPoint, containerSize: CGSize, color: UIColor) -> CALayer {

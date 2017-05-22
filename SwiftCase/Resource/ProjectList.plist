@@ -19,5 +19,8 @@
 	<string>GestureForPhoto</string>
 	<string>CustomKeyboard</string>
 	<string>AppGuidePage</string>
+	<string>BezierPath</string>
+	<string>LayoutForVFL</string>
+	<string>CardGameSizeClasses</string>
 </array>
 </plist>

@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WdG-mF-r6H">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Game View Controller-->
+        <scene sceneID="nqT-O6-5AB">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WdG-mF-r6H" customClass="CardGameViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZU-Zn-0DZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="V2H-eu-YNZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wm3-lX-cIN">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oMQ-mn-HoY">
+                                <rect key="frame" x="10" y="30" width="347" height="345"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-gp-6ZE">
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="108.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iid-BH-sbS">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="sDd-bW-3OD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co1-Af-gGn">
+                                                <rect key="frame" x="88" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="wut-gp-YGs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVF-3n-SDh">
+                                                <rect key="frame" x="176" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="uQL-H7-BIH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFc-4E-Yeh">
+                                                <rect key="frame" x="264" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="fVM-gO-xdW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lL7-Yo-YKZ">
+                                        <rect key="frame" x="0.0" y="118.5" width="347" height="108"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIM-S2-OCr">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="108"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="g6X-2e-bMc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-NQ-Wu7">
+                                                <rect key="frame" x="88" y="0.0" width="83" height="108"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="N5A-jp-J3x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loA-Rv-ROd">
+                                                <rect key="frame" x="176" y="0.0" width="83" height="108"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="CdM-4q-bDG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGa-oZ-rGh">
+                                                <rect key="frame" x="264" y="0.0" width="83" height="108"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="Px0-8N-ucb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5fP-Fq-GlY">
+                                        <rect key="frame" x="0.0" y="236.5" width="347" height="108.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kR-7O-pPz">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="JbX-NP-6gC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weo-BQ-kbI">
+                                                <rect key="frame" x="88" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="NKQ-MF-la0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXf-wi-J7U">
+                                                <rect key="frame" x="176" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="wFM-NA-Rdm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LU-kS-5Gv">
+                                                <rect key="frame" x="264" y="0.0" width="83" height="108.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="Pkq-kN-LQW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EB7-0s-2g3">
+                                <rect key="frame" x="10" y="25" width="345" height="392.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cRo-B8-GnC">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="124"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-Bi-fI8">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="d5o-7B-Ufg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-Gu-4gZ">
+                                                <rect key="frame" x="87.5" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="JRW-bH-S1F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJm-Qr-RgK">
+                                                <rect key="frame" x="175" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="FHV-MG-0UH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdv-rC-xhf">
+                                                <rect key="frame" x="262.5" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="AEc-7Q-jhf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LSI-SP-mlY">
+                                        <rect key="frame" x="0.0" y="134" width="345" height="124.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yff-Kx-VJp">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="124.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="Vzm-R5-mkg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-Br-bAj">
+                                                <rect key="frame" x="87.5" y="0.0" width="82.5" height="124.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="K8S-GN-MlO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdn-EH-tew">
+                                                <rect key="frame" x="175" y="0.0" width="82.5" height="124.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="z0g-c9-u3c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hs-r9-GnD">
+                                                <rect key="frame" x="262.5" y="0.0" width="82.5" height="124.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="hW4-JH-IAW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5Gn-ge-Wud">
+                                        <rect key="frame" x="0.0" y="268.5" width="345" height="124"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZX-iH-ujb">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="eo5-h2-1er"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-FK-Bxa">
+                                                <rect key="frame" x="87.5" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="IhH-Oy-fC4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-D0-V8e">
+                                                <rect key="frame" x="175" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="ImP-3S-V5D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoA-Za-Axd">
+                                                <rect key="frame" x="262.5" y="0.0" width="82.5" height="124"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="kFy-TT-XJe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-j8-756">
+                                <rect key="frame" x="50" y="447.5" width="60.5" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Rwm-8u-eij"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.90582204137356759" green="0.40819091593488416" blue="0.42515523140666367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-lG-eX3">
+                                <rect key="frame" x="107.5" y="492" width="160" height="44"/>
+                                <color key="backgroundColor" red="0.019375458359718323" green="0.39525395631790161" blue="0.73997920751571655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="R7X-5h-Z2T"/>
+                                    <constraint firstAttribute="height" constant="44" id="fuh-Mz-zDt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Reset"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reset:" destination="WdG-mF-r6H" eventType="touchUpInside" id="JIT-4j-tcn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="规则：花色相同 +1 分，点数相同 + 2 分" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-qK-krk">
+                                <rect key="frame" x="15" y="551" width="345" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Ysn-Fb-seH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rei-YO-Yd6">
+                                <rect key="frame" x="457" y="100" width="60.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.9058220414" green="0.40819091590000001" blue="0.4251552314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXt-Ff-sy8">
+                                <rect key="frame" x="427" y="154.5" width="160" height="44"/>
+                                <color key="backgroundColor" red="0.01937545836" green="0.39525395629999999" blue="0.73997920750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Iy-VW-sY3"/>
+                                    <constraint firstAttribute="width" constant="160" id="VvP-s0-Q5T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Reset"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reset:" destination="WdG-mF-r6H" eventType="touchUpInside" id="XKd-pf-tfl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="规则：花色相同 +1 分，点数相同 + 2 分" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgM-Nj-Rcr">
+                                <rect key="frame" x="372" y="228.5" width="280" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="E9u-0j-41i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AbO-fh-mR8">
+                                <rect key="frame" x="10" y="30" width="376" height="384"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="93i-k9-bgI">
+                                        <rect key="frame" x="0.0" y="0.0" width="376" height="121"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyo-Zx-Jrq">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="w7q-y4-i8d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-u8-2E6">
+                                                <rect key="frame" x="95" y="0.0" width="91" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="ZE9-eC-RZh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9D-Nt-9oD">
+                                                <rect key="frame" x="191" y="0.0" width="90" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="TRr-Rh-WgJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itz-nH-Od3">
+                                                <rect key="frame" x="286" y="0.0" width="90" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="tLL-OZ-4XY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="atE-Ke-gur">
+                                        <rect key="frame" x="0.0" y="131" width="376" height="122"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-mm-taU">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="122"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="wXl-ci-cF3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuW-kG-mMC">
+                                                <rect key="frame" x="95" y="0.0" width="91" height="122"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="od2-Dv-2ei"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-xi-z33">
+                                                <rect key="frame" x="191" y="0.0" width="90" height="122"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="fLP-AQ-19x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-fx-9yN">
+                                                <rect key="frame" x="286" y="0.0" width="90" height="122"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="qKW-9q-ysU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ERN-dt-JE3">
+                                        <rect key="frame" x="0.0" y="263" width="376" height="121"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwg-ai-w7u">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="kds-xR-6bM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-km-uB7">
+                                                <rect key="frame" x="95" y="0.0" width="91" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="Y3V-iA-QBr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvx-ca-VY8">
+                                                <rect key="frame" x="191" y="0.0" width="90" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="Kj3-J3-cr7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwI-ui-cYi">
+                                                <rect key="frame" x="286" y="0.0" width="90" height="121"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="❤️A" backgroundImage="cardfront.png"/>
+                                                <connections>
+                                                    <action selector="tapCard:" destination="WdG-mF-r6H" eventType="touchUpInside" id="onc-UY-bNR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e5-24-49i">
+                                <rect key="frame" x="456" y="155" width="160" height="44"/>
+                                <color key="backgroundColor" red="0.01937545836" green="0.39525395629999999" blue="0.73997920750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3UR-5h-KIo"/>
+                                    <constraint firstAttribute="width" constant="160" id="rz8-6S-he7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Reset"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reset:" destination="WdG-mF-r6H" eventType="touchUpInside" id="irz-5j-dlq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G75-Rm-8eK">
+                                <rect key="frame" x="486" y="100" width="61" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.9058220414" green="0.40819091590000001" blue="0.4251552314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="规则：花色相同 +1 分，点数相同 + 2 分" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znX-PY-NSr">
+                                <rect key="frame" x="401" y="229" width="320" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="0b7-Q5-cPG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34440222382545471" green="0.78171616792678833" blue="0.77548301219940186" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZgM-Nj-Rcr" firstAttribute="top" secondItem="JXt-Ff-sy8" secondAttribute="bottom" constant="30" id="0Mm-7w-yT4"/>
+                            <constraint firstItem="Rei-YO-Yd6" firstAttribute="leading" secondItem="oMQ-mn-HoY" secondAttribute="trailing" constant="100" id="1Qd-TX-o5N"/>
+                            <constraint firstItem="G75-Rm-8eK" firstAttribute="leading" secondItem="AbO-fh-mR8" secondAttribute="trailing" constant="100" id="8SF-aV-8W5"/>
+                            <constraint firstItem="M7z-lG-eX3" firstAttribute="centerX" secondItem="Wm3-lX-cIN" secondAttribute="centerX" id="8zE-n4-3aY"/>
+                            <constraint firstItem="JXt-Ff-sy8" firstAttribute="leading" secondItem="oMQ-mn-HoY" secondAttribute="trailing" constant="70" id="DIx-f7-a7N"/>
+                            <constraint firstItem="7e5-24-49i" firstAttribute="top" secondItem="G75-Rm-8eK" secondAttribute="bottom" constant="35" id="Dh7-l1-KcH"/>
+                            <constraint firstItem="2ED-qK-krk" firstAttribute="leading" secondItem="Wm3-lX-cIN" secondAttribute="leading" constant="15" id="Fjf-28-TBH"/>
+                            <constraint firstAttribute="trailing" secondItem="ZgM-Nj-Rcr" secondAttribute="trailing" constant="15" id="GNa-ZW-wRL"/>
+                            <constraint firstItem="ZgM-Nj-Rcr" firstAttribute="leading" secondItem="oMQ-mn-HoY" secondAttribute="trailing" constant="15" id="J7d-sP-Ma7"/>
+                            <constraint firstItem="G75-Rm-8eK" firstAttribute="top" secondItem="uZU-Zn-0DZ" secondAttribute="bottom" constant="80" id="JMH-rc-fNH"/>
+                            <constraint firstItem="JXt-Ff-sy8" firstAttribute="top" secondItem="Rei-YO-Yd6" secondAttribute="bottom" constant="35" id="LNr-xO-Kyg"/>
+                            <constraint firstItem="a3P-j8-756" firstAttribute="leading" secondItem="Wm3-lX-cIN" secondAttribute="leading" constant="50" id="MtL-Ar-sv7"/>
+                            <constraint firstItem="V2H-eu-YNZ" firstAttribute="top" secondItem="AbO-fh-mR8" secondAttribute="bottom" id="QzN-Za-Vau"/>
+                            <constraint firstItem="2ED-qK-krk" firstAttribute="top" secondItem="M7z-lG-eX3" secondAttribute="bottom" constant="15" id="ReH-IG-r2Y"/>
+                            <constraint firstAttribute="trailing" secondItem="7e5-24-49i" secondAttribute="trailing" constant="120" id="Tyi-sR-lCu"/>
+                            <constraint firstItem="AbO-fh-mR8" firstAttribute="leading" secondItem="Wm3-lX-cIN" secondAttribute="leading" constant="10" id="Uf4-gc-bEG"/>
+                            <constraint firstAttribute="trailing" secondItem="2ED-qK-krk" secondAttribute="trailing" constant="15" id="Vj1-aI-Xcy"/>
+                            <constraint firstAttribute="trailing" secondItem="znX-PY-NSr" secondAttribute="trailing" constant="15" id="WMo-B7-kOM"/>
+                            <constraint firstItem="AbO-fh-mR8" firstAttribute="top" secondItem="Wm3-lX-cIN" secondAttribute="top" constant="30" id="Wea-t2-G1D"/>
+                            <constraint firstItem="znX-PY-NSr" firstAttribute="top" secondItem="7e5-24-49i" secondAttribute="bottom" constant="30" id="YmO-6t-wab"/>
+                            <constraint firstItem="Rei-YO-Yd6" firstAttribute="top" secondItem="uZU-Zn-0DZ" secondAttribute="bottom" constant="80" id="aZU-zq-a5G"/>
+                            <constraint firstItem="oMQ-mn-HoY" firstAttribute="top" secondItem="Wm3-lX-cIN" secondAttribute="top" constant="30" id="abK-ON-VZJ"/>
+                            <constraint firstItem="EB7-0s-2g3" firstAttribute="leading" secondItem="Wm3-lX-cIN" secondAttribute="leading" constant="10" id="b2Q-bf-Vew"/>
+                            <constraint firstItem="oMQ-mn-HoY" firstAttribute="leading" secondItem="Wm3-lX-cIN" secondAttribute="leading" constant="10" id="cjQ-tm-n3J"/>
+                            <constraint firstAttribute="trailing" secondItem="JXt-Ff-sy8" secondAttribute="trailing" constant="80" id="dhb-rd-OaK"/>
+                            <constraint firstItem="7e5-24-49i" firstAttribute="leading" secondItem="AbO-fh-mR8" secondAttribute="trailing" constant="70" id="eQe-8Y-rxN"/>
+                            <constraint firstItem="EB7-0s-2g3" firstAttribute="top" secondItem="uZU-Zn-0DZ" secondAttribute="bottom" constant="5" id="fda-c2-ADF"/>
+                            <constraint firstAttribute="bottom" secondItem="oMQ-mn-HoY" secondAttribute="bottom" id="k8K-gP-3q6"/>
+                            <constraint firstItem="M7z-lG-eX3" firstAttribute="top" secondItem="a3P-j8-756" secondAttribute="bottom" constant="25" id="lEp-Kt-uN6"/>
+                            <constraint firstItem="V2H-eu-YNZ" firstAttribute="top" secondItem="2ED-qK-krk" secondAttribute="bottom" constant="80" id="mv4-3I-OAV"/>
+                            <constraint firstItem="a3P-j8-756" firstAttribute="top" secondItem="EB7-0s-2g3" secondAttribute="bottom" constant="30" id="ouH-2g-LpE"/>
+                            <constraint firstItem="znX-PY-NSr" firstAttribute="leading" secondItem="AbO-fh-mR8" secondAttribute="trailing" constant="15" id="ovH-H9-DSE"/>
+                            <constraint firstAttribute="trailing" secondItem="EB7-0s-2g3" secondAttribute="trailing" constant="20" id="tLa-8x-ji4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oMQ-mn-HoY"/>
+                                <exclude reference="EB7-0s-2g3"/>
+                                <exclude reference="a3P-j8-756"/>
+                                <exclude reference="M7z-lG-eX3"/>
+                                <exclude reference="2ED-qK-krk"/>
+                                <exclude reference="Rei-YO-Yd6"/>
+                                <exclude reference="JXt-Ff-sy8"/>
+                                <exclude reference="ZgM-Nj-Rcr"/>
+                                <exclude reference="AbO-fh-mR8"/>
+                                <exclude reference="7e5-24-49i"/>
+                                <exclude reference="G75-Rm-8eK"/>
+                                <exclude reference="znX-PY-NSr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oMQ-mn-HoY"/>
+                                <exclude reference="EB7-0s-2g3"/>
+                                <exclude reference="a3P-j8-756"/>
+                                <exclude reference="M7z-lG-eX3"/>
+                                <exclude reference="2ED-qK-krk"/>
+                                <include reference="Rei-YO-Yd6"/>
+                                <include reference="JXt-Ff-sy8"/>
+                                <include reference="ZgM-Nj-Rcr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <exclude reference="EB7-0s-2g3"/>
+                                <exclude reference="a3P-j8-756"/>
+                                <exclude reference="M7z-lG-eX3"/>
+                                <exclude reference="2ED-qK-krk"/>
+                                <include reference="AbO-fh-mR8"/>
+                                <include reference="7e5-24-49i"/>
+                                <include reference="G75-Rm-8eK"/>
+                                <include reference="znX-PY-NSr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="EB7-0s-2g3"/>
+                                <include reference="a3P-j8-756"/>
+                                <include reference="M7z-lG-eX3"/>
+                                <include reference="2ED-qK-krk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outletCollection property="allCards" destination="O9m-Gu-4gZ" collectionClass="NSMutableArray" id="Lbd-VA-mQ0"/>
+                        <outletCollection property="allCards" destination="qoR-Bi-fI8" collectionClass="NSMutableArray" id="GRI-Nv-WyN"/>
+                        <outletCollection property="allCards" destination="DJm-Qr-RgK" collectionClass="NSMutableArray" id="dBJ-v8-CSR"/>
+                        <outletCollection property="allCards" destination="qdv-rC-xhf" collectionClass="NSMutableArray" id="g7O-As-2jF"/>
+                        <outletCollection property="allCards" destination="yff-Kx-VJp" collectionClass="NSMutableArray" id="PbZ-zS-9dn"/>
+                        <outletCollection property="allCards" destination="Z6c-Br-bAj" collectionClass="NSMutableArray" id="LhA-lN-zyR"/>
+                        <outletCollection property="allCards" destination="Qdn-EH-tew" collectionClass="NSMutableArray" id="Qg6-5w-caL"/>
+                        <outletCollection property="allCards" destination="1Hs-r9-GnD" collectionClass="NSMutableArray" id="MtQ-3F-ujh"/>
+                        <outletCollection property="allCards" destination="HZX-iH-ujb" collectionClass="NSMutableArray" id="s5O-QW-vJs"/>
+                        <outletCollection property="allCards" destination="A3F-FK-Bxa" collectionClass="NSMutableArray" id="HAe-Ha-QkT"/>
+                        <outletCollection property="allCards" destination="t3a-D0-V8e" collectionClass="NSMutableArray" id="FOM-UV-nho"/>
+                        <outletCollection property="allCards" destination="EoA-Za-Axd" collectionClass="NSMutableArray" id="Ygw-dY-6cM"/>
+                        <outletCollection property="allCards" destination="iid-BH-sbS" collectionClass="NSMutableArray" id="Fr9-ML-aQe"/>
+                        <outletCollection property="allCards" destination="co1-Af-gGn" collectionClass="NSMutableArray" id="0LC-nF-Mf6"/>
+                        <outletCollection property="allCards" destination="gVF-3n-SDh" collectionClass="NSMutableArray" id="JRh-Zf-JsT"/>
+                        <outletCollection property="allCards" destination="UFc-4E-Yeh" collectionClass="NSMutableArray" id="YLM-te-IPG"/>
+                        <outletCollection property="allCards" destination="RIM-S2-OCr" collectionClass="NSMutableArray" id="jYg-cb-kFm"/>
+                        <outletCollection property="allCards" destination="yMM-NQ-Wu7" collectionClass="NSMutableArray" id="GDQ-Iz-mkY"/>
+                        <outletCollection property="allCards" destination="loA-Rv-ROd" collectionClass="NSMutableArray" id="Fxh-at-8wi"/>
+                        <outletCollection property="allCards" destination="RGa-oZ-rGh" collectionClass="NSMutableArray" id="KEf-xG-Dfd"/>
+                        <outletCollection property="allCards" destination="3kR-7O-pPz" collectionClass="NSMutableArray" id="RtX-Uc-0mA"/>
+                        <outletCollection property="allCards" destination="Weo-BQ-kbI" collectionClass="NSMutableArray" id="qsW-wg-tB5"/>
+                        <outletCollection property="allCards" destination="EXf-wi-J7U" collectionClass="NSMutableArray" id="BcR-a0-ZuR"/>
+                        <outletCollection property="allCards" destination="5LU-kS-5Gv" collectionClass="NSMutableArray" id="GDd-2x-7iG"/>
+                        <outletCollection property="allCards" destination="lyo-Zx-Jrq" collectionClass="NSMutableArray" id="JSk-dm-EqI"/>
+                        <outletCollection property="allCards" destination="Eoy-u8-2E6" collectionClass="NSMutableArray" id="Vso-J5-lhM"/>
+                        <outletCollection property="allCards" destination="I9D-Nt-9oD" collectionClass="NSMutableArray" id="wxH-7K-yTa"/>
+                        <outletCollection property="allCards" destination="itz-nH-Od3" collectionClass="NSMutableArray" id="KeU-1G-7KH"/>
+                        <outletCollection property="allCards" destination="LW7-mm-taU" collectionClass="NSMutableArray" id="5hD-KD-jN7"/>
+                        <outletCollection property="allCards" destination="EuW-kG-mMC" collectionClass="NSMutableArray" id="kz9-AT-xb8"/>
+                        <outletCollection property="allCards" destination="hiW-xi-z33" collectionClass="NSMutableArray" id="0om-Dk-wWi"/>
+                        <outletCollection property="allCards" destination="dq8-fx-9yN" collectionClass="NSMutableArray" id="R9B-3a-ppd"/>
+                        <outletCollection property="allCards" destination="Uwg-ai-w7u" collectionClass="NSMutableArray" id="dII-XO-dsd"/>
+                        <outletCollection property="allCards" destination="UNa-km-uB7" collectionClass="NSMutableArray" id="oUd-2l-QbA"/>
+                        <outletCollection property="allCards" destination="Kvx-ca-VY8" collectionClass="NSMutableArray" id="079-mY-LXC"/>
+                        <outletCollection property="allCards" destination="bwI-ui-cYi" collectionClass="NSMutableArray" id="Fkv-hd-m5l"/>
+                        <outletCollection property="score" destination="a3P-j8-756" collectionClass="NSMutableArray" id="JXw-uE-7ID"/>
+                        <outletCollection property="message" destination="2ED-qK-krk" collectionClass="NSMutableArray" id="Uj1-fC-yHy"/>
+                        <outletCollection property="score" destination="Rei-YO-Yd6" collectionClass="NSMutableArray" id="See-R4-ej5"/>
+                        <outletCollection property="message" destination="ZgM-Nj-Rcr" collectionClass="NSMutableArray" id="ieK-pd-xwa"/>
+                        <outletCollection property="score" destination="G75-Rm-8eK" collectionClass="NSMutableArray" id="dBz-Cy-DIR"/>
+                        <outletCollection property="message" destination="znX-PY-NSr" collectionClass="NSMutableArray" id="dsV-Zy-dbF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BV2-Qe-YVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="302"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardfront.png" width="79" height="120"/>
+    </resources>
+</document>

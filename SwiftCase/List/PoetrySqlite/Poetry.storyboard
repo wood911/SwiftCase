@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D2C-eO-0dt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Poetry Main View Controller-->
+        <scene sceneID="nia-8Y-fx4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="D2C-eO-0dt" customClass="PoetryMainViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dfk-Dw-Rnp"/>
+                        <viewControllerLayoutGuide type="bottom" id="SIw-om-cpO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yVu-pR-o4o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xdm-V6-Lhg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sFr-zn-PUS">
+                                    <size key="itemSize" width="163" height="86"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AdE-Mb-4vg">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="163" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mly-uv-Ybj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="36" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="SxE-dR-zPu"/>
+                                                        <constraint firstAttribute="height" constant="40" id="hIl-0m-MEb"/>
+                                                    </constraints>
+                                                    <state key="normal" image="delete"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="五言古诗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-Xl-1Qv">
+                                                    <rect key="frame" x="50" y="36" width="64" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
+                                                    <color key="textColor" red="0.49998354911804199" green="0.42473804950714111" blue="0.32341733574867249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.31361239443711758" green="0.34049809644670048" blue="0.33557425514405959" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="XDT-Xl-1Qv" firstAttribute="centerX" secondItem="AdE-Mb-4vg" secondAttribute="centerX" id="FS5-zu-mD1"/>
+                                            <constraint firstItem="Mly-uv-Ybj" firstAttribute="leading" secondItem="AdE-Mb-4vg" secondAttribute="leading" id="RkC-Eh-FlM"/>
+                                            <constraint firstItem="XDT-Xl-1Qv" firstAttribute="centerY" secondItem="AdE-Mb-4vg" secondAttribute="centerY" id="WVj-S3-bvy"/>
+                                            <constraint firstItem="Mly-uv-Ybj" firstAttribute="top" secondItem="AdE-Mb-4vg" secondAttribute="top" id="nXN-OF-IZM"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xdm-V6-Lhg" firstAttribute="top" secondItem="Dfk-Dw-Rnp" secondAttribute="bottom" id="QOg-U9-G3b"/>
+                            <constraint firstItem="SIw-om-cpO" firstAttribute="top" secondItem="Xdm-V6-Lhg" secondAttribute="bottom" id="cek-1r-ZCv"/>
+                            <constraint firstAttribute="trailing" secondItem="Xdm-V6-Lhg" secondAttribute="trailing" id="mtE-zT-Og3"/>
+                            <constraint firstItem="Xdm-V6-Lhg" firstAttribute="leading" secondItem="yVu-pR-o4o" secondAttribute="leading" id="rDU-ct-MMv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phd-oZ-a57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194.40000000000001" y="187.55622188905548"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete" width="17" height="17"/>
+    </resources>
+</document>
