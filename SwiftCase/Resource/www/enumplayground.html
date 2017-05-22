@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>Code</title>
+    <link rel="stylesheet" href="./agate.css">
+    <script src="./highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<pre><code class="Swift">
+
+import UIKit
+
+/*
+ * 本节主要内容:
+ * 枚举类型声明/实例化
+ * raw value: 默认值
+ * associated value(关联值): 声明枚举类型时候, 某些case绑定类型, 实例化的时候, 才给某些case初始值
+ */
+enum Devices {
+    case iPhone // 没有绑定默认值（没有rawValue）
+    case iPad
+    case MacBook
+    case MacBookPro
+    case iPod
+    case iWatch
+    case AppleTV
+}
+enum DevicesDesc: String {
+    case iPhone = "iPhone7"
+    case iPad = "iPad Pro"
+    case MacBook
+    case MacBookPro = "MacBooK Pro 13 Inch"
+    case iPod
+    case iWatch
+    case AppleTV
+}
+
+var device1 = Devices.iPhone
+var device2 = DevicesDesc.MacBookPro
+device2.rawValue
+var device3 = DevicesDesc(rawValue: "iPad Pro") //device3: DevicesDesc?
+var device4 = DevicesDesc(rawValue: "hehe")
+
+// 关联值 声明枚举
+enum ATMStatus {
+    case success(Int)
+    case failure(String)
+    case waiting
+}
+
+ATMStatus.success(500) // 卡里剩余的钱
+var balance = 2000
+func withdrawMoney(amount: Int) -> ATMStatus {
+    if balance >= amount {
+        balance -= amount
+        // 取钱后2000-1500=500，取钱成功且卡里剩余500
+        return ATMStatus.success(balance)
+    } else {
+        return ATMStatus.failure("No enough money")
+    }
+}
+var atmStatus = withdrawMoney(amount: 1500)
+// 通过atmStatus获取卡里剩余钱数及失败原因
+switch atmStatus {
+case let .success(money):
+    print("can withdraw money and left ￥\(money)")
+case let .failure(error):
+    print("cannot withdraw and error is \(error)")
+case .waiting:
+    print("waiting...")
+}
+
+
+// 声明Month枚举 添加季节描述函数 春夏秋冬
+enum Month {
+    enum Season: String {
+        case spring = "春"
+        case summer = "夏"
+        case autumn = "秋"
+        case winter = "冬"
+    }
+    case january
+    case fabruary
+    case march
+    case april
+    case may
+    case june
+    case july
+    case august
+    case september
+    case october
+    case november
+    case december
+    func getSeason() -> Season {
+        switch self {
+        case .january, .fabruary, .march:
+            return Season.spring
+        case .april, .may, .june:
+            return Season.summer
+        case .july, .august, .september:
+            return Season.autumn
+        case .november, .october, .december:
+            return Season.winter
+        }
+    }
+}
+
+var month = Month.may
+month.getSeason().rawValue
+
+// 声明枚举类型Shape 包含4个形状：正方形、矩形、圆形、点
+// 给定Shape枚举型参数返回该形状面积 使用associated value关联值语法
+enum Shape {
+    case square(width: Double)
+    case rectangle(width: Double, height: Double)
+    case circle(radius: Double, centerX: Double, centerY: Double)
+    case point // 不关联
+    func area() -> Double {
+        switch self {
+        case let .square(width: w):
+            return w * w
+        case let .rectangle(width: w, height: h):
+            return w * h
+        case let .circle(radius: r, centerX: _, centerY: _):
+            return M_PI * r * r
+        default:
+            return 0.0
+        }
+    }
+}
+var square = Shape.square(width: 10.5)
+square.area()
+var rectangle = Shape.rectangle(width: 20, height: 30.5)
+rectangle.area()
+var circle = Shape.circle(radius: 8, centerX: 2, centerY: 5)
+circle.area()
+
+
+
+
+
+/*
+ * 本节主要内容:
+ * 1.可选型的相关语法重现
+ * 2.目的: 理解可选型是枚举类型, 理解下面的语法即可
+ */
+var strOne: String? = "Hello Swift"
+print(strOne) // Optional("Hello Swift")
+if let str = strOne {
+    print("unwrapped:\(str)")
+}
+// 这行语句完整形式如下：
+var strTwo: Optional<String> = Optional.some("Hello Swift")
+var strThree: Optional<String> = "Hello Swift"
+
+var strFour: String? = nil
+var strFive: Optional<String> = Optional.none
+
+// Optional枚举类型声明如下
+enum MyOptional {
+    case none
+    case some(String)
+}
+var optionalVar = MyOptional.some("Mag")
+optionalVar = MyOptional.none
+
+// 从枚举的角度, 将可选型的其他语法
+var strResult = strOne! // 强制解包
+// 使用枚举语法实现上面的强制解包
+switch strOne {
+case let .some(value):
+    strResult = value
+case .none:
+    print("unwrapped failure")
+    break
+}
+
+// nil空聚合语法: ??两个问号
+var strSix: String? = "Swift"
+var strSeven = strSix ?? "Default String"
+if strSix != nil {
+    strSeven = strSix!
+} else {
+    strSeven = "Default String"
+}
+
+
+
+
+
+
+/*
+ * 本节主要内容: 泛型函数的声明和使用
+ */
+func swapTwoInts(_ first: inout Int, _ second: inout Int) {
+    (first, second) = (second, first)
+}
+func swapTwoValues<T>(_ first: inout T, _ second: inout T) {
+    (first, second) = (second, first)
+}
+
+var intOne = 12
+var intTwo = 21
+swapTwoInts(&intOne, &intTwo)
+intOne
+intTwo
+var strEight = "Hello"
+var strNine = "Swift"
+swapTwoValues(&strEight, &strNine)
+strEight
+strNine
+
+var dict: Dictionary<Int, String> = [:]
+// 声明函数，翻译元组数组
+func parisFromDictionary<Key, Value>(dictionary: [Key: Value]) -> [(Key, Value)] {
+    return Array(dictionary)
+}
+var dictOne = ["min": 1, "max": 9]
+var arrayResult = parisFromDictionary(dictionary: dictOne)
+var dictTwo = ["First": "Swift", "Second": "Objective-C"]
+parisFromDictionary(dictionary: dictTwo)
+
+</code></pre>
+</body>
+</html>

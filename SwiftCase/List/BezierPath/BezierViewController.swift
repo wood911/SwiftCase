@@ -93,6 +93,8 @@ class BezierViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addSourceCodeItem("bezierpath")
+        
         view.backgroundColor = UIColor.white
 
         // draw image

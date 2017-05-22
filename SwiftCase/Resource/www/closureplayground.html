@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>Code</title>
+    <link rel="stylesheet" href="./agate.css">
+    <script src="./highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<pre><code class="Swift">
+
+import UIKit
+
+/*
+ * 本节主要内容:
+ * 1.guard语句的使用
+ * 2.闭包Closure的使用
+ */
+
+// 声明函数，使用guard语法来判断字符串可选类型是否为空
+func guardString(_ string: String?) {
+    guard let s = string else {
+        print("string is nil")
+        return
+    }
+    print("string is \(s)")
+}
+
+guardString(nil)
+
+func buyByGuard(money: Int, price: Int, capacity: Int, volume: Int) {
+    guard money >= price else {
+        print("No enough money")
+        return
+    }
+    guard capacity >= volume else {
+        print("No enough capacity")
+        return
+    }
+    print("You can buy it, price is \(price) and volume is \(volume)")
+}
+
+// 闭包Closure 匿名函数 {(parameters)->Void in statements}
+var array = [1, 2, 3, 4]
+func biggerNumber(first: Int, second: Int) -> Bool {
+    return first > second
+}
+array.sort(by: biggerNumber)
+array.sort { (first: Int, second: Int) -> Bool in
+    return first < second
+}
+array.sort { (first, second) -> Bool in
+    return first < second
+}
+array.sort { (first, second) in
+    return first > second
+}
+array.sort { (first, second) in
+    first > second
+}
+array.sort(by: {$0 > $1})
+array.sort(by: >)
+
+</code></pre>
+</body>
+</html>

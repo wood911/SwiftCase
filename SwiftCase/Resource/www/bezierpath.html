@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>BezierPath</title>
+    <link rel="stylesheet" href="./agate.css">
+    <script src="./highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<pre><code class="Swift">
+import UIKit
+
+class BezierViewController: UIViewController {
+    
+    /*
+     字符属性
+     
+     字符属性可以应用于 attributed string 的文本中。
+     
+     NSString *const NSFontAttributeName;(字体)
+     
+     NSString *const NSParagraphStyleAttributeName;(段落)
+     
+     NSString *const NSForegroundColorAttributeName;(字体颜色)
+     
+     NSString *const NSBackgroundColorAttributeName;(字体背景色)
+     
+     NSString *const NSLigatureAttributeName;(连字符)
+     
+     NSString *const NSKernAttributeName;(字间距)
+     
+     NSString *const NSStrikethroughStyleAttributeName;(删除线)
+     
+     NSString *const NSUnderlineStyleAttributeName;(下划线)
+     
+     NSString *const NSStrokeColorAttributeName;(边线颜色)
+     
+     NSString *const NSStrokeWidthAttributeName;(边线宽度)
+     
+     NSString *const NSShadowAttributeName;(阴影)(横竖排版)
+     
+     NSString *const NSVerticalGlyphFormAttributeName;
+     
+     常量
+     
+     1> NSFontAttributeName(字体)
+     
+     该属性所对应的值是一个 UIFont 对象。该属性用于改变一段文本的字体。如果不指定该属性，则默认为12-point Helvetica(Neue)。
+     
+     2> NSParagraphStyleAttributeName(段落)
+     
+     该属性所对应的值是一个 NSParagraphStyle 对象。该属性在一段文本上应用多个属性。如果不指定该属性，则默认为 NSParagraphStyle 的defaultParagraphStyle 方法返回的默认段落属性。
+     
+     3> NSForegroundColorAttributeName(字体颜色)
+     
+     该属性所对应的值是一个 UIColor 对象。该属性用于指定一段文本的字体颜色。如果不指定该属性，则默认为黑色。
+     
+     4> NSBackgroundColorAttributeName(字体背景色)
+     
+     该属性所对应的值是一个 UIColor 对象。该属性用于指定一段文本的背景颜色。如果不指定该属性，则默认无背景色。
+     
+     5> NSLigatureAttributeName(连字符)
+     
+     该属性所对应的值是一个 NSNumber 对象(整数)。连体字符是指某些连在一起的字符，它们采用单个的图元符号。0 表示没有连体字符。1 表示使用默认的连体字符。2表示使用所有连体符号。默认值为 1（注意，iOS 不支持值为 2）。
+     
+     6> NSKernAttributeName(字间距)
+     
+     该属性所对应的值是一个 NSNumber 对象(整数)。字母紧排指定了用于调整字距的像素点数。字母紧排的效果依赖于字体。值为 0 表示不使用字母紧排。默认值为0。
+     
+     7> NSStrikethroughStyleAttributeName(删除线)
+     
+     该属性所对应的值是一个 NSNumber 对象(整数)。该值指定是否在文字上加上删除线，该值参考“Underline Style Attributes”。默认值是NSUnderlineStyleNone。
+     
+     8> NSUnderlineStyleAttributeName(下划线)
+     
+     该属性所对应的值是一个 NSNumber 对象(整数)。该值指定是否在文字上加上下划线，该值参考“Underline Style Attributes”。默认值是NSUnderlineStyleNone。
+     
+     9> NSStrokeColorAttributeName(边线颜色)
+     
+     该属性所对应的值是一个 UIColor 对象。如果该属性不指定（默认），则等同于 NSForegroundColorAttributeName。否则，指定为删除线或下划线颜色。更多细节见“Drawing attributedstrings that are both filled and stroked”。
+     
+     10> NSStrokeWidthAttributeName(边线宽度)
+     
+     该属性所对应的值是一个 NSNumber 对象(小数)。该值改变描边宽度（相对于字体size 的百分比）。默认为 0，即不改变。正数只改变描边宽度。负数同时改变文字的描边和填充宽度。例如，对于常见的空心字，这个值通常为3.0。
+     
+     11> NSShadowAttributeName(阴影)
+     
+     该属性所对应的值是一个 NSShadow 对象。默认为 nil。
+     
+     12> NSVerticalGlyphFormAttributeName(横竖排版)
+     
+     该属性所对应的值是一个 NSNumber 对象(整数)。0 表示横排文本。1 表示竖排文本。在 iOS 中，总是使用横排文本，0 以外的值都未定义。
+     
+     */
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor.white
+
+        // draw image
+        var frame = CGRect(x: 0, y: 70, width: view.frame.width * 0.5, height: view.frame.width * 0.5)
+        if let image = UIImage(named: "image") {
+            view.addSubview(DrawImage(image: image, frame: frame))
+        }
+        
+        
+        // draw string
+        let text = "笛卡尔 & 斯宾诺莎 , good good study"
+        frame = CGRect(x: view.frame.width * 0.5 + 10.0, y: 70, width: 120, height: 200)
+        view.addSubview(DrawString(text: text, frame: frame))
+        
+        
+        // draw shape
+        frame = CGRect(x: 0, y: view.frame.height * 0.75, width: view.frame.width, height: view.frame.height * 0.25)
+        let shape = DrawShape(frame: frame)
+        shape.backgroundColor = UIColor.white
+        view.addSubview(shape)
+        
+        
+        // draw progress
+        frame = CGRect(x: view.center.x - 50, y: view.center.y - 50, width: 100, height: 100)
+        view.addSubview(ProgressView(frame: frame))
+        
+    }
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+class DrawImage: UIView {
+    
+    var image: UIImage!
+    
+    init(image: UIImage, frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.white
+        self.image = image
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // 此方法用于CoreGraphics绘图，只调用一次
+    // 核心绘图的功能都集成到UIKit里面了
+    override func draw(_ rect: CGRect) {
+        
+        // 1、创建临时画布，大小为ImageView的尺寸
+        UIGraphicsBeginImageContext(self.bounds.size)
+        
+        // 2、在上下文中绘制图像，绘制空心圆形
+        let width = min(self.bounds.width, self.bounds.height) * 0.8
+        let imageRect = CGRect(x: (self.frame.width - width) * 0.5, y: (self.frame.height - width) * 0.5, width: width, height: width)
+        let path = UIBezierPath(ovalIn: imageRect)
+        // 线的颜色
+        UIColor(red: 0.3, green: 0.7, blue: 0.75, alpha: 1.0).setStroke()
+        path.lineWidth = 3.0
+        path.stroke()
+        // 剪切掉封闭区域之外的内容，相当于圆角
+        path.addClip()
+        
+        // 3、在View中放一张图片，用圆的边缘扣取这张图
+        image.draw(in: self.bounds)
+        // 从刚创建的临时画布中生成图形对象
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        let imageView = UIImageView(frame: self.bounds)
+        imageView.image = newImage
+        self.addSubview(imageView)
+        // 关闭绘图上下文对象
+        UIGraphicsEndImageContext()
+        
+    }
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+class DrawString: UIView {
+
+    var text: String!
+    
+    init(text: String, frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.white
+        self.text = text
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(_ rect: CGRect) {
+        
+        let attribute = [NSFontAttributeName: UIFont.systemFont(ofSize: 20),
+                         NSForegroundColorAttributeName: UIColor.darkText,
+                         NSBackgroundColorAttributeName: UIColor.lightGray]
+        // 自适应宽高
+        let size = text.boundingRect(with: self.bounds.size, options: .usesLineFragmentOrigin, attributes: attribute, context: nil).size
+        
+        text.draw(in: CGRect(origin: CGPoint.zero, size: size), withAttributes: attribute)
+        
+    }
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+class DrawShape: UIView {
+
+    override func draw(_ rect: CGRect) {
+        
+        // 1、绘制矩形
+        var frame = CGRect(x: 5, y: 5, width: self.frame.width * 0.5, height: self.frame.height * 0.5)
+        var path = UIBezierPath(rect: frame)
+        UIColor.black.setStroke()
+        UIColor.orange.setFill()
+        path.lineWidth = 5
+        path.stroke()
+        path.fill()
+        
+        // 2、绘制正方形
+        let width = self.bounds.width * 0.4
+        frame = CGRect(x: self.frame.width * 0.5 + 15.0, y: 0, width: width, height: width)
+        path = UIBezierPath(roundedRect: frame, cornerRadius: width * 0.2)
+        UIColor.blue.setStroke()
+        UIColor.gray.setFill()
+        path.lineWidth = 5
+        path.stroke()
+        path.fill()
+        
+        // 3、绘制圆形
+        frame = CGRect(x: self.frame.width * 0.5 + 25.0, y: self.frame.height * 0.35, width: self.frame.width * 0.2, height: self.frame.width * 0.2)
+        path = UIBezierPath(roundedRect: frame, cornerRadius: frame.width * 0.5)
+        UIColor.purple.setFill()
+        path.fill()
+        
+        // 4、三角形
+        path = UIBezierPath()
+        path.lineWidth = 12
+        path.lineJoinStyle = .bevel
+        path.lineCapStyle = .square
+        
+        path.move(to: CGPoint(x: 10, y: self.frame.height * 0.5 + 15))
+        path.addLine(to: CGPoint(x: 120, y: self.frame.height * 0.5 + 15))
+        path.addLine(to: CGPoint(x: 10, y: self.frame.height * 0.5 + 75))
+        path.close()
+        
+        UIColor.blue.setStroke()
+        path.stroke()
+        
+    }
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+class ProgressView: UIView {
+    
+    // timer需要强引用保存起来，不然autorelease释放掉了
+    var timer: Timer!
+    // 进度
+    var progress: CGFloat
+    // 线条颜色
+    var color: UIColor
+    
+    override init(frame: CGRect) {
+        
+        progress = 0
+        color = UIColor.red
+        
+        super.init(frame: frame)
+        
+        self.backgroundColor = UIColor.white
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [unowned self] (timer) in
+            self.progress += 0.02
+            self.color = UIColor(red: 1 - self.progress, green: self.progress, blue: 0, alpha: 1.0)
+            self.setNeedsDisplay()
+            if self.progress >= 1.0 {
+                timer.invalidate()
+            }
+        })
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func draw(_ rect: CGRect) {
+        let center = CGPoint(x: self.frame.width * 0.5, y: self.frame.height * 0.5)
+        let startAngle = CGFloat(Double.pi * 3 / 2)
+        let endAngle = startAngle + progress * CGFloat(Double.pi * 2)
+        print("\(startAngle) \(endAngle)")
+        let path = UIBezierPath(arcCenter: center, radius: self.frame.width * 0.45, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        color.setStroke()
+        path.lineWidth = 10
+        path.stroke()
+        
+    }
+
+}
+
+</code></pre>
+</body>
+</html>

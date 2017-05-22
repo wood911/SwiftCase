@@ -15,12 +15,15 @@ class CustomKeyboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.addSourceCodeItem("customkeyboard")
         // 注册键盘通知
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        
-        
+    }
+    
+    // Swift析构函数
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // 键盘升起

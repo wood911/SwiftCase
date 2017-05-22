@@ -51,6 +51,5 @@ class DrawImage: UIView {
         UIGraphicsEndImageContext()
         
     }
-    
 
 }
