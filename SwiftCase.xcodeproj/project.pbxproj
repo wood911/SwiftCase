@@ -10,6 +10,7 @@
 		4125933A1EC6A5D100DFEC81 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412593391EC6A5D100DFEC81 /* EventKitUI.framework */; };
 		4125933D1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */; };
 		4125933F1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */; };
+		4134AD9F1ED4372B0046009E /* swift-playgrounds-64x64_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4134AD9E1ED4372B0046009E /* swift-playgrounds-64x64_2x.png */; };
 		415B10CB1EB43CF300A95D27 /* SourceCodeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */; };
 		415B10CF1EB4468D00A95D27 /* UIBarButtonItemEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */; };
 		415B10D21EB58B5100A95D27 /* AVFoundationQRcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */; };
@@ -169,6 +170,7 @@
 		412593391EC6A5D100DFEC81 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GestureForPhoto.storyboard; sourceTree = "<group>"; };
 		4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureForPhotoViewController.swift; sourceTree = "<group>"; };
+		4134AD9E1ED4372B0046009E /* swift-playgrounds-64x64_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swift-playgrounds-64x64_2x.png"; sourceTree = "<group>"; };
 		415B10CA1EB43CF300A95D27 /* SourceCodeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCodeEx.swift; sourceTree = "<group>"; };
 		415B10CE1EB4468D00A95D27 /* UIBarButtonItemEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemEx.swift; sourceTree = "<group>"; };
 		415B10D11EB58B5100A95D27 /* AVFoundationQRcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AVFoundationQRcode.storyboard; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 		41E59C1B1EBF3D560047BD27 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				4134AD9E1ED4372B0046009E /* swift-playgrounds-64x64_2x.png */,
 				41C8E0E41ED013BA00E1ACE7 /* cardfront.png */,
 				41C8E0E21ED013AC00E1ACE7 /* cardback.png */,
 				60F869861ECE9E6300F97128 /* welcome3.png */,
@@ -945,6 +948,7 @@
 				60A38BE71EC30D0D00D63D7B /* emotions.jpg in Resources */,
 				60A38BF21EC418F700D63D7B /* Location.storyboard in Resources */,
 				608BFFA21ECBF98300196E99 /* CustomKeyboard.storyboard in Resources */,
+				4134AD9F1ED4372B0046009E /* swift-playgrounds-64x64_2x.png in Resources */,
 				41E59C111EBEEC960047BD27 /* coreanimation.html in Resources */,
 				6058A4A81ED2F15C00E6AB3C /* genericplayground.html in Resources */,
 				41C8E0EF1ED174AA00E1ACE7 /* Poetry.storyboard in Resources */,
