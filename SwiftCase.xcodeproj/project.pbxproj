@@ -18,6 +18,7 @@
 		415B10D61EB58C3900A95D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415B10D51EB58C3900A95D27 /* AVFoundation.framework */; };
 		415B10DF1EB5A5CD00A95D27 /* AlertC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */; };
 		415B10E11EB5A64B00A95D27 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B10E01EB5A64B00A95D27 /* AlertViewController.swift */; };
+		41A712D41ED6560D0008EB5F /* landscape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41A712D31ED6560D0008EB5F /* landscape.jpg */; };
 		41C8E0CC1ECFD21800E1ACE7 /* BezierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0CB1ECFD21800E1ACE7 /* BezierViewController.swift */; };
 		41C8E0CE1ECFD2A700E1ACE7 /* DrawImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0CD1ECFD2A700E1ACE7 /* DrawImage.swift */; };
 		41C8E0D01ECFD78800E1ACE7 /* DrawString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E0CF1ECFD78800E1ACE7 /* DrawString.swift */; };
@@ -53,7 +54,6 @@
 		41E59C181EBF072C0047BD27 /* CoreImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C171EBF072C0047BD27 /* CoreImage.storyboard */; };
 		41E59C1A1EBF07510047BD27 /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E59C191EBF07510047BD27 /* CoreImageViewController.swift */; };
 		41E59C1D1EBF3D730047BD27 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C1C1EBF3D730047BD27 /* heart.png */; };
-		41E59C211EBF3F5C0047BD27 /* walle.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E59C201EBF3F5C0047BD27 /* walle.png */; };
 		41EB26851EB5B8EA00480186 /* AnimationQuartzCore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */; };
 		41EB26871EB5B95500480186 /* AnimationQuartzCoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */; };
 		41EB26891EB5BECF00480186 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EB26881EB5BECF00480186 /* QuartzCore.framework */; };
@@ -178,6 +178,7 @@
 		415B10D51EB58C3900A95D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		415B10DE1EB5A5CD00A95D27 /* AlertC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertC.storyboard; sourceTree = "<group>"; };
 		415B10E01EB5A64B00A95D27 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		41A712D31ED6560D0008EB5F /* landscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = landscape.jpg; sourceTree = "<group>"; };
 		41C8E0CB1ECFD21800E1ACE7 /* BezierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierViewController.swift; sourceTree = "<group>"; };
 		41C8E0CD1ECFD2A700E1ACE7 /* DrawImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawImage.swift; sourceTree = "<group>"; };
 		41C8E0CF1ECFD78800E1ACE7 /* DrawString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawString.swift; sourceTree = "<group>"; };
@@ -214,7 +215,6 @@
 		41E59C171EBF072C0047BD27 /* CoreImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreImage.storyboard; sourceTree = "<group>"; };
 		41E59C191EBF07510047BD27 /* CoreImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageViewController.swift; sourceTree = "<group>"; };
 		41E59C1C1EBF3D730047BD27 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
-		41E59C201EBF3F5C0047BD27 /* walle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walle.png; sourceTree = "<group>"; };
 		41EB26841EB5B8EA00480186 /* AnimationQuartzCore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnimationQuartzCore.storyboard; sourceTree = "<group>"; };
 		41EB26861EB5B95500480186 /* AnimationQuartzCoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationQuartzCoreViewController.swift; sourceTree = "<group>"; };
 		41EB26881EB5BECF00480186 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -480,6 +480,7 @@
 		41E59C1B1EBF3D560047BD27 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				41A712D31ED6560D0008EB5F /* landscape.jpg */,
 				4134AD9E1ED4372B0046009E /* swift-playgrounds-64x64_2x.png */,
 				41C8E0E41ED013BA00E1ACE7 /* cardfront.png */,
 				41C8E0E21ED013AC00E1ACE7 /* cardback.png */,
@@ -488,7 +489,6 @@
 				60F869821ECE9E5400F97128 /* welcome1.png */,
 				60F869801ECE9E3300F97128 /* welcome0.png */,
 				60A38BE61EC30D0D00D63D7B /* emotions.jpg */,
-				41E59C201EBF3F5C0047BD27 /* walle.png */,
 				41E59C1C1EBF3D730047BD27 /* heart.png */,
 			);
 			path = image;
@@ -894,6 +894,7 @@
 				604E9FEB1ED2D56B008E8F4B /* vfllayout.html in Resources */,
 				6058A4AB1ED2F15C00E6AB3C /* subscriptplayground.html in Resources */,
 				605DD41B1EB2CB13001C873C /* LaunchScreen.storyboard in Resources */,
+				41A712D41ED6560D0008EB5F /* landscape.jpg in Resources */,
 				41C8E0E51ED013BA00E1ACE7 /* cardfront.png in Resources */,
 				60A53E8E1EB836B10012DD2D /* alertc.html in Resources */,
 				41EB26951EB5D8D100480186 /* BasicAgenda.storyboard in Resources */,
@@ -911,7 +912,6 @@
 				60A53E9B1EB839830012DD2D /* templete.html in Resources */,
 				60A53ED11EB9DCC90012DD2D /* ChatPeer2Peer.storyboard in Resources */,
 				60A38BEA1EC3119C00D63D7B /* coreimage.html in Resources */,
-				41E59C211EBF3F5C0047BD27 /* walle.png in Resources */,
 				604E9FE51ED2D56B008E8F4B /* corelocation.html in Resources */,
 				41C8E0DF1ED0132E00E1ACE7 /* CardGame.storyboard in Resources */,
 				60A53E8F1EB836B10012DD2D /* animationgesture.html in Resources */,

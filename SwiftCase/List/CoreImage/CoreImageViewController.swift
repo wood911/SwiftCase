@@ -86,7 +86,7 @@ class CoreImageViewController: UIViewController, UICollectionViewDelegate, UICol
                 ("CIGaussianBlur", "高斯模糊GaussianBlur")]
     }()
     lazy var inputImage = { () -> CIImage in 
-        let filePath = Bundle.main.path(forResource: "walle", ofType: "png")!
+        let filePath = Bundle.main.path(forResource: "landscape", ofType: "jpg")!
         let inputImage: CIImage = CIImage(contentsOf: URL(fileURLWithPath: filePath))!
         return inputImage
     }()
