@@ -19,7 +19,7 @@
 	<string>Calendar</string>
 	<string>iBeacon</string>
 	<string>ChatPeer2Peer</string>
-	<string>CollectionView</string>
+	<string>CollectionView-ImageCache</string>
 	<string>CoreAnimation</string>
 	<string>CoreData</string>
 	<string>CoreImage</string>
