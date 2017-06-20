@@ -160,6 +160,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let poetry = UIStoryboard(name: "Poetry", bundle: nil).instantiateInitialViewController()!
             poetry.title = title
             self.show(poetry, sender: nil)
+        case 29:
+            let poetry = UIStoryboard(name: "JavaScriptCore", bundle: nil).instantiateInitialViewController()!
+            poetry.title = title
+            self.show(poetry, sender: nil)
         default:
             print("%s" + title, #function)
         }

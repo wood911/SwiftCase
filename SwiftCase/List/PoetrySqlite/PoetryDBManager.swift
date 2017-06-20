@@ -85,6 +85,7 @@ class PoetryDBManager: NSObject {
                 
                 sqlite3_finalize(stmt)
             }
+            sqlite3_close_v2(db)
         }
         return kinds
     }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yNc-yZ-owT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Java Script View Controller-->
+        <scene sceneID="QHh-OD-T6h">
+            <objects>
+                <viewController id="yNc-yZ-owT" customClass="JavaScriptViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Od9-Zx-ECK"/>
+                        <viewControllerLayoutGuide type="bottom" id="05p-JG-GmV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SaQ-ph-NfV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-zz-JUA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yNc-yZ-owT" id="aAJ-z7-mYo"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ycm-zz-JUA" firstAttribute="top" secondItem="Od9-Zx-ECK" secondAttribute="bottom" id="0FG-yG-Kuv"/>
+                            <constraint firstItem="ycm-zz-JUA" firstAttribute="leading" secondItem="SaQ-ph-NfV" secondAttribute="leading" id="LZj-p0-MrQ"/>
+                            <constraint firstItem="05p-JG-GmV" firstAttribute="top" secondItem="ycm-zz-JUA" secondAttribute="bottom" id="Nxi-fg-Jiu"/>
+                            <constraint firstAttribute="trailing" secondItem="ycm-zz-JUA" secondAttribute="trailing" id="jsg-wv-RFn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ycm-zz-JUA" id="8Lm-sF-sd3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zIe-wc-hrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-105" y="169"/>
+        </scene>
+    </scenes>
+</document>

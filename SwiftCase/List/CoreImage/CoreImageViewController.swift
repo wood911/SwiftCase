@@ -60,7 +60,7 @@ class CoreImageViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var slider: UISlider!
     
     var saturation: Float = 1.0
-    var brightness: Float = 1.0
+    var brightness: Float = 0
     var contrast: Float = 1.0
     
     // MARK: - lazy load
@@ -69,9 +69,6 @@ class CoreImageViewController: UIViewController, UICollectionViewDelegate, UICol
     }()
     
     var filter: CIFilter!
-    lazy var colorFilter = { () -> CIFilter in
-        return CIFilter(name: "CIColorControls")!
-    }()
     
     // 元组 (filterName: String, displayName: String)
     lazy var filterNames: [(filterName: String, displayName: String)] = {
@@ -86,7 +83,7 @@ class CoreImageViewController: UIViewController, UICollectionViewDelegate, UICol
                 ("CIGaussianBlur", "高斯模糊GaussianBlur")]
     }()
     lazy var inputImage = { () -> CIImage in 
-        let filePath = Bundle.main.path(forResource: "landscape", ofType: "jpg")!
+        let filePath = Bundle.main.path(forResource: "landscape", ofType: "png")!
         let inputImage: CIImage = CIImage(contentsOf: URL(fileURLWithPath: filePath))!
         return inputImage
     }()
@@ -140,15 +137,15 @@ class CoreImageViewController: UIViewController, UICollectionViewDelegate, UICol
         default:
             print("test")
         }
-        
-        colorFilter.setDefaults()
-        colorFilter.setValue(inputImage, forKey: kCIInputImageKey)
-        colorFilter.setValue(saturation, forKey: "inputSaturation")
-        colorFilter.setValue(brightness, forKey: "inputBrightness")
-        colorFilter.setValue(contrast, forKey: "inputContrast")
+        let filter = CIFilter(name: "CIColorControls")!
+        filter.setDefaults()
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        filter.setValue(saturation, forKey: "inputSaturation")
+        filter.setValue(brightness, forKey: "inputBrightness")
+        filter.setValue(contrast, forKey: "inputContrast")
         
         let outputImage = filter.outputImage!
-        let cgImage = context.createCGImage(outputImage, from: outputImage.extent)!
+        let cgImage = CIContext(options: nil).createCGImage(outputImage, from: outputImage.extent)!
         
         imageView.image = UIImage(cgImage: cgImage)
     }
