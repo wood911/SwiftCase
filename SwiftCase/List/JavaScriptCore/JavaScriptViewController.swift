@@ -9,10 +9,15 @@
 import UIKit
 import JavaScriptCore
 
+/// 关于JavaScriptCore详细用法
+/// 1、Bing翻译 -> 简单用法
+/// 2、JavaScriptCore交互方式 -> 高级用法
 class JavaScriptViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     weak var translate: TranslateCircle!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
     
     lazy var jsCode: String? = {
         var jsCode: String?
@@ -26,7 +31,9 @@ class JavaScriptViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let translate = TranslateCircle(frame: CGRect(x: ScreenW - 70, y: ScreenH - 150, width: 50, height: 50)) { [unowned self] (btn) in
+        self.addSourceCodeItem("javascriptcore")
+        
+        let translate = TranslateCircle(frame: CGRect(x: ScreenW - 70, y: ScreenH - 200, width: 50, height: 50)) { [unowned self] (btn) in
             if btn.isSelected {
                 self.webView.stringByEvaluatingJavaScript(from: "TranslatePage('en')")
                 let timer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: 0), queue: DispatchQueue.main)
@@ -79,6 +86,14 @@ extension JavaScriptViewController {
         context.setObject(bridge, forKeyedSubscript: "AppBridge" as NSString)
         bridge.model1.block = { obj in
             XLog(obj)
+            self.textView.text = self.textView.text.appending("\n\(obj.code) \(obj.msg) \(obj.data)")
+        }
+        
+        if let text = textField.text {
+            if let result = context.evaluateScript(text) {
+                XLog(result)
+                textView.text = textView.text.appending(result.toString())
+            }
         }
     }
     
@@ -106,5 +121,18 @@ extension JavaScriptViewController: UIWebViewDelegate {
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         XLog(error)
+    }
+}
+
+extension JavaScriptViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            let context = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as! JSContext
+            if let result = context.evaluateScript(text) {
+                textView.text = textView.text.appending("\n" + result.toString())
+            }
+        }
+        textField.resignFirstResponder()
+        return true
     }
 }

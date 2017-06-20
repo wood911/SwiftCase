@@ -15,6 +15,8 @@
 		4118F7A01EF69A25009137DC /* javascriptcore.html in Resources */ = {isa = PBXBuildFile; fileRef = 4118F79F1EF69A25009137DC /* javascriptcore.html */; };
 		4118F7A21EF69B53009137DC /* translate.js in Resources */ = {isa = PBXBuildFile; fileRef = 4118F7A11EF69B53009137DC /* translate.js */; };
 		4118F7A41EF69D14009137DC /* TranslateCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4118F7A31EF69D14009137DC /* TranslateCircle.swift */; };
+		4118F7A91EF9020D009137DC /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4118F7A81EF9020D009137DC /* About.storyboard */; };
+		4118F7AB1EF90255009137DC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4118F7AA1EF90255009137DC /* AboutViewController.swift */; };
 		4125933A1EC6A5D100DFEC81 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412593391EC6A5D100DFEC81 /* EventKitUI.framework */; };
 		4125933D1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */; };
 		4125933F1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */; };
@@ -182,6 +184,8 @@
 		4118F79F1EF69A25009137DC /* javascriptcore.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = javascriptcore.html; sourceTree = "<group>"; };
 		4118F7A11EF69B53009137DC /* translate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = translate.js; sourceTree = "<group>"; };
 		4118F7A31EF69D14009137DC /* TranslateCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateCircle.swift; sourceTree = "<group>"; };
+		4118F7A81EF9020D009137DC /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		4118F7AA1EF90255009137DC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		412593391EC6A5D100DFEC81 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GestureForPhoto.storyboard; sourceTree = "<group>"; };
 		4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureForPhotoViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +392,15 @@
 				4118F7A31EF69D14009137DC /* TranslateCircle.swift */,
 			);
 			path = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		4118F7A71EF901EC009137DC /* About */ = {
+			isa = PBXGroup;
+			children = (
+				4118F7A81EF9020D009137DC /* About.storyboard */,
+				4118F7AA1EF90255009137DC /* AboutViewController.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 		4125933B1EC6AD8E00DFEC81 /* GestureForPhoto */ = {
@@ -610,6 +623,7 @@
 		605DD4251EB2CE65001C873C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				4118F7A71EF901EC009137DC /* About */,
 				4118F7941EF4E19B009137DC /* JavaScriptCore */,
 				41C8E0ED1ED1749700E1ACE7 /* PoetrySqlite */,
 				41C8E0DD1ED0131F00E1ACE7 /* CardGame */,
@@ -974,6 +988,7 @@
 				41E59C181EBF072C0047BD27 /* CoreImage.storyboard in Resources */,
 				60F869851ECE9E5A00F97128 /* welcome2.png in Resources */,
 				41EB269E1EBD5F8C00480186 /* CollectionView.storyboard in Resources */,
+				4118F7A91EF9020D009137DC /* About.storyboard in Resources */,
 				60F869831ECE9E5400F97128 /* welcome1.png in Resources */,
 				60A53E9A1EB839830012DD2D /* contactlist.html in Resources */,
 				60A38BE71EC30D0D00D63D7B /* emotions.jpg in Resources */,
@@ -1059,6 +1074,7 @@
 				41C8E0E71ED1275300E1ACE7 /* CardGame.swift in Sources */,
 				41EB269B1EB5DBC800480186 /* ContactAddViewController.swift in Sources */,
 				41C8E0DC1ED0012E00E1ACE7 /* VFLViewController.swift in Sources */,
+				4118F7AB1EF90255009137DC /* AboutViewController.swift in Sources */,
 				41C8E0CE1ECFD2A700E1ACE7 /* DrawImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

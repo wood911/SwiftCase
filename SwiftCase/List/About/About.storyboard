@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CXI-X9-6QI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About-->
+        <scene sceneID="FhH-ua-lf1">
+            <objects>
+                <viewController title="About" id="CXI-X9-6QI" customClass="AboutViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3zq-mL-6nH"/>
+                        <viewControllerLayoutGuide type="bottom" id="T7x-tN-APf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SwZ-pW-7C7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCI-WQ-vdl">
+                                <rect key="frame" x="10" y="50" width="355" height="95.5"/>
+                                <gestureRecognizers/>
+                                <attributedString key="attributedText">
+                                    <fragment content="如您发现">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="bug">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="或提供建议请">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="@ ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="        woodtengfei@gmail.com ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.019375458359718323" green="0.39525395631790161" blue="0.73997920751571655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="谢谢！">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="y3r-dQ-NVf" appends="YES" id="BbB-Z9-CUJ"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MCI-WQ-vdl" secondAttribute="trailing" constant="10" id="Tpb-el-RMp"/>
+                            <constraint firstItem="MCI-WQ-vdl" firstAttribute="top" secondItem="3zq-mL-6nH" secondAttribute="bottom" constant="30" id="ZIi-AZ-ZWk"/>
+                            <constraint firstItem="MCI-WQ-vdl" firstAttribute="leading" secondItem="SwZ-pW-7C7" secondAttribute="leading" constant="10" id="t9a-Ch-6O0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGS-dl-51K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="y3r-dQ-NVf">
+                    <connections>
+                        <action selector="mail:" destination="CXI-X9-6QI" id="lwb-cW-OlX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="745" y="904"/>
+        </scene>
+    </scenes>
+</document>

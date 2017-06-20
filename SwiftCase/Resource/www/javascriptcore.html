@@ -12,6 +12,260 @@
 </head>
 <body>
 <pre><code class="Swift">
+参考 https://github.com/woodpower/SwiftCase
+import UIKit
+import JavaScriptCore
+
+/// 关于JavaScriptCore详细用法
+/// 1、Bing翻译 -> 简单用法
+/// 2、JavaScriptCore交互方式 -> 高级用法
+class JavaScriptViewController: UIViewController {
+
+    @IBOutlet weak var webView: UIWebView!
+    weak var translate: TranslateCircle!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
+
+    lazy var jsCode: String? = {
+        var jsCode: String?
+        if let path = Bundle.main.path(forResource: "translate", ofType: "js"), let code = try? String(contentsOfFile: path) {
+            jsCode = code
+        }
+        return jsCode
+    }()
+
+    var urlStr: String = "https://www.apple.com/cn"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let translate = TranslateCircle(frame: CGRect(x: ScreenW - 70, y: ScreenH - 200, width: 50, height: 50)) { [unowned self] (btn) in
+            if btn.isSelected {
+                self.webView.stringByEvaluatingJavaScript(from: "TranslatePage('en')")
+                let timer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: 0), queue: DispatchQueue.main)
+                timer.scheduleRepeating(deadline: DispatchTime.now(), interval: DispatchTimeInterval.milliseconds(50))
+                timer.setEventHandler(handler: { [unowned self] in
+                    let error = self.webView.stringByEvaluatingJavaScript(from: "window.translateError")
+                    if error == nil || error!.isEmpty {
+                        if let progress = self.webView.stringByEvaluatingJavaScript(from: "window.translateProgress") {
+                            XLog(progress)
+                            XLog(Double(progress) ?? 0)
+                            self.translate.progress = Double(progress) ?? 0
+                            if Double(progress) ?? 0 >= 1.0 {
+                                timer.cancel()
+                            }
+                        }
+                    } else {
+                        XLog("Translate Error: \(error!)")
+                        timer.cancel()
+                    }
+                })
+                timer.resume()
+            } else {
+                self.webView.stringByEvaluatingJavaScript(from: "RestoreOriginal()")
+            }
+        }
+        self.view.addSubview(translate)
+        translate.isHidden = true
+        self.translate = translate
+
+        if let url = URL(string: urlStr) {
+            webView.loadRequest(URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 30))
+        }
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+}
+
+// MARK: - JS
+extension JavaScriptViewController {
+
+    /// JavaScriptCore方式交互
+    func initJsContext() {
+        let context = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as! JSContext
+        let bridge = AppBridge()
+        context.setObject(bridge, forKeyedSubscript: "AppBridge" as NSString)
+        bridge.model1.block = { obj in
+            XLog(obj)
+            self.textView.text = self.textView.text.appending("\n\(obj.code) \(obj.msg) \(obj.data)")
+        }
+
+        if let text = textField.text {
+            if let result = context.evaluateScript(text) {
+                XLog(result)
+                textView.text = textView.text.appending("\n" + result.toString())
+            }
+        }
+    }
+
+    /// Bing翻译
+    func initJsCode() {
+        if let code = jsCode {
+            webView.stringByEvaluatingJavaScript(from: code)
+            translate.reset()
+        }
+    }
+}
+
+// MARK: - UIWebViewDelegate
+extension JavaScriptViewController: UIWebViewDelegate {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        initJsCode()
+        initJsContext()
+        translate.isHidden = false
+        if let title = webView.stringByEvaluatingJavaScript(from: "document.title") {
+            self.title = title
+        }
+        let urlStr = webView.request?.url?.absoluteString
+        XLog("URL:\(urlStr ?? "")")
+    }
+
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        XLog(error)
+    }
+}
+
+extension JavaScriptViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            let context = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as! JSContext
+            if let result = context.evaluateScript(text) {
+                textView.text = textView.text.appending("\n" + result.toString())
+            }
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+import Foundation
+import JavaScriptCore
+
+/// AppBridge导出JS上下文协议
+@objc protocol AppBridgeExport: JSExport {
+
+    /// 业务模块1
+    var model1: OneBridge {get}
+
+    /// 业务模块2
+//    var model2: TwoBridge {get}
+
+    /// App版本 5.12
+    var appVersion: String {get}
+
+    /// accessToken
+    var accessToken: String {get}
+
+    /// userid
+    var userid: String {get}
+
+    /// 平台 iOS Android
+    var platform: String {get}
+
+    /// 语言 cn en
+    var language: String {get}
+
+}
+
+/// 业务模块定义JS调用接口
+@objc protocol OneBridgeExport: JSExport {
+
+    /// 添加商品到购物车
+    ///
+    /// - Parameter json: {"code":0, "msg":"错误信息，state==0表示成功，没有错误表示不传", "data":Object}
+    func addCart(_ json: String?)
+}
+
+/// webview中JSContext存在的全局对象
+class AppBridge: NSObject, AppBridgeExport {
+    /// 业务模块1
+    var model1: OneBridge
+
+    /// 语言 cn en fr ...
+    var language: String
+
+    /// 平台 iOS Android
+    var platform: String
+
+    /// userid
+    var userid: String
+
+    /// accessToken
+    var accessToken: String
+
+    /// App版本 1.0
+    var appVersion: String
+
+
+    override init() {
+        model1 = OneBridge()
+        language = "cn"
+        platform = "iOS"
+        userid = "xiaowu"
+        accessToken = "FASDOFIJWOEIDSFN0092IR33REQW90QEWION"
+        appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+    }
+
+}
+
+/// 实现接口，共JS方调用
+class OneBridge: NSObject, OneBridgeExport {
+
+    var block: ((_ obj: JSObj) -> ())?
+
+    func addCart(_ json: String?) {
+        if let json = json {
+            jsonSatax(json)
+        }
+    }
+
+    // 没有在JSExport中声明的方法是不会在JS环境中出现的
+    func privateMethod(_ json: String?) {
+        if let json = json {
+            jsonSatax(json)
+        }
+    }
+
+    private func jsonSatax(_ json: String) {
+        XLog("JSCallback:\(json)")
+        // 可以使用SwiftyJSON
+        if let obj = try? JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? [String: Any], let block = block {
+            let t = JSObj()
+            if let code = obj?["code"] as? Int {
+                t.code = code
+            }
+            if let msg = obj?["msg"] as? String {
+                t.msg = msg
+            }
+            if let data = obj?["data"] {
+                t.data = data
+            }
+            block(t)
+        } else {
+            XLog("AppBridge JSON 解析错误")
+        }
+    }
+}
+
+class JSObj: NSObject {
+    var code: Int = -1
+    var msg: String = ""
+    var data: Any = []
+}
+
+
+
 
 </code></pre>
 </body>

@@ -22,22 +22,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-zz-JUA">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="467"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="yNc-yZ-owT" id="aAJ-z7-mYo"/>
                                 </connections>
                             </webView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5SC-kU-vuo">
+                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="VUl-Iv-0FM"/>
+                                </constraints>
+                                <color key="textColor" red="0.6804317831993103" green="0.35470062494277954" blue="0.35912823677062988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AppBridge.platform" borderStyle="roundedRect" placeholder="debug输入JavaScript语句执行结果在下方可见" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7M9-jJ-Mtp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hoG-5o-tXM"/>
+                                </constraints>
+                                <color key="textColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yNc-yZ-owT" id="wqb-zl-lv6"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ycm-zz-JUA" firstAttribute="top" secondItem="Od9-Zx-ECK" secondAttribute="bottom" id="0FG-yG-Kuv"/>
+                            <constraint firstItem="ycm-zz-JUA" firstAttribute="top" secondItem="Od9-Zx-ECK" secondAttribute="bottom" constant="30" id="0FG-yG-Kuv"/>
                             <constraint firstItem="ycm-zz-JUA" firstAttribute="leading" secondItem="SaQ-ph-NfV" secondAttribute="leading" id="LZj-p0-MrQ"/>
-                            <constraint firstItem="05p-JG-GmV" firstAttribute="top" secondItem="ycm-zz-JUA" secondAttribute="bottom" id="Nxi-fg-Jiu"/>
+                            <constraint firstItem="05p-JG-GmV" firstAttribute="top" secondItem="ycm-zz-JUA" secondAttribute="bottom" constant="150" id="Nxi-fg-Jiu"/>
+                            <constraint firstAttribute="trailing" secondItem="7M9-jJ-Mtp" secondAttribute="trailing" id="Tit-mV-75f"/>
+                            <constraint firstItem="5SC-kU-vuo" firstAttribute="leading" secondItem="SaQ-ph-NfV" secondAttribute="leading" id="f88-AQ-wqe"/>
+                            <constraint firstItem="05p-JG-GmV" firstAttribute="top" secondItem="5SC-kU-vuo" secondAttribute="bottom" id="fDh-Hu-TJP"/>
+                            <constraint firstAttribute="trailing" secondItem="5SC-kU-vuo" secondAttribute="trailing" id="ha0-yC-qaG"/>
                             <constraint firstAttribute="trailing" secondItem="ycm-zz-JUA" secondAttribute="trailing" id="jsg-wv-RFn"/>
+                            <constraint firstItem="7M9-jJ-Mtp" firstAttribute="leading" secondItem="SaQ-ph-NfV" secondAttribute="leading" id="pg8-xW-Sf1"/>
+                            <constraint firstItem="7M9-jJ-Mtp" firstAttribute="top" secondItem="Od9-Zx-ECK" secondAttribute="bottom" id="sie-66-MBF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textField" destination="7M9-jJ-Mtp" id="Rdn-xo-Mrb"/>
+                        <outlet property="textView" destination="5SC-kU-vuo" id="938-kP-LkE"/>
                         <outlet property="webView" destination="ycm-zz-JUA" id="8Lm-sF-sd3"/>
                     </connections>
                 </viewController>
