@@ -27,7 +27,7 @@ class JavaScriptViewController: UIViewController {
         return jsCode
     }()
     
-    var urlStr: String = "https://m.taobao.com/"
+    var urlStr: String = "https://m.taobao.com/#index"
     
     override func viewDidLoad() {
         super.viewDidLoad()
