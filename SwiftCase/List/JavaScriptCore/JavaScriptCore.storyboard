@@ -12,7 +12,7 @@
         <!--Java Script View Controller-->
         <scene sceneID="QHh-OD-T6h">
             <objects>
-                <viewController id="yNc-yZ-owT" customClass="JavaScriptViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="yNc-yZ-owT" customClass="JavaScriptViewController" customModule="SwiftCase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Od9-Zx-ECK"/>
                         <viewControllerLayoutGuide type="bottom" id="05p-JG-GmV"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-zz-JUA">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-zz-JUA">
                                 <rect key="frame" x="0.0" y="50" width="375" height="467"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
