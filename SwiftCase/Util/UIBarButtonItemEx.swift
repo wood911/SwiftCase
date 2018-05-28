@@ -37,7 +37,7 @@ class _UIBarButtonItemBlockTarget: NSObject {
         super.init()
     }
     
-    func invoke(_ sender: Any?) {
+    @objc func invoke(_ sender: Any?) {
         handler(sender)
     }
 }

@@ -112,10 +112,10 @@ class AirdropViewController: UIViewController, UINavigationControllerDelegate, U
     
     // MARK: 相机授权
     func albumAuthorization(callback: @escaping VoidBlock) {
-        let status = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo);
+        let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video);
         switch status {
         case .notDetermined:
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted) in
+            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted) in
                 granted == true ? callback() : ()
             })
         case .authorized:

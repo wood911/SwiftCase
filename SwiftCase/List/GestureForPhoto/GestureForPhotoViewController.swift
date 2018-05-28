@@ -225,7 +225,7 @@ class PhotoView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate {
     }
     
     // 更多选项
-    func moreAction(_ sender: UIButton) {
+    @objc func moreAction(_ sender: UIButton) {
         photoDelegate?.showMoreOptions()
     }
 }
@@ -311,7 +311,7 @@ class GestureForPhotoViewController: UIViewController, PhotoViewDelegate {
     var optionsView: OptionsView!
     var maskView: UIView?
     
-    func imageViewTapAction(_ sender: UITapGestureRecognizer) {
+    @objc func imageViewTapAction(_ sender: UITapGestureRecognizer) {
         // 获取点击的位置
         let imageView = sender.view as! UIImageView
         let point = sender.location(in: view)

@@ -61,7 +61,7 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         self.stopRunning()
     }
     
-    func startRunning() {
+    @objc func startRunning() {
         guard captureSession != nil else {
             return
         }
@@ -70,7 +70,7 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         runnng = true
     }
     
-    func stopRunning() {
+    @objc func stopRunning() {
         captureSession.stopRunning()
         runnng = false
     }
@@ -86,8 +86,8 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         if captureSession != nil {
             return
         }
-        
-        videoDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+
+        videoDevice = AVCaptureDevice.default(for: .video)
         guard videoDevice != nil else {
             print("No carema on this device. Is this an iOS Simulator?")
             return
@@ -101,7 +101,7 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         }
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         metadataOutput = AVCaptureMetadataOutput()
         let metadataQueue = DispatchQueue(label: "com.example.QRCode.metadata", attributes: [])
         metadataOutput.setMetadataObjectsDelegate(self, queue: metadataQueue)
@@ -117,7 +117,7 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let elemento = metadataObjects.first as? AVMetadataMachineReadableCodeObject
         if(elemento != nil){
             // self.stopRunning()
-            print(elemento!.stringValue)
+            print(elemento!.stringValue ?? "")
             sendURL.text = elemento!.stringValue
         }
     }

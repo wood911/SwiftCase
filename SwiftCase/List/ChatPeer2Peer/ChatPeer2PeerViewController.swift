@@ -46,18 +46,18 @@ class ChatPeer2PeerViewController: UIViewController, MCBrowserViewControllerDele
         let attributedText = NSMutableAttributedString(attributedString: self.textview.attributedText)
         switch state {
         case .connected:
-            attributedText.append(NSAttributedString(string: "\(peerID) connected", attributes: [NSForegroundColorAttributeName: UIColor.green]))
+            attributedText.append(NSAttributedString(string: "\(peerID) connected", attributes: [NSAttributedStringKey.foregroundColor: UIColor.green]))
         case .connecting:
-            attributedText.append(NSAttributedString(string: "\(peerID) connecting", attributes: [NSForegroundColorAttributeName: UIColor.orange]))
+            attributedText.append(NSAttributedString(string: "\(peerID) connecting", attributes: [NSAttributedStringKey.foregroundColor: UIColor.orange]))
         case .notConnected:
-            attributedText.append(NSAttributedString(string: "\(peerID) disconnected", attributes: [NSForegroundColorAttributeName: UIColor.red]))
+            attributedText.append(NSAttributedString(string: "\(peerID) disconnected", attributes: [NSAttributedStringKey.foregroundColor: UIColor.red]))
         }
         input.attributedText = attributedText
     }
     func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
         print("Receiving \(peerID) \(resourceName) \(progress.fractionCompleted)")
     }
-    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
         print("Finish \(peerID) \(resourceName)")
     }
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -67,9 +67,9 @@ class ChatPeer2PeerViewController: UIViewController, MCBrowserViewControllerDele
     func receive(message: String, fromPeer peerID: MCPeerID) {
         let attributedText = NSMutableAttributedString(attributedString: self.textview.attributedText)
         if peerID == self.peerID {
-            attributedText.append(NSAttributedString(string: "\n" + message, attributes: [NSForegroundColorAttributeName: UIColor.blue]))
+            attributedText.append(NSAttributedString(string: "\n" + message, attributes: [NSAttributedStringKey.foregroundColor: UIColor.blue]))
         } else {
-            attributedText.append(NSAttributedString(string: "\n" + peerID.displayName + ":" + message, attributes: [NSForegroundColorAttributeName: UIColor.gray]))
+            attributedText.append(NSAttributedString(string: "\n" + peerID.displayName + ":" + message, attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray]))
         }
         self.textview.attributedText = attributedText
     }

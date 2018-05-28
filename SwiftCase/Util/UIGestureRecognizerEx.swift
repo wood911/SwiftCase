@@ -36,7 +36,7 @@ extension UIGestureRecognizer {
             super.init()
         }
         
-        func invoke(_ sender: UIGestureRecognizer) {
+        @objc func invoke(_ sender: UIGestureRecognizer) {
             hander(sender)
         }
         

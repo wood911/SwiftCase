@@ -33,7 +33,7 @@ class CalendarViewController: UIViewController, UITextFieldDelegate, EKEventEdit
         view.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    func dismissKeyBoard() {
+    @objc func dismissKeyBoard() {
         textField.resignFirstResponder()
     }
     
