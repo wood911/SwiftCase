@@ -24,9 +24,7 @@ class DrawString: UIView {
     
     override func draw(_ rect: CGRect) {
         
-        let attribute = [NSFontAttributeName: UIFont.systemFont(ofSize: 20),
-                         NSForegroundColorAttributeName: UIColor.darkText,
-                         NSBackgroundColorAttributeName: UIColor.lightGray]
+        let attribute: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 20), .foregroundColor: UIColor.darkText, .backgroundColor: UIColor.lightGray]
         // 自适应宽高
         let size = text.boundingRect(with: self.bounds.size, options: .usesLineFragmentOrigin, attributes: attribute, context: nil).size
         

@@ -96,7 +96,7 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     // MARK: - Add Contact
-    func toAddContact() {
+    @objc func toAddContact() {
         let naviC = UIStoryboard.init(name: "BasicAgenda", bundle: nil).instantiateViewController(withIdentifier: "addContact") as! UINavigationController
         (naviC.viewControllers[0] as! ContactAddViewController).delegate = self
         self.present(naviC, animated: true, completion: nil)

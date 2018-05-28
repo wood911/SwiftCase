@@ -136,7 +136,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     // 插入/删除字符
-    func tapButton(_ sender: UIButton) {
+    @objc func tapButton(_ sender: UIButton) {
         if let text = sender.currentTitle {
             if text == numberKeys.last {
                 textDocumentProxy.deleteBackward()

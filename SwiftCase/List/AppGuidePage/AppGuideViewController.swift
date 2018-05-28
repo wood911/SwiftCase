@@ -37,7 +37,7 @@ class AppGuideViewController: UIViewController, UIScrollViewDelegate {
         return false
     }
     
-    func backAction() {
+    @objc func backAction() {
         self.dismiss(animated: true, completion: nil)
     }
     

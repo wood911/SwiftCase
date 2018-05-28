@@ -37,7 +37,7 @@ class JavaScriptViewController: UIViewController {
             if btn.isSelected {
                 self.webView.stringByEvaluatingJavaScript(from: "TranslatePage('en')")
                 let timer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: 0), queue: DispatchQueue.main)
-                timer.scheduleRepeating(deadline: DispatchTime.now(), interval: DispatchTimeInterval.milliseconds(50))
+                timer.schedule(deadline: DispatchTime.now(), repeating: DispatchTimeInterval.milliseconds(50))
                 timer.setEventHandler(handler: { [unowned self] in
                     let error = self.webView.stringByEvaluatingJavaScript(from: "window.translateError")
                     if error == nil || error!.isEmpty {

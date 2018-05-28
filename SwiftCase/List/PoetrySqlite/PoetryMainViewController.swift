@@ -57,7 +57,7 @@ class PoetryMainViewController: UIViewController, UICollectionViewDataSource, Po
         }
     }
     
-    func editKind(_ sender: Any) {
+    @objc func editKind(_ sender: Any) {
         isKindEditing = !isKindEditing
         collectionView.reloadData()
     }

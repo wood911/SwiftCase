@@ -48,7 +48,7 @@ class AnimationGestureViewController: UIViewController {
     }
     
     // walk right 中心点到达又边界，返回至左边继续运动
-    func walkRight(_ sender: UIGestureRecognizer) {
+    @objc func walkRight(_ sender: UIGestureRecognizer) {
         if penguinView.center.x > view.frame.size.width {
             penguinView.center = CGPoint(x: 0, y: penguinView.center.y)
         }
@@ -62,7 +62,7 @@ class AnimationGestureViewController: UIViewController {
         }
     }
     
-    func walkLeft(_ sender: UIGestureRecognizer) {
+    @objc func walkLeft(_ sender: UIGestureRecognizer) {
         if penguinView.center.x < 0 {
             penguinView.center = CGPoint(x: view.frame.size.width - penguinView.frame.size.width, y: penguinView.center.y)
         }
@@ -76,7 +76,7 @@ class AnimationGestureViewController: UIViewController {
         }
     }
     
-    func jump(_ sender: UIGestureRecognizer) {
+    @objc func jump(_ sender: UIGestureRecognizer) {
         penguinView.startAnimating()
         // 0.25s jump up 50 and 0.25 jump down 50
         UIView.animate(withDuration: 0.25, animations: { 
@@ -90,7 +90,7 @@ class AnimationGestureViewController: UIViewController {
     }
     
     // 消失于屏幕下方，然后又回到原位置
-    func longPress(_ sender: UIGestureRecognizer) {
+    @objc func longPress(_ sender: UIGestureRecognizer) {
         UIView.animate(withDuration: 0.33, animations: { 
             self.dieCenter = self.penguinView.center
             self.penguinView.center = CGPoint(x: self.penguinView.center.x, y: self.view.frame.size.height)

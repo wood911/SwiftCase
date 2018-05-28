@@ -62,7 +62,7 @@ class TranslateCircle: UIView {
         startAngle = endAngle
     }
     
-    func buttonClick(_ button: UIButton) {
+    @objc func buttonClick(_ button: UIButton) {
         button.isSelected = !button.isSelected
         block(button)
     }
