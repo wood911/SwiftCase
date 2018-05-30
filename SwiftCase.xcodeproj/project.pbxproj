@@ -195,6 +195,10 @@
 		4118F7A31EF69D14009137DC /* TranslateCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateCircle.swift; sourceTree = "<group>"; };
 		4118F7A81EF9020D009137DC /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		4118F7AA1EF90255009137DC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		4118F7AD1F19AF1F009137DC /* basics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = basics.playground; sourceTree = "<group>"; };
+		4118F7AE1F1B0013009137DC /* StringCharacters.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StringCharacters.playground; sourceTree = "<group>"; };
+		4118F7AF1F1B00C0009137DC /* CollectionTypes.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CollectionTypes.playground; sourceTree = "<group>"; };
+		4118F7B01F1B1BAB009137DC /* functionClosures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = functionClosures.playground; sourceTree = "<group>"; };
 		412593391EC6A5D100DFEC81 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		4125933C1EC6AD9E00DFEC81 /* GestureForPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GestureForPhoto.storyboard; sourceTree = "<group>"; };
 		4125933E1EC6ADB500DFEC81 /* GestureForPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureForPhotoViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +425,17 @@
 				4118F7AA1EF90255009137DC /* AboutViewController.swift */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		4118F7AC1F19AE41009137DC /* Swift4.0-Playground */ = {
+			isa = PBXGroup;
+			children = (
+				4118F7AD1F19AF1F009137DC /* basics.playground */,
+				4118F7AE1F1B0013009137DC /* StringCharacters.playground */,
+				4118F7AF1F1B00C0009137DC /* CollectionTypes.playground */,
+				4118F7B01F1B1BAB009137DC /* functionClosures.playground */,
+			);
+			path = "Swift4.0-Playground";
 			sourceTree = "<group>";
 		};
 		4125933B1EC6AD8E00DFEC81 /* GestureForPhoto */ = {
@@ -671,6 +686,7 @@
 				605DD4261EB2CE7A001C873C /* Airdrop */,
 				608BFFB31ECBFF7A00196E99 /* Swift3.0-Playground */,
 				608BFFB41ECBFF7A00196E99 /* Swift2.2-Playground */,
+				4118F7AC1F19AE41009137DC /* Swift4.0-Playground */,
 			);
 			path = List;
 			sourceTree = "<group>";
